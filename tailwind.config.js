@@ -66,21 +66,21 @@ module.exports = {
           to: { height: 0 },
         },
         "slide-down": {
-          from: { 
+          from: {
             opacity: 0,
             transform: "translateY(-10px)",
           },
-          to: { 
+          to: {
             opacity: 1,
             transform: "translateY(0)",
           },
         },
         "slide-up": {
-          from: { 
+          from: {
             opacity: 0,
             transform: "translateY(10px)",
           },
-          to: { 
+          to: {
             opacity: 1,
             transform: "translateY(0)",
           },
