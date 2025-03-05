@@ -1,0 +1,83 @@
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
+
+@keyframes dropdownEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dropdownExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dropdown-content[data-state='open'] {
+  animation: dropdownEnter 0.15s ease-out;
+}
+
+.dropdown-content[data-state='closed'] {
+  animation: dropdownExit 0.1s ease-in;
+}
+
+.dropdown-item {
+  opacity: 0;
+  animation: fadeScale 0.2s ease-out forwards;
+}
+
+.dropdown-item:nth-child(1) { animation-delay: 0.05s; }
+.dropdown-item:nth-child(2) { animation-delay: 0.1s; }
+.dropdown-item:nth-child(3) { animation-delay: 0.15s; }
+.dropdown-item:nth-child(4) { animation-delay: 0.2s; }
+.dropdown-item:nth-child(5) { animation-delay: 0.25s; }
+.dropdown-item:nth-child(6) { animation-delay: 0.3s; }
+.dropdown-item:nth-child(7) { animation-delay: 0.35s; }
+.dropdown-item:nth-child(8) { animation-delay: 0.4s; }
+.dropdown-item:nth-child(9) { animation-delay: 0.45s; }

@@ -1,0 +1,123 @@
+# React Development Standards and Best Practices
+
+## 1. UI and Design Standards
+
+### ShadCN Components
+- Use shadcn components as much as possible for consistent, customizable and reusable UI elements
+- Import components from "@/components/ui" when using shadcn/ui
+
+### Tailwind CSS
+- Take a utility-first approach to design
+- Use the @apply directive to avoid excessive repetition of classes
+- Ensure responsive design and mobile compatibility
+
+## 2. Code Structure and Architecture
+
+### Functional Components & React Hooks
+- Use functional components with modern ES6+ syntax
+- Optimize lifecycle and state management with React Hooks (useState, useEffect, useMemo, etc.)
+- Use plain JavaScript instead of TypeScript
+- Do not use React StrictMode
+
+### Modularity
+- Break components into logical, reusable parts
+- Organize file and folder structure in an organized, readable and scalable way
+
+### State Management
+- Choose Context API or Zustand for small and medium-sized applications
+- Use Redux Toolkit or similar for complex applications with global state requirements
+
+## 3. Accessibility and Semantics
+
+### Semantic HTML
+- Use appropriate HTML tags for better accessibility and SEO
+- Add ARIA tags and roles where necessary
+
+### Keyboard and Screen Reader Support
+- Ensure all interactive elements are keyboard accessible
+- Apply screen reader-friendly design principles
+
+## 4. Performance Optimizations
+
+### Lazy Loading & Code Splitting
+- Use dynamic imports to avoid unnecessary code loading
+- Implement React.lazy and Suspense for component lazy loading
+
+### Memoization
+- Reduce unnecessary renders with useMemo and useCallback
+
+### Caching
+- Implement SWR or React Query for API data caching
+
+## 5. Code Quality and Standards
+
+### Clean Code Principles
+- Follow DRY (Don't Repeat Yourself) principle
+- Use meaningful variable, function and component names
+
+### Documentation
+- Add comments for complex functions, algorithms and critical code
+- Provide API documentation using JSDoc or similar
+
+### Linting and Formatting
+- Use ESLint, Prettier and Stylelint for code standards
+- Include static analysis in CI/CD processes
+
+## 6. Test Strategy
+
+### Unit and Integration Testing
+- Write tests for critical components using Jest and React Testing Library
+
+### E2E Testing
+- Verify user flows with Cypress or Playwright
+
+### Test Continuity
+- Automate test runs in development phases (pre-commit hooks, CI/CD)
+
+## 7. Security Measures
+
+### Input Validation
+- Sanitize and validate all user input
+- Configure firewall and CORS policies correctly
+
+### Dependency Management
+- Perform regular dependency updates
+- Monitor for vulnerabilities
+
+### Security Testing
+- Conduct periodic application penetration tests
+
+## 8. Router and Navigation
+
+### React Router v6
+- Implement consistent routing with React Router v6
+- Configure dynamic and protected routes properly
+
+### Navigation Flow
+- Create intuitive navigation prioritizing user experience
+
+## 9. DevOps and Continuity
+
+### CI/CD Integration
+- Automate test, build and deploy processes
+- Use GitHub Actions, GitLab CI or Jenkins
+
+### Code Review
+- Implement peer-review for pull requests
+- Use automated code review tools
+
+## 10. Additional Tools and Advanced Applications
+
+### Rendering Strategies
+- Consider SSR or SSG needs with Next.js or similar frameworks
+
+### API Design
+- Centralize HTTP clients (Axios, Fetch)
+- Implement error handling and retry mechanisms
+
+### Monitoring
+- Integrate error reporting and performance monitoring (Sentry, LogRocket)
+
+### Version Control
+- Follow Conventional Commits standards
+- Implement Git Flow or similar branch strategy
