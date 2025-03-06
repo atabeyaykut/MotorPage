@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { cn } from "@/lib/utils";
+import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
+import { cn } from "../lib/utils";
+import { Button } from "./ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const news = [
   {
@@ -25,60 +27,61 @@ const news = [
   }
 ];
 
-const ANIMATION_DURATION = 8000; // 8 seconds for the full kenburns effect
-const TRANSITION_DURATION = 822; // 822ms for slide transitions
+const ANIMATION_DURATION = 8000;
+const TRANSITION_DURATION = 822;
+
+// Lazy loaded image component with error handling
+const LazyImage = React.lazy(() => import('./LazyImage'));
+
+// Fallback component for image loading errors
+const ImageFallback = () => (
+  <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+    <span className="text-white/50">Görsel Yüklenemedi</span>
+  </div>
+);
 
 const NewsSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  const startKenburnsAnimation = useCallback(() => {
-    setIsAnimating(true);
-    // After animation completes, move to next slide
-    setTimeout(() => {
+  // Memoize slide transition functions
+  const slideTransition = useMemo(() => ({
+    start: () => {
       setIsTransitioning(true);
       setIsAnimating(false);
-      setTimeout(() => {
-        setCurrentSlide((prev) => (prev + 1) % news.length);
-        setIsTransitioning(false);
-        setIsAnimating(true);
-      }, TRANSITION_DURATION);
-    }, ANIMATION_DURATION);
-  }, []);
-
-  const changeSlide = useCallback((index) => {
-    if (currentSlide === index) return;
-    setIsTransitioning(true);
-    setIsAnimating(false);
-    setTimeout(() => {
-      setCurrentSlide(index);
+    },
+    end: (newIndex) => {
+      setCurrentSlide(newIndex);
       setIsTransitioning(false);
       setIsAnimating(true);
-    }, TRANSITION_DURATION);
-  }, [currentSlide]);
+    }
+  }), []);
 
   const prevSlide = useCallback(() => {
     if (isTransitioning) return;
-    setIsTransitioning(true);
-    setIsAnimating(false);
+    slideTransition.start();
     setTimeout(() => {
-      setCurrentSlide((prev) => (prev - 1 + news.length) % news.length);
-      setIsTransitioning(false);
-      setIsAnimating(true);
+      slideTransition.end((currentSlide - 1 + news.length) % news.length);
     }, TRANSITION_DURATION);
-  }, [isTransitioning]);
+  }, [currentSlide, isTransitioning, slideTransition]);
 
   const nextSlide = useCallback(() => {
     if (isTransitioning) return;
-    setIsTransitioning(true);
-    setIsAnimating(false);
+    slideTransition.start();
     setTimeout(() => {
-      setCurrentSlide((prev) => (prev + 1) % news.length);
-      setIsTransitioning(false);
-      setIsAnimating(true);
+      slideTransition.end((currentSlide + 1) % news.length);
     }, TRANSITION_DURATION);
-  }, [isTransitioning]);
+  }, [currentSlide, isTransitioning, slideTransition]);
+
+  const changeSlide = useCallback((index) => {
+    if (currentSlide === index || isTransitioning) return;
+    slideTransition.start();
+    setTimeout(() => {
+      slideTransition.end(index);
+    }, TRANSITION_DURATION);
+  }, [currentSlide, isTransitioning, slideTransition]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -86,6 +89,9 @@ const NewsSlider = () => {
     }, ANIMATION_DURATION + TRANSITION_DURATION);
     return () => clearInterval(timer);
   }, [nextSlide]);
+
+  // Memoize current slide data
+  const currentSlideData = useMemo(() => news[currentSlide], [currentSlide]);
 
   return (
     <section className="relative bg-[#1C1F26] py-16">
@@ -101,49 +107,49 @@ const NewsSlider = () => {
               isAnimating && "scale-110 translate-x-[8.33%]",
               isTransitioning && "opacity-0 duration-[822ms]"
             )}>
-              <img
-                src={news[currentSlide].image}
-                alt=""
-                className="w-full h-full object-cover"
-              />
+              <Suspense fallback={<ImageFallback />}>
+                <LazyImage
+                  src={currentSlideData.image}
+                  alt=""
+                  className="w-full h-full object-cover"
+                  onError={() => setHasError(true)}
+                />
+              </Suspense>
+              {hasError && <ImageFallback />}
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
           </div>
 
           {/* Navigation Arrows */}
           <div className="absolute bottom-8 left-8 flex gap-4">
-            <button
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={prevSlide}
               className={cn(
-                "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm",
-                "flex items-center justify-center",
-                "text-white hover:text-red-500 hover:bg-white/20 transition-all",
-                "focus:outline-none focus:ring-2 focus:ring-white/50",
+                "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm p-0",
+                "text-white hover:text-red-500 hover:bg-white/20",
                 isTransitioning && "pointer-events-none opacity-50"
               )}
-              aria-label="Önceki haber"
               disabled={isTransitioning}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="transition-transform group-hover:-translate-x-0.5">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button
+              <ChevronLeft className="h-5 w-5 transition-transform group-hover:-translate-x-0.5" />
+              <span className="sr-only">Önceki haber</span>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={nextSlide}
               className={cn(
-                "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm",
-                "flex items-center justify-center",
-                "text-white hover:text-red-500 hover:bg-white/20 transition-all",
-                "focus:outline-none focus:ring-2 focus:ring-white/50",
+                "w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm p-0",
+                "text-white hover:text-red-500 hover:bg-white/20",
                 isTransitioning && "pointer-events-none opacity-50"
               )}
-              aria-label="Sonraki haber"
               disabled={isTransitioning}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="transition-transform group-hover:translate-x-0.5">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+              <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+              <span className="sr-only">Sonraki haber</span>
+            </Button>
           </div>
 
           {/* Text Content */}
@@ -153,24 +159,24 @@ const NewsSlider = () => {
                 "text-3xl font-bold text-white mb-4 transition-all duration-[822ms] ease",
                 isTransitioning && "opacity-0 translate-y-20"
               )}>
-                <span className="text-red-500 first-word">{news[currentSlide].title.split(' ')[0]}</span>
-                {' ' + news[currentSlide].title.split(' ').slice(1).join(' ')}
+                <span className="text-red-500 first-word">{currentSlideData.title.split(' ')[0]}</span>
+                {' ' + currentSlideData.title.split(' ').slice(1).join(' ')}
               </h3>
               <div className={cn(
                 "transition-all duration-[822ms] ease",
                 isTransitioning && "opacity-0 translate-y-[60px]"
               )}>
                 <p className="text-white/80 mb-6 max-w-2xl">
-                  {news[currentSlide].description}
+                  {currentSlideData.description}
                 </p>
               </div>
               <div className={cn(
                 "transition-all duration-[822ms] ease",
                 isTransitioning && "opacity-0 translate-y-[150px]"
               )}>
-                <a
-                  href="#"
-                  className="group inline-flex items-center bg-transparent text-white hover:text-red-500 transition-colors w-fit"
+                <Button
+                  variant="ghost"
+                  className="group inline-flex items-center bg-transparent text-white hover:text-red-500 transition-colors w-fit p-0 h-auto hover:bg-transparent"
                 >
                   <span className="mr-2">DEVAMINI OKU</span>
                   <svg
@@ -195,7 +201,7 @@ const NewsSlider = () => {
                       strokeWidth="1.5"
                     />
                   </svg>
-                </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -205,7 +211,7 @@ const NewsSlider = () => {
             "absolute top-8 right-8 bg-white/10 backdrop-blur-sm px-4 py-2 rounded transition-all duration-[822ms]",
             isTransitioning && "opacity-0"
           )}>
-            <span className="text-white font-medium">{news[currentSlide].date}</span>
+            <span className="text-white font-medium">{currentSlideData.date}</span>
           </div>
         </div>
       </div>
