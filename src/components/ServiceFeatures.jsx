@@ -6,43 +6,37 @@ const features = [
     id: 1,
     title: "Online Randevu",
     icon: "/icons/calendar.svg",
-    description: "KORLAS olarak siz değerli müşterilerimize sadakat programımız sayesinde iskontolar yapıyoruz. Olağan bakım süresinde tespit ettiğimiz arızaları da hizmetleri önce sizden onay alarak onarıyoruz.",
-    image: "https://picsum.photos/id/133/1200/800"
+    description: "KORLAS olarak siz değerli müşterilerimize sadakat programımız sayesinde iskontolar yapıyoruz. Olağan bakım süresinde tespit ettiğimiz arızaları da hizmetleri önce sizden onay alarak onarıyoruz."
   },
   {
     id: 2,
     title: "İyi Niyet Garantisi",
     icon: "/icons/guarantee.svg",
-    description: "Mekaniklerimiz, distribütörü olduğumuz tüm markalar tarafından da denetimden geçiyor. Her yıl sertifikalarını yenileyerek güncel kalıyorlar.",
-    image: "https://picsum.photos/id/134/1200/800"
+    description: "Mekaniklerimiz, distribütörü olduğumuz tüm markalar tarafından da denetimden geçiyor. Her yıl sertifikalarını yenileyerek güncel kalıyorlar."
   },
   {
     id: 3,
     title: "Elektronik Hasar Kontrolü",
     icon: "/icons/diagnostic.svg",
-    description: "En son teknoloji diagnostik cihazlarımızla elektronik hasar kontrolü yapıyoruz.",
-    image: "https://picsum.photos/id/135/1200/800"
+    description: "En son teknoloji diagnostik cihazlarımızla elektronik hasar kontrolü yapıyoruz."
   },
   {
     id: 4,
     title: "En Deneyimli Servis",
     icon: "/icons/service.svg",
-    description: "Uzman servis ekibimizle en kaliteli hizmeti sunuyoruz.",
-    image: "https://picsum.photos/id/136/1200/800"
+    description: "Uzman servis ekibimizle en kaliteli hizmeti sunuyoruz."
   },
   {
     id: 5,
     title: "Sertifikalı Mekanikler",
     icon: "/icons/certificate.svg",
-    description: "Tüm mekaniklerimiz sertifikalı ve sürekli eğitimlerle kendilerini geliştiriyor.",
-    image: "https://picsum.photos/id/137/1200/800"
+    description: "Tüm mekaniklerimiz sertifikalı ve sürekli eğitimlerle kendilerini geliştiriyor."
   },
   {
     id: 6,
     title: "Ücretsiz Motosiklet Yıkama",
     icon: "/icons/wash.svg",
-    description: "Her servis sonrası ücretsiz motosiklet yıkama hizmeti sunuyoruz.",
-    image: "https://picsum.photos/id/138/1200/800"
+    description: "Her servis sonrası ücretsiz motosiklet yıkama hizmeti sunuyoruz."
   }
 ];
 
@@ -82,10 +76,7 @@ FeatureCircle.displayName = 'FeatureCircle';
 
 const ServiceFeatures = () => {
   const [activeFeature, setActiveFeature] = useState(null);
-  const [centerContent, setCenterContent] = useState({
-    description: features[0].description,
-    image: features[0].image
-  });
+  const [description, setDescription] = useState(features[0].description);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = useCallback((e) => {
@@ -97,18 +88,12 @@ const ServiceFeatures = () => {
 
   const handleFeatureChange = useCallback((feature) => {
     setActiveFeature(feature.id);
-    setCenterContent({
-      description: feature.description,
-      image: feature.image
-    });
+    setDescription(feature.description);
   }, []);
 
   const handleFeatureReset = useCallback(() => {
     setActiveFeature(null);
-    setCenterContent({
-      description: features[0].description,
-      image: features[0].image
-    });
+    setDescription(features[0].description);
   }, []);
 
   const calculatePosition = useCallback((index, totalItems) => {
@@ -153,11 +138,11 @@ const ServiceFeatures = () => {
           {/* Background image with gradient overlay */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
-              src={centerContent.image}
+              src="https://picsum.photos/id/133/1200/800"
               alt=""
               className="w-[105%] h-[105%] object-cover hover:scale-110"
               style={{
-                transform: `translate(${(mousePosition.x - 0.5) * -20}px, ${(mousePosition.y - 0.5) * -20}px)`,
+                transform: `translate(${(mousePosition.x - 0.5) * -100}px, ${(mousePosition.y - 0.5) * -100}px)`,
                 transformOrigin: 'center',
                 margin: '-2.5%'
               }}
@@ -176,7 +161,7 @@ const ServiceFeatures = () => {
             aria-live="polite"
           >
             <p className="text-white text-lg">
-              {centerContent.description}
+              {description}
             </p>
           </div>
 
