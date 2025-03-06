@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { cn } from "@/lib/utils";
+import NewsSlider from './NewsSlider';
 
 const features = [
   {
@@ -126,52 +127,55 @@ const ServiceFeatures = () => {
   ), [activeFeature, handleFeatureChange, handleFeatureReset, calculatePosition]);
 
   return (
-    <section
-      className="bg-[#1C1F26] py-20 relative overflow-hidden"
-      aria-label="Servis Özellikleri"
-    >
-      <div className="max-w-7xl mx-auto px-4">
-        <div
-          className="relative w-full aspect-[16/9] flex items-center justify-center"
-          onMouseMove={handleMouseMove}
-        >
-          {/* Background image with gradient overlay */}
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="https://picsum.photos/id/133/1200/800"
-              alt=""
-              className="w-[105%] h-[105%] object-cover hover:scale-110"
-              style={{
-                transform: `translate(${(mousePosition.x - 0.5) * -100}px, ${(mousePosition.y - 0.5) * -100}px)`,
-                transformOrigin: 'center',
-                margin: '-2.5%'
-              }}
-              aria-hidden="true"
-            />
-            <div
-              className="absolute inset-0 bg-gradient-to-t from-[#1C1F26] via-[#1C1F26]/80 to-transparent"
-              aria-hidden="true"
-            />
-          </div>
-
-          {/* Center text */}
+    <>
+      <section
+        className="bg-[#1C1F26] py-20 relative overflow-hidden"
+        aria-label="Servis Özellikleri"
+      >
+        <div className="max-w-7xl mx-auto px-4">
           <div
-            className="relative z-10 text-center max-w-2xl mx-auto px-4"
-            role="region"
-            aria-live="polite"
+            className="relative w-full aspect-[16/9] flex items-center justify-center"
+            onMouseMove={handleMouseMove}
           >
-            <p className="text-white text-lg">
-              {description}
-            </p>
-          </div>
+            {/* Background image with gradient overlay */}
+            <div className="absolute inset-0 z-0 overflow-hidden">
+              <img
+                src="https://picsum.photos/id/133/1200/800"
+                alt=""
+                className="w-[105%] h-[105%] object-cover hover:scale-110"
+                style={{
+                  transform: `translate(${(mousePosition.x - 0.5) * -100}px, ${(mousePosition.y - 0.5) * -100}px)`,
+                  transformOrigin: 'center',
+                  margin: '-2.5%'
+                }}
+                aria-hidden="true"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-[#1C1F26] via-[#1C1F26]/80 to-transparent"
+                aria-hidden="true"
+              />
+            </div>
 
-          {/* Feature circles */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            {featureElements}
+            {/* Center text */}
+            <div
+              className="relative z-10 text-center max-w-2xl mx-auto px-4"
+              role="region"
+              aria-live="polite"
+            >
+              <p className="text-white text-lg">
+                {description}
+              </p>
+            </div>
+
+            {/* Feature circles */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              {featureElements}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <NewsSlider />
+    </>
   );
 };
 
