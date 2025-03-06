@@ -7,7 +7,7 @@ const features = [
     id: 1,
     title: "Online Randevu",
     icon: "/icons/calendar.svg",
-    description: "KORLAS olarak siz değerli müşterilerimize sadakat programımız sayesinde iskontolar yapıyoruz. Olağan bakım süresinde tespit ettiğimiz arızaları da hizmetleri önce sizden onay alarak onarıyoruz."
+    description: "DARIC olarak siz değerli müşterilerimize sadakat programımız sayesinde iskontolar yapıyoruz. Olağan bakım süresinde tespit ettiğimiz arızaları da hizmetleri önce sizden onay alarak onarıyoruz."
   },
   {
     id: 2,
