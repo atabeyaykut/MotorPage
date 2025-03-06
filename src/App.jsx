@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import UnderConstruction from './pages/UnderConstruction';
 import HomeSlider from './components/HomeSlider';
-import CategorySlider from './components/CategorySlider';
+import AboutSection from './components/AboutSection';
+import ServiceFeatures from './components/ServiceFeatures';
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
             <Route path="/" element={
               <>
                 <HomeSlider />
-                <CategorySlider />
+                <AboutSection />
+                <ServiceFeatures />
               </>
             } />
             <Route path="/markalar/*" element={<UnderConstruction />} />
