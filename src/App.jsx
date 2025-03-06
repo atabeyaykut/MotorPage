@@ -12,9 +12,13 @@ const App = () => {
       <div className="min-h-screen bg-[#1C1F26]">
         <Header />
         <main>
-          <CategorySlider />
           <Routes>
-            <Route path="/" element={<HomeSlider />} />
+            <Route path="/" element={
+              <>
+                <HomeSlider />
+                <CategorySlider />
+              </>
+            } />
             <Route path="/markalar/*" element={<UnderConstruction />} />
             <Route path="/kurumsal/*" element={<UnderConstruction />} />
             <Route path="/bayilerimiz/*" element={<UnderConstruction />} />
