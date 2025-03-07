@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect } from 'react';
 import ModelCategory from "@/components/motorcycle/ModelCategory";
+import { cn } from "@/lib/utils";
 
 /**
  * @component DucatiPage
@@ -85,19 +86,6 @@ const DucatiPage = () => {
           link: "/markalar/ducati/monster"
         }
       ]
-    },
-    {
-      title: "MONSTER",
-      models: [
-        {
-          id: 8,
-          name: "Monster",
-          description: "Urban Naked",
-          image: "https://picsum.photos/seed/monster/800/600",
-          modelYear: null,
-          link: "/markalar/ducati/monster"
-        }
-      ]
     }
   ], []);
 
@@ -113,25 +101,37 @@ const DucatiPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto py-12 px-4" role="main">
-      <section className="mb-16" aria-label="Ducati Logo">
-        <img
-          src="https://picsum.photos/seed/ducati-logo/400/100"
-          alt="Ducati Logo"
-          className="h-12 mx-auto object-contain"
-          loading="eager"
-          width="400"
-          height="100"
-        />
-      </section>
+    <div className={cn(
+      "min-h-screen",
+      "bg-[#F7F8FA]"
+    )}>
+      <div className={cn(
+        "container mx-auto",
+        "py-12 px-4"
+      )} role="main">
+        <section className="mb-16" aria-label="Ducati Logo">
+          <img
+            src="https://picsum.photos/seed/ducati-logo/400/100"
+            alt="Ducati Logo"
+            className={cn(
+              "h-12",
+              "mx-auto",
+              "object-contain"
+            )}
+            loading="eager"
+            width="400"
+            height="100"
+          />
+        </section>
 
-      {categories.map((category) => (
-        <ModelCategory
-          key={category.title}
-          title={category.title}
-          models={category.models}
-        />
-      ))}
+        {categories.map((category) => (
+          <ModelCategory
+            key={category.title}
+            title={category.title}
+            models={category.models}
+          />
+        ))}
+      </div>
     </div>
   );
 };
