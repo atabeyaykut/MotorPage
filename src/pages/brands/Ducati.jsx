@@ -84,6 +84,22 @@ const DucatiPage = () => {
           image: "https://picsum.photos/seed/monster/800/600",
           modelYear: null,
           link: "/markalar/ducati/monster"
+        },
+        {
+          id: 9,
+          name: "Monster SP",
+          description: "Urban Naked",
+          image: "https://picsum.photos/seed/monster-sp/800/600",
+          modelYear: null,
+          link: "/markalar/ducati/monster-sp"
+        },
+        {
+          id: 10,
+          name: "Monster Plus",
+          description: "Urban Naked",
+          image: "https://picsum.photos/seed/monster-plus/800/600",
+          modelYear: "2025",
+          link: "/markalar/ducati/monster-plus"
         }
       ]
     }

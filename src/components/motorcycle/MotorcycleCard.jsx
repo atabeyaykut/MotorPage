@@ -1,70 +1,53 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Bike } from "lucide-react";
 
 /**
  * @component ModelBadge
- * @description Displays a model year badge for new motorcycle models
+ * @description Displays a badge for new model year motorcycles
  */
 const ModelBadge = React.memo(({ year }) => (
-  <span 
-    className={cn(
-      "absolute top-2 right-2 z-10",
-      "bg-[#D4001A] text-white",
-      "px-2 py-0.5",
-      "text-sm font-medium"
-    )}
-    role="status" 
-    aria-label={`${year} model`}
-  >
-    Model Yılı {year}
-  </span>
+  <div className={cn(
+    "absolute top-2 right-2 z-10",
+    "px-2 py-1",
+    "bg-primary text-primary-foreground",
+    "text-xs font-medium",
+    "rounded-md"
+  )}>
+    {year}
+  </div>
 ));
 
 ModelBadge.displayName = 'ModelBadge';
 
 /**
  * @component ModelImage
- * @description Displays a motorcycle model image with hover effects
+ * @description Displays a motorcycle model image with hover effect and lazy loading
  */
 const ModelImage = React.memo(({ name, src }) => (
-  <img
-    src={src}
-    alt={`${name} motosiklet`}
-    className={cn(
-      "w-full h-full object-contain",
-      "mix-blend-multiply hover:mix-blend-normal",
-      "transition-all duration-300 group-hover:scale-105"
-    )}
-    loading="lazy"
-    width="800"
-    height="600"
-  />
+  <div className="relative w-full h-full overflow-hidden">
+    <img
+      src={src}
+      alt={name}
+      className={cn(
+        "w-full h-full",
+        "object-cover",
+        "group-hover:scale-105",
+        "transition-transform duration-500 ease-out"
+      )}
+      loading="lazy"
+      width={800}
+      height={600}
+    />
+  </div>
 ));
 
 ModelImage.displayName = 'ModelImage';
 
-const buttonBaseStyles = cn(
-  "min-w-32 text-sm font-medium",
-  "px-4 py-1 h-8",
-  "rounded-none",
-  "transition-colors duration-200"
-);
-
-const buttonVariants = {
-  default: cn(
-    buttonBaseStyles,
-    "bg-[#D4001A] hover:bg-[#B30016] text-white"
-  ),
-  disabled: cn(
-    buttonBaseStyles,
-    "bg-gray-300 text-gray-600 cursor-not-allowed"
-  )
-};
-
 /**
  * @component MotorcycleCard
- * @description Displays a motorcycle model card with image, details, and action button
+ * @description Displays a motorcycle model card with image, details, and lazy loading animation
  * @param {Object} model - The motorcycle model data
  * @param {string} model.name - The name of the motorcycle
  * @param {string} model.description - A short description of the motorcycle
@@ -74,38 +57,81 @@ const buttonVariants = {
  * @param {boolean} [model.comingSoon] - Whether the motorcycle is coming soon
  */
 const MotorcycleCard = React.memo(({ model }) => {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-4');
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '30px'
+      }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col items-center group">
-      <div className="relative w-full aspect-[4/3] mb-4 bg-white">
+    <div 
+      ref={cardRef}
+      className={cn(
+        "group",
+        "flex flex-col items-center",
+        "opacity-0 translate-y-4",
+        "transition-all duration-700 ease-out",
+        "p-4 rounded-lg",
+        "bg-card text-card-foreground",
+        "hover:shadow-lg",
+        "dark:hover:shadow-primary/5"
+      )}
+    >
+      <div className="relative w-full aspect-[4/3] mb-4 rounded-md overflow-hidden bg-muted">
         {model.modelYear && <ModelBadge year={model.modelYear} />}
         <ModelImage name={model.name} src={model.image} />
       </div>
       
-      <h3 className="text-base font-semibold text-center mb-1">{model.name}</h3>
-      <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-3">
+      <h3 className="text-base font-semibold text-center mb-1">
+        {model.name}
+      </h3>
+      <p className="text-sm text-muted-foreground text-center mb-4 line-clamp-2">
         {model.description}
       </p>
       
       {model.comingSoon ? (
         <Button 
-          className={buttonVariants.disabled}
           disabled 
           variant="outline"
+          className="w-full"
           aria-label="Bu model henüz satışta değil"
         >
           Çok Yakında
         </Button>
       ) : (
         <Button 
-          className={buttonVariants.default}
           asChild
           variant="default"
+          className="w-full bg-primary hover:bg-primary/90"
         >
           <a 
             href={model.link}
             aria-label={`${model.name} detaylarını incele`}
-            className="text-center"
+            className="inline-flex items-center justify-center"
           >
+            <Bike className="w-4 h-4 mr-2" />
             Detaylı İncele
           </a>
         </Button>

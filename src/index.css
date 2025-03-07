@@ -4,117 +4,87 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 100%;
+    --foreground: 220 13% 9%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 220 13% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 220 13% 9%;
     --primary: 346 100% 41%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 220 13% 9%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 13% 45%;
+    --accent: 220 13% 91%;
+    --accent-foreground: 220 13% 9%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 346 100% 41%;
     --radius: 0.5rem;
   }
-
+ 
   .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-    --card: 24 9.8% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 95%;
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+    --card: 220 13% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 13% 9%;
+    --popover-foreground: 210 40% 98%;
     --primary: 346 100% 41%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 12 6.5% 15.1%;
-    --accent-foreground: 0 0% 98%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 13% 21%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 13% 21%;
+    --muted-foreground: 220 13% 65%;
+    --accent: 220 13% 21%;
+    --accent-foreground: 210 40% 98%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 85.7% 97.3%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 21%;
+    --input: 220 13% 21%;
     --ring: 346 100% 41%;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  .nav-link {
+    @apply px-4 py-2 text-sm font-medium transition-colors hover:text-primary;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  .nav-link-active {
+    @apply text-primary;
   }
+
+  .dropdown-content {
+    @apply origin-top animate-slide-down;
+  }
+
+  .dropdown-item {
+    @apply opacity-0;
+    animation: fade-in 0.3s ease-out forwards;
+  }
+
+  .dropdown-item:nth-child(1) { animation-delay: 50ms; }
+  .dropdown-item:nth-child(2) { animation-delay: 100ms; }
+  .dropdown-item:nth-child(3) { animation-delay: 150ms; }
+  .dropdown-item:nth-child(4) { animation-delay: 200ms; }
+  .dropdown-item:nth-child(5) { animation-delay: 250ms; }
+  .dropdown-item:nth-child(6) { animation-delay: 300ms; }
+  .dropdown-item:nth-child(7) { animation-delay: 350ms; }
+  .dropdown-item:nth-child(8) { animation-delay: 400ms; }
+  .dropdown-item:nth-child(9) { animation-delay: 450ms; }
 }
 
-.dropdown-content[data-state='open'] {
-  transform-origin: top;
-  animation: dropdownEnter 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity;
-}
-
-.dropdown-content[data-state='closed'] {
-  transform-origin: top;
-  animation: dropdownExit 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity;
-}
-
-.dropdown-item {
-  opacity: 0;
-  animation: fadeScale 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  will-change: transform, opacity;
-}
-
-@keyframes dropdownEnter {
+@keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(-8px) scale(0.98);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
-
-@keyframes dropdownExit {
-  from {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-8px) scale(0.98);
-  }
-}
-
-@keyframes fadeScale {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.dropdown-item:nth-child(1) { animation-delay: 50ms; }
-.dropdown-item:nth-child(2) { animation-delay: 100ms; }
-.dropdown-item:nth-child(3) { animation-delay: 150ms; }
-.dropdown-item:nth-child(4) { animation-delay: 200ms; }
-.dropdown-item:nth-child(5) { animation-delay: 250ms; }
-.dropdown-item:nth-child(6) { animation-delay: 300ms; }
-.dropdown-item:nth-child(7) { animation-delay: 350ms; }
-.dropdown-item:nth-child(8) { animation-delay: 400ms; }
-.dropdown-item:nth-child(9) { animation-delay: 450ms; }
