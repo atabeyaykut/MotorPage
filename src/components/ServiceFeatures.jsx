@@ -160,8 +160,16 @@ const ServiceFeatures = () => {
               role="region"
               aria-live="polite"
             >
-              <p className="text-white text-lg font-light">
-                {description}
+              <p className="text-lg text-white font-normal">
+                {description.includes("DARIC") ? (
+                  <>
+                    <span className="text-primary">{description.split("DARIC")[0]}</span>
+                    <span className="text-primary font-bold">DARIC</span>
+                    <span>{description.split("DARIC")[1]}</span>
+                  </>
+                ) : (
+                  description
+                )}
               </p>
             </div>
 

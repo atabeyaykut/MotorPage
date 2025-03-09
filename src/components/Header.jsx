@@ -24,10 +24,6 @@ const MENU_ITEMS = {
     { name: "Hakkımızda", path: "/kurumsal/hakkimizda" },
     { name: "Misyon & Vizyon", path: "/kurumsal/misyon-vizyon" },
     { name: "İnsan Kaynakları", path: "/kurumsal/insan-kaynaklari" }
-  ],
-  bayilerimiz: [
-    { name: "Bayi Listesi", path: "/bayilerimiz/liste" },
-    { name: "Bayi Başvuru", path: "/bayilerimiz/basvuru" }
   ]
 };
 
@@ -75,11 +71,6 @@ const Header = () => {
               title="Kurumsal"
               items={MENU_ITEMS.kurumsal}
               type="kurumsal"
-            />
-            <NavigationDropdown
-              title="Bayilerimiz"
-              items={MENU_ITEMS.bayilerimiz}
-              type="bayilerimiz"
             />
 
             {navLinks.map(link => (
