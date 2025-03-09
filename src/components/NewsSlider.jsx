@@ -96,7 +96,7 @@ const NewsSlider = () => {
   return (
     <section className="relative py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-white mb-8 text-center">HABERLERİMİZ</h2>
+        <h2 className="text-2xl font-bold text-white text-[#1f1f1f] mb-8 text-start border-b-2 border-gray-200">HABERLERİMİZ</h2>
 
         <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg group">
           {/* Main Content */}

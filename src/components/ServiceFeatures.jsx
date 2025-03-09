@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { cn } from "@/lib/utils";
 import NewsSlider from './NewsSlider';
 
@@ -45,8 +45,8 @@ const FeatureCircle = React.memo(({ feature, isActive, onHover, onLeave }) => (
   <div
     className={cn(
       "w-28 h-28 bg-white rounded-full flex flex-col items-center justify-center p-3",
-      "cursor-pointer",
-      "hover:shadow-lg hover:shadow-white/20 hover:bg-opacity-100",
+      "cursor-pointer transition-all duration-300 ease-in-out",
+      "hover:shadow-lg hover:shadow-white/20 hover:bg-opacity-100 hover:scale-110",
       "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1C1F26]",
       isActive ? "bg-opacity-100 scale-110" : "bg-opacity-90"
     )}
@@ -78,7 +78,7 @@ FeatureCircle.displayName = 'FeatureCircle';
 const ServiceFeatures = () => {
   const [activeFeature, setActiveFeature] = useState(null);
   const [description, setDescription] = useState(features[0].description);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 0.5, y: 0.5 });
 
   const handleMouseMove = useCallback((e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -99,7 +99,7 @@ const ServiceFeatures = () => {
 
   const calculatePosition = useCallback((index, totalItems) => {
     const angle = (index * (360 / totalItems) - 90) * (Math.PI / 180);
-    const radius = 300;
+    const radius = 300; // Adjusted radius for better positioning
     return {
       left: `calc(50% + ${Math.cos(angle) * radius}px)`,
       top: `calc(50% + ${Math.sin(angle) * radius}px)`,
@@ -129,12 +129,12 @@ const ServiceFeatures = () => {
   return (
     <>
       <section
-        className="py-20 relative max-h-screen overflow-hidden"
+        className="relative h-screen max-h-[800px] overflow-hidden bg-[#1C1F26]"
         aria-label="Servis Özellikleri"
       >
-        <div className="max-w-full mx-auto">
+        <div className="w-full h-full flex justify-center">
           <div
-            className="relative bottom-40 w-full aspect-[16/9] flex items-center justify-center"
+            className="relative w-full aspect-[16/6] flex items-center justify-center"
             onMouseMove={handleMouseMove}
           >
             {/* Background image with gradient overlay */}
@@ -142,11 +142,9 @@ const ServiceFeatures = () => {
               <img
                 src="https://picsum.photos/id/133/1800/2200"
                 alt=""
-                className="w-[120%] h-[120%] object-cover hover:scale-110"
+                className="w-[125%] h-[125%] object-cover object-center"
                 style={{
-                  transform: `translate(${(mousePosition.x - 0.5) * -100}px, ${(mousePosition.y - 0.5) * -100}px)`,
-                  transformOrigin: 'center',
-
+                  transform: `scale(1.1) translate(${(mousePosition.x - 0.5) * -30}px, ${(mousePosition.y - 0.5) * -30}px)`,
                 }}
                 aria-hidden="true"
               />
@@ -162,7 +160,7 @@ const ServiceFeatures = () => {
               role="region"
               aria-live="polite"
             >
-              <p className="text-white text-lg">
+              <p className="text-white text-lg font-light">
                 {description}
               </p>
             </div>
