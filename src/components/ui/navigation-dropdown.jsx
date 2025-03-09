@@ -48,6 +48,7 @@ const NavigationDropdown = ({ title, items, columns = 1, type = "markalar" }) =>
       <NavigationMenuTrigger
         className="bg-transparent text-white "
         aria-label={`${title} menüsünü aç`}
+        showChevron={false}
       >
         {title}
       </NavigationMenuTrigger>
