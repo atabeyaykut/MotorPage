@@ -11,7 +11,7 @@ import DucatiPage from './pages/brands/Ducati';
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-[#1C1F26]">
+      <div className="min-h-screen ">
         <Header />
         <main>
           <Routes>
