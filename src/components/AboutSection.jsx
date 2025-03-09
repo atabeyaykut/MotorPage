@@ -13,28 +13,28 @@ const AboutSection = () => {
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>
-          <div className="space-y-6">
-            <h2 
+          <div className="space-y-6 h-full flex flex-col justify-center items-end">
+            <h2
               id="about-heading"
-              className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl "
             >
               1994'TEN BERİ MOTOSİKLET DÜNYASINDA EN YÜKSEK KALİTE
             </h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Hayatınızın herhangi bir döneminde motosikletle ilgilendiyseniz bizi zaten tanıyorsunuz. 
-                1994 yılında motosiklet tutkunları alanında profesyonel anlayışımızla başladığımız ticari 
-                serüvenimize Ducati, Triumph, Royal Alloy, Fanatic, Moto Morini ve İtaljet markalarının 
+                Hayatınızın herhangi bir döneminde motosikletle ilgilendiyseniz bizi zaten tanıyorsunuz.
+                1994 yılında motosiklet tutkunları alanında profesyonel anlayışımızla başladığımız ticari
+                serüvenimize Ducati, Triumph, Royal Alloy, Fanatic, Moto Morini ve İtaljet markalarının
                 distribütörlüğü ile devam ediyoruz.
               </p>
               <p>
-                2023 yılının son çeyreğinde açtığımız Watergarden'da bulunan merkez Showroom hacmini 2600m2 
-                ye çıkardık. Hem servis, hem showroom, hem de çalışma alanlarımız genişletildi. A+ Hizmet 
-                verme döneminde büyüme hedefimize kararlılıkla yürüyerek müşterilerimize yüksek standartlarda 
+                2023 yılının son çeyreğinde açtığımız Watergarden'da bulunan merkez Showroom hacmini 2600m2
+                ye çıkardık. Hem servis, hem showroom, hem de çalışma alanlarımız genişletildi. A+ Hizmet
+                verme döneminde büyüme hedefimize kararlılıkla yürüyerek müşterilerimize yüksek standartlarda
                 hizmet verdiğimiz bir noktaya doğru emin adımlarla ilerliyoruz.
               </p>
             </div>
-            <div className="pt-4">
+            <div className="pt-4 ">
               <Link
                 to="/kurumsal/hakkimizda"
                 className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
