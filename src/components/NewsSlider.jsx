@@ -5,7 +5,7 @@ import { cn } from "../lib/utils"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const TRANSITION_DURATION = 300
+const TRANSITION_DURATION = 100
 const ANIMATION_DURATION = 7000
 
 const news = [
@@ -94,23 +94,24 @@ const NewsSlider = () => {
       <div className="relative w-full h-full">
         <div className="absolute inset-0">
           <Suspense fallback={<ImageFallback />}>
-            <div 
-              className={cn(
-                "absolute inset-0 w-full h-full",
-                "transition-all duration-[7000ms] ease-in-out",
-                "transform-gpu",
-                isKenburnsActive ? [
-                  "scale-[1.15]",
-                  "animate-kenburns",
-                  "brightness-110",
-                  "contrast-110"
-                ].join(" ") : [
-                  "scale-100",
-                  "brightness-100",
-                  "contrast-100"
-                ].join(" ")
-              )}
-            >
+          <div 
+  className={cn(
+    "absolute inset-0 w-full h-full",
+    "transform-gpu",
+    "transition-opacity duration-800 ease-in-out", 
+    isTransitioning ? "opacity-0" : "opacity-100", 
+    isKenburnsActive ? [
+      "scale-[1.15]",
+      "animate-kenburns",
+      "brightness-110",
+      "contrast-110"
+    ].join(" ") : [
+      "scale-100",
+      "brightness-100",
+      "contrast-100"
+    ].join(" ")
+  )}
+>
               <img
                 src={currentSlideData.image}
                 alt={currentSlideData.title}
