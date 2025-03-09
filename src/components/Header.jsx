@@ -57,9 +57,9 @@ const Header = () => {
 
   return (
     <header className="bg-[#1C1F26] text-white shadow-md" role="banner">
-      <div className="container mx-auto px-40 flex items-center justify-between h-18">
+      <div className="container mx-auto px-40 flex items-center justify-between h-20">
         <Link to="/" className="text-2xl font-bold flex justify-center items-center gap-4" aria-label="Daric Ana Sayfa">
-          <img src="/daric.svg" alt="logo" className='max-h-12 w-full relative bottom-1' />
+          <img src="/daric.svg" alt="logo" className='max-h-14 w-full relative bottom-1' />
           Daric
         </Link>
 
