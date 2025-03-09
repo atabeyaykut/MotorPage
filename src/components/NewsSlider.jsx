@@ -98,8 +98,17 @@ const NewsSlider = () => {
               className={cn(
                 "absolute inset-0 w-full h-full",
                 "transition-all duration-[7000ms] ease-in-out",
-                "origin-center",
-                isKenburnsActive ? "scale-[1.15]" : "scale-100"
+                "transform-gpu",
+                isKenburnsActive ? [
+                  "scale-[1.15]",
+                  "animate-kenburns",
+                  "brightness-110",
+                  "contrast-110"
+                ].join(" ") : [
+                  "scale-100",
+                  "brightness-100",
+                  "contrast-100"
+                ].join(" ")
               )}
             >
               <img
@@ -111,7 +120,8 @@ const NewsSlider = () => {
             </div>
           </Suspense>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
           <Button
             variant="outline"

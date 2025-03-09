@@ -99,13 +99,28 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        kenburns: {
+          '0%': {
+            transform: 'scale(1.15) translate(0)',
+            filter: 'brightness(100%) contrast(100%)'
+          },
+          '50%': {
+            transform: 'scale(1.2) translate(-1%, -1%)',
+            filter: 'brightness(110%) contrast(110%)'
+          },
+          '100%': {
+            transform: 'scale(1.15) translate(0)',
+            filter: 'brightness(100%) contrast(100%)'
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-down": "slide-down 0.2s ease-out",
         "slide-up": "slide-up 0.2s ease-out",
-        "fade-in": "fade-in 0.3s ease-out forwards",
+        "fade-in": "fade-in 0.2s ease-out",
+        kenburns: 'kenburns 15s ease-in-out infinite'
       },
     },
   },
