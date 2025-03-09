@@ -46,14 +46,15 @@ const NavigationDropdown = ({ title, items, columns = 1, type = "markalar" }) =>
   return (
     <NavigationMenuItem >
       <NavigationMenuTrigger
-        className="bg-transparent text-white hover:bg-white/10"
+        className="bg-transparent text-white "
         aria-label={`${title} menüsünü aç`}
+        showChevron={false}
       >
         {title}
       </NavigationMenuTrigger>
       <NavigationMenuContent className="dropdown-content ">
         <div
-          className="relative w-100 md:w-100 lg:w-100 "
+          className="relative w-[500px] md:w-[500px] lg:w-[500px] "
           style={backgroundStyle}
           role="menu"
         >

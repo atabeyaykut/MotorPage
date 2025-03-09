@@ -6,6 +6,7 @@ import UnderConstruction from './pages/UnderConstruction';
 import HomeSlider from './components/HomeSlider';
 import AboutSection from './components/AboutSection';
 import ServiceFeatures from './components/ServiceFeatures';
+import DucatiPage from './pages/brands/Ducati';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
                 <ServiceFeatures />
               </>
             } />
+            <Route path="/markalar/ducati" element={<DucatiPage />} />
             <Route path="/markalar/*" element={<UnderConstruction />} />
             <Route path="/kurumsal/*" element={<UnderConstruction />} />
             <Route path="/bayilerimiz/*" element={<UnderConstruction />} />
