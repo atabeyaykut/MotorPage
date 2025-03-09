@@ -7,6 +7,7 @@ import HomeSlider from './components/HomeSlider';
 import AboutSection from './components/AboutSection';
 import ServiceFeatures from './components/ServiceFeatures';
 import DucatiPage from './pages/brands/Ducati';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/iletisim" element={<UnderConstruction />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
