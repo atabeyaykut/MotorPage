@@ -94,7 +94,7 @@ const NewsSlider = () => {
   const currentSlideData = useMemo(() => news[currentSlide], [currentSlide]);
 
   return (
-    <section className="relative bg-[#1C1F26] py-16">
+    <section className="relative py-16">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl font-bold text-white mb-8 text-center">HABERLERİMİZ</h2>
 

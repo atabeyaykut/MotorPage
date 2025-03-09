@@ -129,24 +129,24 @@ const ServiceFeatures = () => {
   return (
     <>
       <section
-        className="bg-[#1C1F26] py-20 relative overflow-hidden"
+        className="py-20 relative max-h-screen overflow-hidden"
         aria-label="Servis Özellikleri"
       >
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-full mx-auto">
           <div
-            className="relative w-full aspect-[16/9] flex items-center justify-center"
+            className="relative bottom-40 w-full aspect-[16/9] flex items-center justify-center"
             onMouseMove={handleMouseMove}
           >
             {/* Background image with gradient overlay */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 flex items-center justify-center z-0 overflow-hidden">
               <img
-                src="https://picsum.photos/id/133/1200/800"
+                src="https://picsum.photos/id/133/1800/2200"
                 alt=""
-                className="w-[105%] h-[105%] object-cover hover:scale-110"
+                className="w-[120%] h-[120%] object-cover hover:scale-110"
                 style={{
                   transform: `translate(${(mousePosition.x - 0.5) * -100}px, ${(mousePosition.y - 0.5) * -100}px)`,
                   transformOrigin: 'center',
-                  margin: '-2.5%'
+
                 }}
                 aria-hidden="true"
               />
