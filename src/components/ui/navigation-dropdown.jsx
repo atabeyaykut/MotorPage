@@ -9,13 +9,13 @@ const DropdownItem = memo(({ item, isLoading }) => (
     <Link
       to={item.path}
       className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 text-white 
-         hover:text-primary hover:translate-x-1
+        hover:bg-[#1C1F26]/20 hover:text-primary hover:translate-x-1
         data-[active]:bg-white/10 data-[state=open]:bg-white/10
         ${isLoading ? 'animate-pulse' : ''}`}
       aria-label={item.name}
       role="menuitem"
     >
-      <div className="text-md font-medium items-center leading-none">{item.name}</div>
+      <div className="text-md font-medium leading-none">{item.name}</div>
       <div className="mt-1 h-px w-full opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true"></div>
     </Link>
   </li>
@@ -36,7 +36,7 @@ const NavigationDropdown = ({ title, items, columns = 1 }) => {
   return (
     <NavigationMenuItem role="none">
       <NavigationMenuTrigger
-        className="bg-transparent text-white transition-colors duration-300 "
+        className="bg-transparent text-white transition-colors duration-200"
         aria-label={`${title} menüsünü aç`}
         aria-expanded="false"
         aria-haspopup="true"
@@ -49,7 +49,7 @@ const NavigationDropdown = ({ title, items, columns = 1 }) => {
         role="menu"
         aria-label={`${title} alt menüsü`}
       >
-        <div className="relative w-[280px] md:w-[320px] lg:w-[380px] bg-transparent" role="none">
+        <div className="relative w-[250px] md:w-[300px] lg:w-[350px] bg-transparent" role="none">
           <ul className={`${gridClass} bg-transparent`} role="group">
             {items.map((item) => (
               <DropdownItem
