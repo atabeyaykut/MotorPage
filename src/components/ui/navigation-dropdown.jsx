@@ -1,79 +1,72 @@
-import React, { memo, useMemo } from 'react';
-import { Link } from "react-router-dom";
-import {
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-} from "@/components/ui/navigation-menu";
+"use client"
 
-// Constants moved to a separate object
-const BACKGROUNDS = {
-  markalar: "/dropdownBackground.jpeg",
-  kurumsal: "/dropdownBackground2.jpeg",
-  bayilerimiz: "/dropdownBackground3.jpg"
-};
+import { memo, useMemo, useState } from "react"
+import { Link } from "react-router-dom"
+import { NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
 
-const DropdownItem = memo(({ item }) => (
+const DropdownItem = memo(({ item, isLoading }) => (
   <li className="dropdown-item">
     <Link
       to={item.path}
-      className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors text-white hover:bg-white/10 data-[active]:bg-white/10 data-[state=open]:bg-white/10"
+      className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 text-white 
+        hover:bg-[#1C1F26]/20 hover:text-primary hover:translate-x-1
+        data-[active]:bg-white/10 data-[state=open]:bg-white/10
+        ${isLoading ? 'animate-pulse' : ''}`}
       aria-label={item.name}
+      role="menuitem"
     >
       <div className="text-md font-medium leading-none">{item.name}</div>
-      <div className="mt-1 h-px w-full" aria-hidden="true"></div>
+      <div className="mt-1 h-px w-full opacity-0 transition-opacity group-hover:opacity-100" aria-hidden="true"></div>
     </Link>
   </li>
-));
+), (prevProps, nextProps) => prevProps.item.path === nextProps.item.path)
 
-DropdownItem.displayName = 'DropdownItem';
+DropdownItem.displayName = "DropdownItem"
 
-const NavigationDropdown = ({ title, items, columns = 1, type = "markalar" }) => {
-  const bgImage = useMemo(() => BACKGROUNDS[type], [type]);
+const NavigationDropdown = ({ title, items, columns = 1 }) => {
+  const [isLoading, setIsLoading] = useState(false)
 
-  const gridClass = useMemo(() =>
-    columns > 1 ? `relative z-10 grid gap-1 p-4 py-6 md:grid-cols-${columns}` : 'relative z-10 grid gap-1 p-4 py-6',
+  const gridClass = useMemo(
+    () => columns > 1
+      ? `relative z-10 grid gap-1 p-6 py-6 md:grid-cols-${columns}`
+      : "relative z-10 grid gap-1 p-6 py-6",
     [columns]
-  );
-
-  const backgroundStyle = useMemo(() => ({
-    backgroundImage: `url(${bgImage})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-  }), [bgImage]);
+  )
 
   return (
-    <NavigationMenuItem >
+    <NavigationMenuItem role="none">
       <NavigationMenuTrigger
-        className="bg-transparent text-white "
+        className="bg-transparent text-white transition-colors duration-200"
         aria-label={`${title} menüsünü aç`}
+        aria-expanded="false"
+        aria-haspopup="true"
         showChevron={false}
       >
         {title}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="dropdown-content ">
-        <div
-          className="relative w-[500px] md:w-[500px] lg:w-[500px] "
-          style={backgroundStyle}
-          role="menu"
-        >
-          <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
-            aria-hidden="true"
-          ></div>
-          <ul
-            className={gridClass}
-            role="menubar"
-          >
+      <NavigationMenuContent
+        className="dropdown-content bg-transparent backdrop-blur-lg"
+        role="menu"
+        aria-label={`${title} alt menüsü`}
+      >
+        <div className="relative w-[250px] md:w-[300px] lg:w-[350px] bg-transparent" role="none">
+          <ul className={`${gridClass} bg-transparent`} role="group">
             {items.map((item) => (
-              <DropdownItem key={item.path} item={item} />
+              <DropdownItem
+                key={item.path}
+                item={item}
+                isLoading={isLoading}
+              />
             ))}
           </ul>
         </div>
       </NavigationMenuContent>
     </NavigationMenuItem>
-  );
-};
+  )
+}
 
-export default memo(NavigationDropdown);
+export default memo(NavigationDropdown,
+  (prevProps, nextProps) =>
+    prevProps.items.length === nextProps.items.length &&
+    prevProps.title === nextProps.title
+)

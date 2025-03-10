@@ -98,15 +98,41 @@ module.exports = {
             opacity: "1",
             transform: "translateY(0)",
           },
+          "slide-fade": {
+  '0%': {
+    opacity: '0',
+    transform: 'scale(1.05) translateY(2px)'
+  },
+  '100%': {
+    opacity: '1',
+    transform: 'scale(1) translateY(0)'
+  }
+},
         },
+        kenburns: {
+          '0%': {
+            transform: 'scale(1.15) translate(0)',
+            filter: 'brightness(100%) contrast(100%)'
+          },
+          '50%': {
+            transform: 'scale(1.2) translate(-1%, -1%)',
+            filter: 'brightness(110%) contrast(110%)'
+          },
+          '100%': {
+            transform: 'scale(1.15) translate(0)',
+            filter: 'brightness(100%) contrast(100%)'
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-down": "slide-down 0.2s ease-out",
         "slide-up": "slide-up 0.2s ease-out",
-        "fade-in": "fade-in 0.3s ease-out forwards",
-      },
+        "fade-in": "fade-in 0.2s ease-out",
+        kenburns: 'kenburns 15s ease-in-out infinite',
+        "slide-fade": "slide-fade 1.2s cubic-bezier(0.4, 0, 0.2, 1)" 
+},
     },
   },
   plugins: [require("tailwindcss-animate")],
