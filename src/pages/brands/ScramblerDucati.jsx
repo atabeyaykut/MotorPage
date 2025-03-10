@@ -1,13 +1,11 @@
-import React, { useMemo, useEffect } from 'react';
-import ModelCategory from "@/components/motorcycle/ModelCategory";
-import { cn } from "@/lib/utils";
+
 import BrandPage from '@/components/brands/BrandPage';
 
 /**
  * @component DucatiPage
  * @description Main page component for displaying Ducati motorcycle models by category
  */
-const DUCATI_CATEGORIES = [
+const SCRAMBLER_DUCATI_CATEGORIES = [
   {
     title: "STREETFIGHTER",
     models: [
@@ -105,26 +103,15 @@ const DUCATI_CATEGORIES = [
   }
 ]
 
-const DucatiPage = () => {
-
-  useEffect(() => {
-    document.title = "Ducati Motosikletler | Tüm Modeller ve Fiyatlar";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content',
-        'Ducati motosiklet modelleri, özellikleri ve fiyatları. ' +
-        'Streetfighter, Diavel ve Monster serileri hakkında detaylı bilgi.'
-      );
-    }
-  }, []);
+const ScramblerDucatiPage = () => {
 
   return (
     <BrandPage
-      brandName="DUCATI"
+      brandName="SCRAMBLER DUCATI"
       description="Saf macera, mutlak avantaj"
-      categories={DUCATI_CATEGORIES}
+      categories={SCRAMBLER_DUCATI_CATEGORIES}
     />
   );
 };
 
-export default DucatiPage;
+export default ScramblerDucatiPage;
