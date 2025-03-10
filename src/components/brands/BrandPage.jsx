@@ -31,7 +31,7 @@ import ModelCategory from "@/components/motorcycle/ModelCategory";
 const BrandPage = ({ brandName, description, categories }) => {
   useEffect(() => {
     // Update page title and meta description for SEO
-    document.title = `${brandName} | Korlas Motor`;
+    document.title = `${brandName} | Daric Motor`;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", description);

@@ -86,7 +86,7 @@ const MotorcycleCard = React.memo(({ model }) => {
   }, []);
 
   return (
-    <div 
+    <div
       ref={cardRef}
       className={cn(
         "group",
@@ -103,17 +103,17 @@ const MotorcycleCard = React.memo(({ model }) => {
         {model.modelYear && <ModelBadge year={model.modelYear} />}
         <ModelImage name={model.name} src={model.image} />
       </div>
-      
+
       <h3 className="text-base font-semibold text-center mb-1">
         {model.name}
       </h3>
       <p className="text-sm text-muted-foreground text-center mb-4 line-clamp-2">
         {model.description}
       </p>
-      
+
       {model.comingSoon ? (
-        <Button 
-          disabled 
+        <Button
+          disabled
           variant="outline"
           className="w-full"
           aria-label="Bu model henüz satışta değil"
@@ -121,12 +121,12 @@ const MotorcycleCard = React.memo(({ model }) => {
           Çok Yakında
         </Button>
       ) : (
-        <Button 
+        <Button
           asChild
           variant="default"
-          className="w-full bg-primary hover:bg-primary/90"
+          className="w-60 bg-primary hover:bg-primary/90"
         >
-          <a 
+          <a
             href={model.link}
             aria-label={`${model.name} detaylarını incele`}
             className="inline-flex items-center justify-center"
