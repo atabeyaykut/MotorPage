@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import NavigationDropdown from "@/components/ui/navigation-dropdown";
 
-// Constants moved to a separate object for better maintainability
 const MENU_ITEMS = {
   markalar: [
     { name: "Ducati", path: "/markalar/ducati" },
@@ -37,7 +36,7 @@ const NavLink = memo(({ to, children }) => (
   <NavigationMenuItem>
     <Link
       to={to}
-      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-white/10 text-white"
+      className="inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-md font-medium transition-colors hover:text-primary text-white"
       aria-label={children}
     >
       {children}
@@ -54,7 +53,7 @@ const Header = () => {
   return (
     <header className="bg-[#1C1F26] text-white shadow-md" role="banner">
       <div className="container mx-auto px-40 flex items-center justify-between h-20">
-        <Link to="/" className="text-2xl font-bold flex justify-center items-center gap-4" aria-label="Daric Ana Sayfa">
+        <Link to="/" className="text-3xl font-bold flex justify-center items-center gap-4" aria-label="Daric Ana Sayfa">
           <img src="/daric.svg" alt="logo" className='max-h-14 w-full relative bottom-1' />
           Daric
         </Link>
