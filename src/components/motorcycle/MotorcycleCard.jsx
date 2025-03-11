@@ -1,22 +1,27 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Bike } from "lucide-react";
+import { motion } from "framer-motion";
 
 /**
  * @component ModelBadge
  * @description Displays a badge for new model year motorcycles
  */
 const ModelBadge = React.memo(({ year }) => (
-  <div className={cn(
-    "absolute top-2 right-2 z-10",
-    "px-2 py-1",
-    "bg-primary text-primary-foreground",
-    "text-xs font-medium",
-    "rounded-md"
-  )}>
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    className={cn(
+      "absolute top-4 right-4 z-10",
+      "px-3 py-1.5",
+      "bg-primary text-white",
+      "text-sm font-semibold",
+      "rounded-full shadow-lg backdrop-blur-sm"
+    )}
+  >
     {year}
-  </div>
+  </motion.div>
 ));
 
 ModelBadge.displayName = 'ModelBadge';
@@ -26,7 +31,7 @@ ModelBadge.displayName = 'ModelBadge';
  * @description Displays a motorcycle model image with hover effect and lazy loading
  */
 const ModelImage = React.memo(({ name, src }) => (
-  <div className="relative w-full h-full overflow-hidden">
+  <div className="relative w-full h-full overflow-hidden rounded-xl">
     <img
       src={src}
       alt={name}
@@ -40,6 +45,12 @@ const ModelImage = React.memo(({ name, src }) => (
       width={800}
       height={600}
     />
+    <div className={cn(
+      "absolute inset-0",
+      "bg-gradient-to-t from-black/60 via-black/20 to-transparent",
+      "opacity-0 group-hover:opacity-100",
+      "transition-opacity duration-300"
+    )} />
   </div>
 ));
 
@@ -47,7 +58,7 @@ ModelImage.displayName = 'ModelImage';
 
 /**
  * @component MotorcycleCard
- * @description Displays a motorcycle model card with image, details, and lazy loading animation
+ * @description Displays a motorcycle model card with modern hover effects and animations
  * @param {Object} model - The motorcycle model data
  * @param {string} model.name - The name of the motorcycle
  * @param {string} model.description - A short description of the motorcycle
@@ -57,86 +68,80 @@ ModelImage.displayName = 'ModelImage';
  * @param {boolean} [model.comingSoon] - Whether the motorcycle is coming soon
  */
 const MotorcycleCard = React.memo(({ model }) => {
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-          entry.target.classList.remove('opacity-0', 'translate-y-4');
-          observer.unobserve(entry.target);
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '30px'
-      }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div
-      ref={cardRef}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={{ y: -5 }}
       className={cn(
-        "group",
-        "flex flex-col items-center",
-        "opacity-0 translate-y-4",
-        "transition-all duration-700 ease-out",
-        "p-4 rounded-lg",
-        "bg-card text-card-foreground",
-        "hover:shadow-lg",
-        "dark:hover:shadow-primary/5"
+        "group relative",
+        "bg-white rounded-xl",
+        "shadow-md hover:shadow-xl",
+        "transition-all duration-300"
       )}
     >
-      <div className="relative w-full aspect-[4/3] mb-4 rounded-md overflow-hidden bg-muted">
+      <div className="relative aspect-[4/3] mb-4">
         {model.modelYear && <ModelBadge year={model.modelYear} />}
         <ModelImage name={model.name} src={model.image} />
+        
+        <div className={cn(
+          "absolute bottom-0 left-0 right-0",
+          "p-6 text-white",
+          "transform translate-y-full group-hover:translate-y-0",
+          "transition-transform duration-300 ease-out"
+        )}>
+          <h3 className="text-xl font-bold mb-2">
+            {model.name}
+          </h3>
+          <p className="text-sm opacity-90 line-clamp-2">
+            {model.description}
+          </p>
+        </div>
       </div>
 
-      <h3 className="text-base font-semibold text-center mb-1">
-        {model.name}
-      </h3>
-      <p className="text-sm text-muted-foreground text-center mb-4 line-clamp-2">
-        {model.description}
-      </p>
+      <div className="px-4 pb-4">
+        <h3 className="text-lg font-bold text-gray-900 mb-1">
+          {model.name}
+        </h3>
+        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+          {model.description}
+        </p>
 
-      {model.comingSoon ? (
-        <Button
-          disabled
-          variant="outline"
-          className="w-full"
-          aria-label="Bu model henüz satışta değil"
-        >
-          Çok Yakında
-        </Button>
-      ) : (
-        <Button
-          asChild
-          variant="default"
-          className="w-60 bg-primary hover:bg-primary/90"
-        >
-          <a
-            href={model.link}
-            aria-label={`${model.name} detaylarını incele`}
-            className="inline-flex items-center justify-center"
+        {model.comingSoon ? (
+          <div className={cn(
+            "inline-flex items-center",
+            "px-3 py-1.5 rounded-full",
+            "bg-gray-100 text-gray-600",
+            "text-sm font-medium"
+          )}>
+            <span className="mr-2">•</span>
+            Çok Yakında
+          </div>
+        ) : (
+          <Button
+            asChild
+            variant="default"
+            className={cn(
+              "w-full bg-primary hover:bg-primary/90",
+              "group/btn"
+            )}
           >
-            <Bike className="w-4 h-4 mr-2" />
-            Detaylı İncele
-          </a>
-        </Button>
-      )}
-    </div>
+            <a
+              href={model.link}
+              aria-label={`${model.name} detaylarını incele`}
+              className="inline-flex items-center justify-center"
+            >
+              <Bike className={cn(
+                "w-4 h-4 mr-2",
+                "transform group-hover/btn:translate-x-1",
+                "transition-transform duration-300"
+              )} />
+              Detaylı İncele
+            </a>
+          </Button>
+        )}
+      </div>
+    </motion.div>
   );
 });
 
