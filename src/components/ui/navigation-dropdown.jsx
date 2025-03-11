@@ -1,7 +1,7 @@
 "use client"
 
 import { memo, useMemo, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
 
 const DropdownItem = memo(({ item, isLoading }) => (
@@ -23,8 +23,9 @@ const DropdownItem = memo(({ item, isLoading }) => (
 
 DropdownItem.displayName = "DropdownItem"
 
-const NavigationDropdown = ({ title, items, columns = 1 }) => {
+const NavigationDropdown = ({ title, items, columns = 1, type }) => {
   const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate();
 
   const gridClass = useMemo(
     () => columns > 1
@@ -32,6 +33,10 @@ const NavigationDropdown = ({ title, items, columns = 1 }) => {
       : "relative z-10 grid gap-1 p-6 py-6",
     [columns]
   )
+
+  const handleTitleClick = () => {
+    navigate(`/${type}`);
+  };
 
   return (
     <NavigationMenuItem role="none">
@@ -41,6 +46,7 @@ const NavigationDropdown = ({ title, items, columns = 1 }) => {
         aria-expanded="false"
         aria-haspopup="true"
         showChevron={false}
+        onClick={handleTitleClick}
       >
         {title}
       </NavigationMenuTrigger>
