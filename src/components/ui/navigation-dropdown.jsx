@@ -9,7 +9,7 @@ const DropdownItem = memo(({ item, isLoading }) => (
     <Link
       to={item.path}
       className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 text-white 
-        hover:bg-[#1C1F26]/20 hover:text-primary hover:translate-x-1
+        hover:text-primary hover:translate-x-1
         data-[active]:bg-white/10 data-[state=open]:bg-white/10
         ${isLoading ? 'animate-pulse' : ''}`}
       aria-label={item.name}
@@ -51,7 +51,7 @@ const NavigationDropdown = ({ title, items, columns = 1, type }) => {
         {title}
       </NavigationMenuTrigger>
       <NavigationMenuContent
-        className="dropdown-content bg-transparent backdrop-blur-lg"
+        className="dropdown-content bg-gray-700/30 backdrop-blur-lg"
         role="menu"
         aria-label={`${title} alt menüsü`}
       >
