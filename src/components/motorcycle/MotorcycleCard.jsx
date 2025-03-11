@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Bike } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 /**
  * @component ModelBadge
@@ -53,7 +54,8 @@ ModelImage.displayName = 'ModelImage';
  * @param {string} model.description - A short description of the motorcycle
  * @param {string} model.image - The URL of the motorcycle image
  * @param {string} [model.modelYear] - The model year if it's a new model
- * @param {string} [model.link] - The link to the motorcycle's detail page
+ * @param {string} [model.brand] - The brand of the motorcycle
+ * @param {string} [model.slug] - URL-friendly version of the model name
  * @param {boolean} [model.comingSoon] - Whether the motorcycle is coming soon
  */
 const MotorcycleCard = React.memo(({ model }) => {
@@ -84,6 +86,9 @@ const MotorcycleCard = React.memo(({ model }) => {
       }
     };
   }, []);
+
+  // Create URL-friendly slug if not provided
+  const slug = model.slug || model.name.toLowerCase().replace(/\s+/g, '-');
 
   return (
     <div
@@ -125,14 +130,14 @@ const MotorcycleCard = React.memo(({ model }) => {
           className="w-60 bg-primary/90 text-white  
           hover:bg-transparent hover:text-primary transition-colors hover:border-2"
         >
-          <a
-            href={model.link}
+          <Link
+            to={`/markalar/${model.brand}/${slug}`}
             aria-label={`${model.name} detaylarını incele`}
             className="inline-flex items-center justify-center"
           >
             <Bike className="w-4 h-4 mr-2" />
             Detaylı İncele
-          </a>
+          </Link>
         </Button>
       )}
     </div>
