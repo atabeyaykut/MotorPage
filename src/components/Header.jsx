@@ -21,8 +21,9 @@ const MENU_ITEMS = {
   ],
   kurumsal: [
     { name: "Hakkımızda", path: "/kurumsal/hakkimizda" },
+    { name: "Ekibimiz", path: "/kurumsal/ekibimiz" },
     { name: "Misyon & Vizyon", path: "/kurumsal/misyon-vizyon" },
-    { name: "İnsan Kaynakları", path: "/kurumsal/insan-kaynaklari" }
+    { name: "Kullanıcı Kılavuzları", path: "/kurumsal/kullanici-kilavuzlari" },
   ]
 };
 

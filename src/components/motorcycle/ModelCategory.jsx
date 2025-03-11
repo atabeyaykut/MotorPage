@@ -39,7 +39,7 @@ const ModelCategory = React.memo(({ title, models }) => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={categoryRef}
       className={cn(
         "mb-16",
@@ -50,11 +50,11 @@ const ModelCategory = React.memo(({ title, models }) => {
     >
       <h2 className={cn(
         "text-2xl font-bold pb-4 mb-8",
-        "text-[#D4001A] border-b border-gray-200"
+        "text-[#D4001A] border-b border-gray-800"
       )}>
         {title}
       </h2>
-      
+
       <div className={cn(
         "grid gap-y-12",
         "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",

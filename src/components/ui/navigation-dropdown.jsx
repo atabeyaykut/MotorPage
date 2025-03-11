@@ -1,7 +1,7 @@
 "use client"
 
 import { memo, useMemo, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
 
 const DropdownItem = memo(({ item, isLoading }) => (
@@ -9,7 +9,7 @@ const DropdownItem = memo(({ item, isLoading }) => (
     <Link
       to={item.path}
       className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 text-white 
-        hover:bg-[#1C1F26]/20 hover:text-primary hover:translate-x-1
+        hover:text-primary hover:translate-x-1
         data-[active]:bg-white/10 data-[state=open]:bg-white/10
         ${isLoading ? 'animate-pulse' : ''}`}
       aria-label={item.name}
@@ -23,8 +23,9 @@ const DropdownItem = memo(({ item, isLoading }) => (
 
 DropdownItem.displayName = "DropdownItem"
 
-const NavigationDropdown = ({ title, items, columns = 1 }) => {
+const NavigationDropdown = ({ title, items, columns = 1, type }) => {
   const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate();
 
   const gridClass = useMemo(
     () => columns > 1
@@ -32,6 +33,10 @@ const NavigationDropdown = ({ title, items, columns = 1 }) => {
       : "relative z-10 grid gap-1 p-6 py-6",
     [columns]
   )
+
+  const handleTitleClick = () => {
+    navigate(`/${type}`);
+  };
 
   return (
     <NavigationMenuItem role="none">
@@ -41,11 +46,12 @@ const NavigationDropdown = ({ title, items, columns = 1 }) => {
         aria-expanded="false"
         aria-haspopup="true"
         showChevron={false}
+        onClick={handleTitleClick}
       >
         {title}
       </NavigationMenuTrigger>
       <NavigationMenuContent
-        className="dropdown-content bg-transparent backdrop-blur-lg"
+        className="dropdown-content bg-gray-700/30 backdrop-blur-lg"
         role="menu"
         aria-label={`${title} alt menüsü`}
       >
