@@ -36,47 +36,7 @@ SpecTable.displayName = 'SpecTable';
  * @component ImageHotspot
  * @description Displays an image with interactive hotspots
  */
-const ImageHotspot = React.memo(({ image, hotspots }) => (
-  <div className="relative w-full aspect-[16/10] overflow-hidden rounded-lg">
-    <img
-      src={image}
-      alt="Motorcycle Details"
-      className="w-full h-full object-cover"
-      loading="lazy"
-    />
-    {hotspots?.map((hotspot, index) => (
-      <Button
-        key={index}
-        variant="outline"
-        size="icon"
-        className={cn(
-          "absolute group",
-          "w-8 h-8 -mt-4 -ml-4",
-          "flex items-center justify-center",
-          "bg-white/90 hover:bg-white",
-          "transition-transform hover:scale-110"
-        )}
-        style={{ top: `${hotspot.y}%`, left: `${hotspot.x}%` }}
-        aria-label={hotspot.title}
-      >
-        <span className="text-primary text-lg">+</span>
-        <div className={cn(
-          "absolute invisible group-hover:visible",
-          "w-48 p-3 mt-2",
-          "bg-white rounded-lg shadow-xl",
-          "text-left",
-          hotspot.x > 50 ? "-left-48" : "left-8",
-          "top-8 z-50"
-        )}>
-          <h4 className="font-semibold mb-1">{hotspot.title}</h4>
-          <p className="text-sm text-muted-foreground">{hotspot.description}</p>
-        </div>
-      </Button>
-    ))}
-  </div>
-));
 
-ImageHotspot.displayName = 'ImageHotspot';
 
 /**
  * @component MotorcycleDetail
@@ -104,10 +64,6 @@ const MotorcycleDetail = React.memo(({ model }) => {
         </h1>
       </section>
 
-      {/* Interactive Image Section */}
-      <section className="mb-12">
-        <ImageHotspot image={model.detailImage} hotspots={model.hotspots} />
-      </section>
 
       {/* Specifications Tabs */}
       <section className="mb-12">

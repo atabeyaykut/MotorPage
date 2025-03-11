@@ -40,9 +40,9 @@ const MotorcycleDetailPage = () => {
 
   // Update document title for SEO
   React.useEffect(() => {
-    document.title = `${motorcycleData.name} | Korlas Motosiklet`;
+    document.title = `${motorcycleData.name} | Daric Motosiklet`;
     return () => {
-      document.title = 'Korlas Motosiklet';
+      document.title = 'Daric Motosiklet';
     };
   }, [motorcycleData.name]);
 

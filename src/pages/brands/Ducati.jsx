@@ -17,7 +17,8 @@ const DUCATI_CATEGORIES = [
         description: "Sport Naked",
         image: "https://picsum.photos/seed/streetfighter-v2/800/600",
         modelYear: null,
-        link: "/markalar/ducati/streetfighter-v2"
+        brand: "ducati",
+        slug: "streetfighter-v2"
       },
       {
         id: 2,
@@ -25,7 +26,8 @@ const DUCATI_CATEGORIES = [
         description: "Sport Naked",
         image: "https://picsum.photos/seed/streetfighter-v2-2025/800/600",
         modelYear: "2025",
-        link: "/markalar/ducati/streetfighter-v2-my-2025"
+        brand: "ducati",
+        slug: "streetfighter-v2-my-2025"
       },
       {
         id: 3,
@@ -33,7 +35,8 @@ const DUCATI_CATEGORIES = [
         description: "Sport Naked",
         image: "https://picsum.photos/seed/streetfighter-v4/800/600",
         modelYear: null,
-        link: "/markalar/ducati/streetfighter-v4"
+        brand: "ducati",
+        slug: "streetfighter-v4"
       },
       {
         id: 4,
@@ -41,7 +44,8 @@ const DUCATI_CATEGORIES = [
         description: "Sport Naked",
         image: "https://picsum.photos/seed/streetfighter-v4-2025/800/600",
         modelYear: "2025",
-        link: "/markalar/ducati/streetfighter-v4-my-2025"
+        brand: "ducati",
+        slug: "streetfighter-v4-my-2025"
       },
       {
         id: 5,
@@ -49,7 +53,8 @@ const DUCATI_CATEGORIES = [
         description: "Sport Naked",
         image: "https://picsum.photos/seed/streetfighter-v4-s/800/600",
         modelYear: null,
-        link: "/markalar/ducati/streetfighter-v4-s"
+        brand: "ducati",
+        slug: "streetfighter-v4-s"
       }
     ]
   },
@@ -62,7 +67,8 @@ const DUCATI_CATEGORIES = [
         description: "Power Cruiser",
         image: "https://picsum.photos/seed/diavel-v4/800/600",
         modelYear: null,
-        link: "/markalar/ducati/diavel-v4"
+        brand: "ducati",
+        slug: "diavel-v4"
       },
       {
         id: 7,
@@ -70,7 +76,8 @@ const DUCATI_CATEGORIES = [
         description: "Power Cruiser",
         image: "https://picsum.photos/seed/x-diavel-v4/800/600",
         modelYear: "2025",
-        link: "/markalar/ducati/x-diavel-v4"
+        brand: "ducati",
+        slug: "x-diavel-v4"
       }
     ]
   },
@@ -83,7 +90,8 @@ const DUCATI_CATEGORIES = [
         description: "Urban Naked",
         image: "https://picsum.photos/seed/monster/800/600",
         modelYear: null,
-        link: "/markalar/ducati/monster"
+        brand: "ducati",
+        slug: "monster"
       },
       {
         id: 9,
@@ -91,7 +99,8 @@ const DUCATI_CATEGORIES = [
         description: "Urban Naked",
         image: "https://picsum.photos/seed/monster-sp/800/600",
         modelYear: null,
-        link: "/markalar/ducati/monster-sp"
+        brand: "ducati",
+        slug: "monster-sp"
       },
       {
         id: 10,
@@ -99,16 +108,16 @@ const DUCATI_CATEGORIES = [
         description: "Urban Naked",
         image: "https://picsum.photos/seed/monster-plus/800/600",
         modelYear: "2025",
-        link: "/markalar/ducati/monster-plus"
+        brand: "ducati",
+        slug: "monster-plus"
       }
     ]
   }
 ]
 
 const DucatiPage = () => {
-
   useEffect(() => {
-    document.title = "Ducati Motosikletler | Tüm Modeller ve Fiyatlar";
+    document.title = "Ducati Motosikletler | Daric Motosiklet";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content',

@@ -3,11 +3,14 @@ import ModelCategory from "@/components/motorcycle/ModelCategory";
 
 /**
  * @typedef {Object} Model
- * @property {string} id - Model ID
+ * @property {string|number} id - Model ID
  * @property {string} name - Model name
  * @property {string} description - Model description
  * @property {string} image - Model image URL
- * @property {string} modelYear - Model year
+ * @property {string} [modelYear] - Model year (optional)
+ * @property {string} brand - Brand slug for routing (e.g., 'ducati', 'triumph')
+ * @property {string} slug - URL-friendly model identifier
+ * @property {boolean} [comingSoon] - Whether the model is coming soon (optional)
  * @property {string} [link] - External link for the model
  */
 
@@ -31,7 +34,7 @@ import ModelCategory from "@/components/motorcycle/ModelCategory";
 const BrandPage = ({ brandName, description, categories }) => {
   useEffect(() => {
     // Update page title and meta description for SEO
-    document.title = `${brandName} | Daric Motor`;
+    document.title = `${brandName} | Daric Motosiklet`;
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", description);
