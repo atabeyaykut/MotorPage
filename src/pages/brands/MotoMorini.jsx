@@ -34,8 +34,8 @@ const MOTO_MORINI_CATEGORIES = [
 const MotoMoriniPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="MOTO MORINI"
+      description="Motosikletlerde yaşamanın yeni bir yolu"
       categories={MOTO_MORINI_CATEGORIES}
     />
   );

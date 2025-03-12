@@ -348,7 +348,7 @@ const DucatiPage = () => {
   return (
     <BrandPage
       brandName="DUCATI"
-      description="Saf macera, mutlak avantaj"
+      description="Sportif ve zarif ruh"
       categories={DUCATI_CATEGORIES}
     />
   );

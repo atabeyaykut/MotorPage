@@ -352,7 +352,7 @@ const TriumphPage = () => {
   return (
     <BrandPage
       brandName="TRIUMPH"
-      description="Modern klasiklerin öncüsü"
+      description="Saf macera, mutlak avantaj"
       categories={TRIUMPH_CATEGORIES}
     />
   );

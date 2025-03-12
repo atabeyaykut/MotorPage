@@ -111,8 +111,8 @@ const FANTIC_CATEGORIES = [
 const FanticPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="FANTIC"
+      description="Efsaneyi yaşayın"
       categories={FANTIC_CATEGORIES}
     />
   );

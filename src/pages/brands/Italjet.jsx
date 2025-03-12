@@ -29,8 +29,8 @@ const ITALJET_CATEGORIES = [
 const ItaljetPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="ITALJET"
+      description="Alışılmışın dışına çıkın"
       categories={ITALJET_CATEGORIES}
     />
   );

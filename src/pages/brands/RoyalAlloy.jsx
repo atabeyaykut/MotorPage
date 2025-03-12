@@ -34,8 +34,8 @@ const ROYAL_ALLOY_CATEGORIES = [
 const RoyalAlloyPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="ROYAL ALLOY"
+      description="Şehir hayatına stilinizle karışın"
       categories={ROYAL_ALLOY_CATEGORIES}
     />
   );

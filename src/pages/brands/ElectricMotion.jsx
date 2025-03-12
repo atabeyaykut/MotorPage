@@ -34,8 +34,8 @@ const ELECTRIC_MOTION_CATEGORIES = [
 const ElectricMotionPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="ELECTRIC MOTION"
+      description="Keskin gaz tepkisi"
       categories={ELECTRIC_MOTION_CATEGORIES}
     />
   );

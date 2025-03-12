@@ -21,8 +21,8 @@ const KAMAX_CATEGORIES = [
 const KamaxPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="KAMAX"
+      description="Basit, Havalı, Eğlenceli, Şık."
       categories={KAMAX_CATEGORIES}
     />
   );

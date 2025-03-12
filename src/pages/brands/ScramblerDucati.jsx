@@ -54,7 +54,7 @@ const ScramblerDucatiPage = () => {
   return (
     <BrandPage
       brandName="SCRAMBLER DUCATI"
-      description="Saf macera, mutlak avantaj"
+      description="Yeni nesil Scrambler Ducati sizin için burada"
       categories={SCRAMBLER_DUCATI_CATEGORIES}
     />
   );
