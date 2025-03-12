@@ -127,7 +127,7 @@ const MotorcycleCard = React.memo(({ model }) => {
         <Button
           asChild
           variant="default"
-          className="w-60 bg-primary/90 text-white  
+          className="w-60 bg-primary/90 text-white rounded-full  
           hover:bg-transparent hover:text-primary transition-colors hover:border-2"
         >
           <Link
