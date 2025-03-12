@@ -37,6 +37,7 @@ const MotoMoriniPage = () => {
       brandName="MOTO MORINI"
       description="Motosikletlerde yaşamanın yeni bir yolu"
       categories={MOTO_MORINI_CATEGORIES}
+      img= "moto-morini.webp"
     />
   );
 };

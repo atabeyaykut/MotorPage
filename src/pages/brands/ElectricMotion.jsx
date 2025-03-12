@@ -37,6 +37,7 @@ const ElectricMotionPage = () => {
       brandName="ELECTRIC MOTION"
       description="Keskin gaz tepkisi"
       categories={ELECTRIC_MOTION_CATEGORIES}
+      img="electric-motion.png"
     />
   );
 };

@@ -429,6 +429,7 @@ const DucatiPage = () => {
       brandName="DUCATI"
       description="Sportif ve zarif ruh"
       categories={DUCATI_CATEGORIES}
+      img="ducati.png"
     />
   );
 };
