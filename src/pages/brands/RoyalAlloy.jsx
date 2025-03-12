@@ -8,7 +8,7 @@ const ROYAL_ALLOY_CATEGORIES = [
         id: 1,
         name: "TG 300 S LC ABS",
         description: "Vintage Tasarım, Güçlü Performans",
-        image: "https://picsum.photos/seed/tg-300-s-lc-abs/800/600",
+        image: "/brands/royal-alloy/Royal-Alloy-GP-300-S-ABS-1024x634.webp",
         modelYear: null,
         brand: "royal alloy",
         slug: "tg-300-s-lc-abs"
@@ -22,7 +22,7 @@ const ROYAL_ALLOY_CATEGORIES = [
         id: 2,
         name: "GP 300 S LC ABS",
         description: "Klasik Tasarım, Modern Performans",
-        image: "https://picsum.photos/seed/gp-300-s-lc-abs/800/600",
+        image: "/brands/royal-alloy/Royal-Alloy-TG-300-ABS-1024x634.webp",
         modelYear: null,
         brand: "royal alloy",
         slug: "gp-300-s-lc-abs"
@@ -37,6 +37,7 @@ const RoyalAlloyPage = () => {
       brandName="ROYAL ALLOY"
       description="Şehir hayatına stilinizle karışın"
       categories={ROYAL_ALLOY_CATEGORIES}
+      img="royal-alloy.png"
     />
   );
 };

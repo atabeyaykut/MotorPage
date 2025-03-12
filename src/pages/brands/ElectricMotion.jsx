@@ -8,7 +8,7 @@ const ELECTRIC_MOTION_CATEGORIES = [
         id: 1,
         name: "Escape XR",
         description: "Basit, Havalı, Eğlenceli, Şık.",
-        image: "https://picsum.photos/seed/escape-xr/800/600",
+        image: "/brands/electric-motion/Escape-XR-300x186-1.webp",
         modelYear: null,
         brand: "electric-motion",
         slug: "escape-xr"
@@ -22,7 +22,7 @@ const ELECTRIC_MOTION_CATEGORIES = [
         id: 2,
         name: "E Pure Race",
         description: "Basit, Havalı, Eğlenceli, Şık.",
-        image: "https://picsum.photos/seed/e-pure-race/800/600",
+        image: "/brands/electric-motion/Epurerace-RENK-e1723728261200.webp",
         modelYear: null,
         brand: "electric-motion",
         slug: "e-pure-race"
@@ -37,6 +37,7 @@ const ElectricMotionPage = () => {
       brandName="ELECTRIC MOTION"
       description="Keskin gaz tepkisi"
       categories={ELECTRIC_MOTION_CATEGORIES}
+      img="electric-motion.png"
     />
   );
 };

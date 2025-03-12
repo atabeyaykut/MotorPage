@@ -13,7 +13,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         id: 1,
         name: "Scrambler ICON",
         description: "İkonik Görünüm, Modern Performans",
-        image: "https://picsum.photos/seed/scrambler-icon/800/600",
+        image: "/brands/scrambler/scrambler-icon.webp",
         modelYear: null,
         brand: "ducati",
         slug: "scrambler-icon"
@@ -22,7 +22,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         id: 2,
         name: "Scrambler NIGHTSHIFT",
         description: "Şehrin Keskin Ruhu",
-        image: "https://picsum.photos/seed/scrambler-nightshift/800/600",
+        image: "/brands/scrambler/scrambler-nightshift.webp",
         modelYear: null,
         brand: "ducati",
         slug: "scrambler-nightshift"
@@ -31,7 +31,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         id: 3,
         name: "Scrambler Full Throttle",
         description: "Kusursuz Tasarım, Sınırsız Performans Yarışın Ruhunu Şehre Taşı!",
-        image: "https://picsum.photos/seed/scrambler-full-throttle/800/600",
+        image: "/brands/scrambler/Scrambler-Full-Throttle-Model-Banner.webp",
         modelYear: null,
         brand: "ducati",
         slug: "scrambler-full-throttle"
@@ -40,7 +40,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         id: 4,
         name: "Scrambler Ducati 10° Anniversario Rizoma Edition",
         description: "Güç, Güvenlik ve Tarzın Kusursuz Buluşması",
-        image: "https://picsum.photos/seed/scrambler-anniversario/800/600",
+        image: "/brands/scrambler/scrambler-10°-Anniversario-Rizoma-Edition.png",
         modelYear: null,
         brand: "ducati",
         slug: "scrambler-anniversario-rizoma"
@@ -56,6 +56,7 @@ const ScramblerDucatiPage = () => {
       brandName="SCRAMBLER DUCATI"
       description="Yeni nesil Scrambler Ducati sizin için burada"
       categories={SCRAMBLER_DUCATI_CATEGORIES}
+      img="ducati-scrambler.svg"
     />
   );
 };

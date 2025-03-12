@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
  */
 const ModelBadge = React.memo(({ year }) => (
   <div className={cn(
-    "absolute top-2 right-2 z-10",
+    "absolute top-2  right-2 z-10",
     "px-2 py-1",
     "bg-primary text-primary-foreground",
     "text-xs font-medium",
@@ -33,7 +33,8 @@ const ModelImage = React.memo(({ name, src }) => (
       alt={name}
       className={cn(
         "w-full h-full",
-        "object-cover",
+        "object-contain",
+        "bg-transparent",
         "group-hover:scale-105",
         "transition-transform duration-500 ease-out"
       )}
@@ -102,7 +103,7 @@ const MotorcycleCard = React.memo(({ model }) => {
         "bg-card text-card-foreground",
       )}
     >
-      <div className="relative w-full aspect-[4/3] mb-4 rounded-md overflow-hidden bg-muted">
+      <div className="relative w-full aspect-[4/3] mb-4 rounded-md overflow-hidden">
         {model.modelYear && <ModelBadge year={model.modelYear} />}
         <ModelImage name={model.name} src={model.image} />
       </div>

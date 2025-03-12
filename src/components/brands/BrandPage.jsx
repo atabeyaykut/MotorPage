@@ -31,7 +31,7 @@ import ModelCategory from "@/components/motorcycle/ModelCategory";
  * BrandPage component displays motorcycle models organized by categories
  * @param {BrandPageProps} props
  */
-const BrandPage = ({ brandName, description, categories }) => {
+const BrandPage = ({ brandName, description, categories, img }) => {
   useEffect(() => {
     // Update page title and meta description for SEO
     document.title = `${brandName} | Daric Motosiklet`;
@@ -42,9 +42,9 @@ const BrandPage = ({ brandName, description, categories }) => {
   }, [brandName, description]);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">{brandName}</h1>
+    <div className="container mx-auto px-4 py-4 pt-16">
+      <div className="text-center justify-items-center mb-6 space-y-4">
+        {img && <img src={`/logos/${img}`} alt="" className="max-w-[200px] h-auto max-h-[115px]" />}
         <p className="text-xl text-gray-600">{description}</p>
       </div>
 
