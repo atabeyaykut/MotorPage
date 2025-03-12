@@ -7,6 +7,89 @@ import BrandPage from '@/components/brands/BrandPage';
  */
 const DUCATI_CATEGORIES = [
   {
+    title: "DIAVEL",
+    models: [
+      {
+        id: 26,
+        name: "Diavel V4",
+        description: "Mekaniği Sanatla Buluşturan Şaheser",
+        image: "/brands/ducati/Ducati-Diavel-V4-Banner-1024x6342-005.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "diavel-v4"
+      },
+      {
+        id: 27,
+        name: "X Diavel V4",
+        description: "Sizi şaşırtmak için tasarlandı",
+        image: "/brands/ducati/XDiavel-V4-2025-Dis-banner-1.avif",
+        modelYear: "2025",
+        brand: "ducati",
+        slug: "x-diavel-v4"
+      }
+    ]
+  },
+  {
+    title: "DESERTX",
+    models: [
+      {
+        id: 31,
+        name: "DesertX",
+        description: "Her Yola Hükmet, Her Anı Yaşa",
+        image: "/brands/ducati/Ducati-desert-x-banner-1024x63411-1.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "desertx"
+      },
+      {
+        id: 29,
+        name: "DesertX Discovery",
+        description: "Tur Çevikliği ve Arazi Karakteri",
+        image: "/brands/ducati/Ducati-desert-x-discovery-banner-model.png",
+        modelYear: null,
+        brand: "ducati",
+        slug: "desertx-discovery"
+      },
+      {
+        id: 30,
+        name: "DesertX Rally",
+        description: "Hassasiyet ve Eşsiz Kontrol",
+        image: "/brands/ducati/DesertX-Rally-banner-1024x634-1.webp",
+        modelYear: null,
+        brand: "ducati",
+        slug: "desertx-rally"
+      }
+    ]
+  },
+  {
+    title: "HYPERMOTARD",
+    models: [
+      {
+        id: 32,
+        name: "Hypermotard 698 Mono",
+        description: "Eğlenceye Hakim Ol",
+        image: "/brands/ducati/Hypermotard-698-Mono-1024x6349-kopya.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "hypermotard-698-mono"
+      }
+    ]
+  },
+  {
+    title: "MONSTER",
+    models: [
+      {
+        id: 28,
+        name: "Monster",
+        description: "Güçlü Performans, Modern Görünüm!",
+        image: "/brands/ducati/Ducati-Monster-Banner-1024x634.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "monster"
+      }
+    ]
+  },
+  {
     title: "MULTISTRADA",
     models: [
       {
@@ -64,51 +147,6 @@ const DUCATI_CATEGORIES = [
         slug: "multistrada-v4-2025"
       },
       {
-        id: 4,
-        name: "Multistrada V4 S",
-        description: "Teknoloji, Güvenlik ve Performansın Dansı",
-        image: "/brands/ducati/Ducati-Multistrada-V4-S-My-25-1024x6349-1.avif",
-        modelYear: "2025",
-        brand: "ducati",
-        slug: "multistrada-v4-s-2025"
-      },
-      {
-        id: 5,
-        name: "Multistrada V4 S Grand Tour",
-        description: "Konfor ve Çok Yönlülüğün Kesişim Noktası",
-        image: "/brands/ducati/Multistrada-V4-S-Grand-Tour.webp",
-        modelYear: null,
-        brand: "ducati",
-        slug: "multistrada-v4-s-grand-tour"
-      },
-      {
-        id: 6,
-        name: "Multistrada V4 Rally",
-        description: "Yolculuğunuzu Sınırların Ötesine Taşıyın",
-        image: "/brands/ducati/Ducati-Multistrada-V4-Rally-1024x634-003.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "multistrada-v4-rally"
-      },
-      {
-        id: 7,
-        name: "Multistrada V4 S Travel & Radar",
-        description: "Teknoloji, Güvenlik ve Performansın Dansı",
-        image: "/brands/ducati/Multistrada-V4-S-Travel-And-Radar-Hot-Spot-Banner12-1024x634.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "multistrada-v4-s-travel-radar"
-      },
-      {
-        id: 8,
-        name: "Multistrada V4 S Full",
-        description: "Yolculuğunuzu Sınırların Ötesine Taşıyın",
-        image: "/brands/ducati/Ducati-Multistrada-V4-Rally-1024x634-003.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "multistrada-v4-s-full"
-      },
-      {
         id: 9,
         name: "Multistrada V4 Pikes Peak",
         description: "Zirvenin Hakimi",
@@ -134,6 +172,51 @@ const DUCATI_CATEGORIES = [
         modelYear: null,
         brand: "ducati",
         slug: "multistrada-v4-rs"
+      },
+      {
+        id: 4,
+        name: "Multistrada V4 S",
+        description: "Teknoloji, Güvenlik ve Performansın Dansı",
+        image: "/brands/ducati/Ducati-Multistrada-V4-S-My-25-1024x6349-1.avif",
+        modelYear: "2025",
+        brand: "ducati",
+        slug: "multistrada-v4-s-2025"
+      },
+      {
+        id: 8,
+        name: "Multistrada V4 S Full",
+        description: "Yolculuğunuzu Sınırların Ötesine Taşıyın",
+        image: "/brands/ducati/Ducati-Multistrada-V4-Rally-1024x634-003.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "multistrada-v4-s-full"
+      },
+      {
+        id: 5,
+        name: "Multistrada V4 S Grand Tour",
+        description: "Konfor ve Çok Yönlülüğün Kesişim Noktası",
+        image: "/brands/ducati/Multistrada-V4-S-Grand-Tour.webp",
+        modelYear: null,
+        brand: "ducati",
+        slug: "multistrada-v4-s-grand-tour"
+      },
+      {
+        id: 7,
+        name: "Multistrada V4 S Travel & Radar",
+        description: "Teknoloji, Güvenlik ve Performansın Dansı",
+        image: "/brands/ducati/Multistrada-V4-S-Travel-And-Radar-Hot-Spot-Banner12-1024x634.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "multistrada-v4-s-travel-radar"
+      },
+      {
+        id: 6,
+        name: "Multistrada V4 Rally",
+        description: "Yolculuğunuzu Sınırların Ötesine Taşıyın",
+        image: "/brands/ducati/Ducati-Multistrada-V4-Rally-1024x634-003.avif",
+        modelYear: null,
+        brand: "ducati",
+        slug: "multistrada-v4-rally"
       }
     ]
   },
@@ -159,15 +242,6 @@ const DUCATI_CATEGORIES = [
         slug: "panigale-v2-2025"
       },
       {
-        id: 13,
-        name: "Panigale V2 S",
-        description: "Performansın İnce Ayrıntıları",
-        image: "/brands/ducati/Panigale-V2-S-MY25-1024x6349-1.avif",
-        modelYear: "2025",
-        brand: "ducati",
-        slug: "panigale-v2-s"
-      },
-      {
         id: 14,
         name: "Panigale V2 Bayliss",
         description: "Sportif ve zarif ruh",
@@ -175,6 +249,15 @@ const DUCATI_CATEGORIES = [
         modelYear: null,
         brand: "ducati",
         slug: "panigale-v2-bayliss"
+      },
+      {
+        id: 13,
+        name: "Panigale V2 S",
+        description: "Performansın İnce Ayrıntıları",
+        image: "/brands/ducati/Panigale-V2-S-MY25-1024x6349-1.avif",
+        modelYear: "2025",
+        brand: "ducati",
+        slug: "panigale-v2-s"
       },
       {
         id: 15,
@@ -324,89 +407,6 @@ const DUCATI_CATEGORIES = [
         modelYear: null,
         brand: "ducati",
         slug: "streetfighter-v4-sp2"
-      }
-    ]
-  },
-  {
-    title: "DIAVEL",
-    models: [
-      {
-        id: 26,
-        name: "Diavel V4",
-        description: "Mekaniği Sanatla Buluşturan Şaheser",
-        image: "/brands/ducati/Ducati-Diavel-V4-Banner-1024x6342-005.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "diavel-v4"
-      },
-      {
-        id: 27,
-        name: "X Diavel V4",
-        description: "Sizi şaşırtmak için tasarlandı",
-        image: "/brands/ducati/XDiavel-V4-2025-Dis-banner-1.avif",
-        modelYear: "2025",
-        brand: "ducati",
-        slug: "x-diavel-v4"
-      }
-    ]
-  },
-  {
-    title: "MONSTER",
-    models: [
-      {
-        id: 28,
-        name: "Monster",
-        description: "Güçlü Performans, Modern Görünüm!",
-        image: "/brands/ducati/Ducati-Monster-Banner-1024x634.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "monster"
-      }
-    ]
-  },
-  {
-    title: "DESERTX",
-    models: [
-      {
-        id: 29,
-        name: "DesertX Discovery",
-        description: "Tur Çevikliği ve Arazi Karakteri",
-        image: "/brands/ducati/Ducati-desert-x-discovery-banner-model.png",
-        modelYear: null,
-        brand: "ducati",
-        slug: "desertx-discovery"
-      },
-      {
-        id: 30,
-        name: "DesertX Rally",
-        description: "Hassasiyet ve Eşsiz Kontrol",
-        image: "/brands/ducati/DesertX-Rally-banner-1024x634-1.webp",
-        modelYear: null,
-        brand: "ducati",
-        slug: "desertx-rally"
-      },
-      {
-        id: 31,
-        name: "DesertX",
-        description: "Her Yola Hükmet, Her Anı Yaşa",
-        image: "/brands/ducati/Ducati-desert-x-banner-1024x63411-1.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "desertx"
-      }
-    ]
-  },
-  {
-    title: "HYPERMOTARD",
-    models: [
-      {
-        id: 32,
-        name: "Hypermotard 698 Mono",
-        description: "Eğlenceye Hakim Ol",
-        image: "/brands/ducati/Hypermotard-698-Mono-1024x6349-kopya.avif",
-        modelYear: null,
-        brand: "ducati",
-        slug: "hypermotard-698-mono"
       }
     ]
   }
