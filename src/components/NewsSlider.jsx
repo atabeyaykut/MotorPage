@@ -12,10 +12,10 @@ const news = [
   {
     title: "Yeni Model Duyurusu",
     description: "2024 model Ducati Streetfighter V4 S artık showroomlarımızda!",
-    image: "https://picsum.photos/id/233/1200/800"
+    image: "/logos/triumph-motorcycles-seeklogo.png"
   },
   {
-    title: "Özel Servis Kampanyası", 
+    title: "Özel Servis Kampanyası",
     description: "Kış bakım kampanyamızdan yararlanmak için acele edin.",
     image: "https://picsum.photos/id/334/1200/800"
   },
@@ -80,7 +80,7 @@ const NewsSlider = () => {
     const slideTimer = setInterval(() => {
       nextSlide()
     }, ANIMATION_DURATION)
-    
+
     return () => {
       clearTimeout(timer)
       clearInterval(slideTimer)
@@ -94,24 +94,24 @@ const NewsSlider = () => {
       <div className="relative w-full h-full">
         <div className="absolute inset-0">
           <Suspense fallback={<ImageFallback />}>
-          <div 
-  className={cn(
-    "absolute inset-0 w-full h-full",
-    "transform-gpu",
-    "transition-opacity duration-800 ease-in-out", 
-    isTransitioning ? "opacity-0" : "opacity-100", 
-    isKenburnsActive ? [
-      "scale-[1.15]",
-      "animate-kenburns",
-      "brightness-110",
-      "contrast-110"
-    ].join(" ") : [
-      "scale-100",
-      "brightness-100",
-      "contrast-100"
-    ].join(" ")
-  )}
->
+            <div
+              className={cn(
+                "absolute inset-0 w-full h-full",
+                "transform-gpu",
+                "transition-opacity duration-800 ease-in-out",
+                isTransitioning ? "opacity-0" : "opacity-100",
+                isKenburnsActive ? [
+                  "scale-[1.15]",
+                  "animate-kenburns",
+                  "brightness-110",
+                  "contrast-110"
+                ].join(" ") : [
+                  "scale-100",
+                  "brightness-100",
+                  "contrast-100"
+                ].join(" ")
+              )}
+            >
               <img
                 src={currentSlideData.image}
                 alt={currentSlideData.title}

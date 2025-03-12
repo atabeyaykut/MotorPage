@@ -17,6 +17,7 @@ import RoyalAlloyPage from './pages/brands/RoyalAlloy';
 import KamaxPage from './pages/brands/Kamax';
 import ElectricMotionPage from './pages/brands/ElectricMotion';
 import MotorcycleDetailPage from './pages/motorcycle/MotorcycleDetailPage';
+import FanticPage from './pages/brands/Fantic';
 
 const App = () => {
   return (
