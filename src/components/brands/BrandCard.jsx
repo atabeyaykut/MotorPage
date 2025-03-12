@@ -16,24 +16,24 @@ import { Link } from "react-router-dom";
 const BrandCard = ({ name, description, image, path }) => {
   return (
     <div className="w-full p-4">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center ">
         <Link to={path} className="w-full">
           <img
             src={image}
             alt={`${name} Banner`}
             className={cn(
-              "w-full h-[250px] object-cover rounded-lg transition-transform duration-300",
+              "w-full h-[250px] object-cover rounded-lg transition-transform duration-300 ",
               "hover:scale-105"
             )}
           />
         </Link>
         <h2 className="text-2xl font-bold mt-4 mb-2">{name}</h2>
-        <p className="text-lg text-gray-600 mb-4 text-center">{description}</p>
+        <p className="text-lg text-gray-600 mb-4 text-center ">{description}</p>
         <Link
           to={path}
           className={cn(
             "inline-flex items-center gap-2 px-6 py-3 rounded-lg",
-            "bg-primary text-white hover:bg-primary/90 transition-colors",
+            "bg-primary text-white hover:bg-primary/90 transition-colors ",
             "text-sm font-medium"
           )}
         >
