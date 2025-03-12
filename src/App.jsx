@@ -47,6 +47,7 @@ const App = () => {
             <Route path="/markalar/:brand/:model" element={<MotorcycleDetailPage />} />
             <Route path="/markalar/*" element={<UnderConstruction />} />
             <Route path="/kurumsal/ekibimiz" element={<TeamPage />} />
+            <Route path="/kurumsal" element={<TeamPage />} />
             <Route path="/kurumsal/*" element={<UnderConstruction />} />
             <Route path="/bayilerimiz/*" element={<UnderConstruction />} />
             <Route path="/fiyat-listeleri" element={<UnderConstruction />} />
