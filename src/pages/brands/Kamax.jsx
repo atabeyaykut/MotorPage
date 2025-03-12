@@ -2,62 +2,21 @@ import BrandPage from "@/components/brands/BrandPage";
 
 const KAMAX_CATEGORIES = [
   {
-    title: "ADVENTURE",
+    title: "Cub Pro",
     models: [
       {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
-  },
-  {
-    title: "MODERN CLASSICS",
-    models: [
-      {
-        id: "speed-twin",
-        name: "Speed Twin 1200",
-        description: "Modern klasik performans",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
-  },
+        id: 1,
+        name: "Cub Pro 125",
+        description: "Basit, Havalı, Eğlenceli, Şık.",
+        image: "https://picsum.photos/seed/cub-pro-125/800/600",
+        modelYear: null,
+        brand: "kamax",
+        slug: "cub-pro-125"
+      }
+    ]
+  }
 ];
+
 
 const KamaxPage = () => {
   return (
