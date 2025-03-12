@@ -23,7 +23,7 @@ const TRIUMPH_CATEGORIES = [
         id: 2,
         name: "Scrambler 400 X",
         description: "Dengeli ve Çevik",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/triumph-scrambler-400-x-banner-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "scrambler-400-x"
@@ -32,7 +32,7 @@ const TRIUMPH_CATEGORIES = [
         id: 3,
         name: "Scrambler 1200 XE",
         description: "İmza niteliğindeki çift yüksek seviyeli egzoz",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/triumph-1200-Xe-Model-gorseli-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "scrambler-1200-xe"
@@ -41,7 +41,7 @@ const TRIUMPH_CATEGORIES = [
         id: 4,
         name: "Scrambler 1200 X",
         description: "Özgürlüğün ve Eğlencenin Bileti",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/triumph-speed-400-banner-1024x634-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "scrambler-1200-x"
@@ -55,7 +55,7 @@ const TRIUMPH_CATEGORIES = [
         id: 5,
         name: "Speed 400",
         description: "Geçmişi Yansıtan Stil, Geleceği Kucaklayan Performans",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/triumph-speed-400-banner-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "speed-400"
@@ -64,16 +64,25 @@ const TRIUMPH_CATEGORIES = [
         id: 6,
         name: "Speed Triple 1200 RS",
         description: "Teknolojide mutlak bir devrim",
-        image: "/brands/triumph/",
-        modelYear: "2025",
+        image: "/brands/triumph/Speed-Triple-1200-RS-Banner-1024x634.webp",
+        modelYear: null,
         brand: "triumph",
         slug: "speed-triple-1200-rs"
+      },
+      {
+        id: 6,
+        name: "Speed Triple 1200 RS",
+        description: "Teknolojide mutlak bir devrim",
+        image: "/brands/triumph/Speed-Triple-1200-RS-Dis-Banner-my-25-1024x634.jpg.avif",
+        modelYear: "2025",
+        brand: "triumph",
+        slug: "speed-triple-1200-rs-2025"
       },
       {
         id: 7,
         name: "Speed Triple 1200 RR",
         description: "Ayırt edici İngiliz zarafeti ve tarzı",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Speed-Triple-1200-RR-Banner-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "speed-triple-1200-rr"
@@ -87,7 +96,7 @@ const TRIUMPH_CATEGORIES = [
         id: 8,
         name: "Street Triple RS",
         description: "Gücün ve Performansın Yeni Adı",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Street-Triple-RS-Banner-1024x576-10-1-1024x634.avif",
         modelYear: null,
         brand: "triumph",
         slug: "street-triple-rs"
@@ -96,7 +105,7 @@ const TRIUMPH_CATEGORIES = [
         id: 9,
         name: "Street Triple R",
         description: "Güç ve Tarz Bir Arada",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Street-Triple-R-Page-Banner-02-1-1024x634.avif",
         modelYear: null,
         brand: "triumph",
         slug: "street-triple-r"
@@ -110,7 +119,7 @@ const TRIUMPH_CATEGORIES = [
         id: 10,
         name: "Trident 660",
         description: "Sportif, şık, heyecan verici ve çevik",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Trident_660_banner-1024x634-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "trident-660"
@@ -124,7 +133,7 @@ const TRIUMPH_CATEGORIES = [
         id: 11,
         name: "Tiger Sport 660",
         description: "Sınıfında lider güç ve teknik özellikler",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-Sport-660-Banner-1024x634-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-sport-660"
@@ -133,7 +142,7 @@ const TRIUMPH_CATEGORIES = [
         id: 12,
         name: "Tiger Sport 800",
         description: "Sınıfında lider güç ve teknik özellikler – Yakında Sizlerle",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-Sport-800-Banner-1024x634-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-sport-800"
@@ -142,7 +151,7 @@ const TRIUMPH_CATEGORIES = [
         id: 13,
         name: "Tiger 900 Rally Pro",
         description: "Doğayla Buluşun, Yollarda Hüküm Sürün!",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-900-Rally-Pro-Banner-1024x576-0019.webp",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-900-rally-pro"
@@ -151,7 +160,7 @@ const TRIUMPH_CATEGORIES = [
         id: 14,
         name: "Tiger 900 GT Pro",
         description: "Sınırsız Yol, Kesintisiz Performans",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-900-GT-PRO-Banner-1024x576-1-1024x634-1.webp",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-900-gt-pro"
@@ -160,7 +169,7 @@ const TRIUMPH_CATEGORIES = [
         id: 15,
         name: "Tiger 900 GT",
         description: "Her Yolu Keşfedin, Her Anı Yaşayın",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-900-GT-Banner-1024x576-1-1024x634-1.webp",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-900-gt"
@@ -169,7 +178,7 @@ const TRIUMPH_CATEGORIES = [
         id: 16,
         name: "Tiger 1200 Rally Pro",
         description: "Saf macera, mutlak avantaj",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-1200-Rally-Pro-dis-banner.avif",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-1200-rally-pro"
@@ -178,7 +187,7 @@ const TRIUMPH_CATEGORIES = [
         id: 17,
         name: "Tiger 1200 Rally Explorer",
         description: "Macera için tasarlandı",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-1200-Rally-Explorer-Banner-1024x576-1-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-1200-rally-explorer"
@@ -187,7 +196,7 @@ const TRIUMPH_CATEGORIES = [
         id: 18,
         name: "Tiger 1200 GT Explorer",
         description: "Tamamen teknolojiyle donatılmış",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-1200-GT-Explorer-dis-banner.avif",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-1200-gt-explorer"
@@ -196,7 +205,7 @@ const TRIUMPH_CATEGORIES = [
         id: 19,
         name: "Tiger 1200 GT Pro",
         description: "Muhteşem yol tutuşu",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Tiger-1200-Gt-Pro-dis-banner.avif",
         modelYear: null,
         brand: "triumph",
         slug: "tiger-1200-gt-pro"
@@ -210,7 +219,7 @@ const TRIUMPH_CATEGORIES = [
         id: 20,
         name: "Rocket 3 Storm R",
         description: "Epik Performans",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Rocket-3-R-MY24-Karnaval-Kirmizisi-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "rocket-3-storm-r"
@@ -219,7 +228,7 @@ const TRIUMPH_CATEGORIES = [
         id: 21,
         name: "Rocket 3 Storm GT",
         description: "Güçlü duruş ve kusursuz stil",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Rocket-3-GT-MY24-Pasifik-Mavisi-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "rocket-3-storm-gt"
@@ -233,7 +242,7 @@ const TRIUMPH_CATEGORIES = [
         id: 22,
         name: "Bonneville Speedmaster",
         description: "Speedmaster'ın kaslı varlığı ve muhteşem stili",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Speed-Master-Banner-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-speedmaster"
@@ -242,7 +251,7 @@ const TRIUMPH_CATEGORIES = [
         id: 23,
         name: "Thruxton 1200 RS",
         description: "Klasik Stil, Modern Performans",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Thruxton-RS-Banner-1024x634.webp",
         modelYear: null,
         brand: "triumph",
         slug: "thruxton-1200-rs"
@@ -251,7 +260,7 @@ const TRIUMPH_CATEGORIES = [
         id: 24,
         name: "Bonneville T100",
         description: "Zamana meydan okuyan stil",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Triumph-Bonneville-T-100-Banner-0019.avif",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-t100"
@@ -260,7 +269,7 @@ const TRIUMPH_CATEGORIES = [
         id: 25,
         name: "Bonneville T120",
         description: "Efsanevi Bonneville'in orijinal silueti",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Bonneville_T120_my25_model-png.avif",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-t120"
@@ -269,7 +278,7 @@ const TRIUMPH_CATEGORIES = [
         id: 26,
         name: "Bonneville Scrambler 900",
         description: "Özgürlük ve eğlence için doğdu",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/scrambler-900_my24_cosmic-yellow_rhs_-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-scrambler-900"
@@ -278,7 +287,7 @@ const TRIUMPH_CATEGORIES = [
         id: 27,
         name: "Bonneville Speed Twin 1200",
         description: "Gelişmiş teknoloji ve daha da üstün stil",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/speed-twin-1200_my23_matt-baja-orange_rhs.avif",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-speed-twin-1200"
@@ -287,25 +296,25 @@ const TRIUMPH_CATEGORIES = [
         id: 28,
         name: "Speed Twin 1200",
         description: "Çağdaş stil ve klasik tasarım",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Speed-Twin-1200_MY25_model_banner.avif",
         modelYear: "2025",
         brand: "triumph",
-        slug: "speed-twin-1200"
+        slug: "speed-twin-1200-2025"
       },
       {
         id: 29,
         name: "Speed Twin 1200 RS",
         description: "Çarpıcı ve tavizsiz",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Speed-Twin-1200-RS_MY25_model_banner.avif",
         modelYear: "2025",
         brand: "triumph",
-        slug: "speed-twin-1200-rs"
+        slug: "speed-twin-1200-rs-2025"
       },
       {
         id: 30,
         name: "Bonneville Speed Twin 900",
         description: "Heyecan verici performans",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/Bonneville-Speed-Twin-900-Model-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-speed-twin-900"
@@ -314,7 +323,7 @@ const TRIUMPH_CATEGORIES = [
         id: 31,
         name: "Bonneville Bobber",
         description: "Klasik Stil, Modern Performans",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/bonneville-bobber-Banner-1024x634-1.avif",
         modelYear: null,
         brand: "triumph",
         slug: "bonneville-bobber"
@@ -328,7 +337,7 @@ const TRIUMPH_CATEGORIES = [
         id: 32,
         name: "TF 250 X",
         description: "Gücün zirvesine çık!",
-        image: "/brands/triumph/",
+        image: "/brands/triumph/TRIUMPH-TF-250-X.webp",
         modelYear: null,
         brand: "triumph",
         slug: "tf-250-x"

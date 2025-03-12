@@ -8,7 +8,7 @@ const KAMAX_CATEGORIES = [
         id: 1,
         name: "Cub Pro 125",
         description: "Basit, Havalı, Eğlenceli, Şık.",
-        image: "https://picsum.photos/seed/cub-pro-125/800/600",
+        image: "/brands/kamax/kamax-marka-banner-bg01.webp",
         modelYear: null,
         brand: "kamax",
         slug: "cub-pro-125"
