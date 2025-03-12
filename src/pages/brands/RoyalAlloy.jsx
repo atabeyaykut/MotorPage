@@ -2,61 +2,33 @@ import BrandPage from "@/components/brands/BrandPage";
 
 const ROYAL_ALLOY_CATEGORIES = [
   {
-    title: "ADVENTURE",
+    title: "Tigara Grande",
     models: [
       {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
+        id: 1,
+        name: "TG 300 S LC ABS",
+        description: "Vintage Tasarım, Güçlü Performans",
+        image: "https://picsum.photos/seed/tg-300-s-lc-abs/800/600",
+        modelYear: null,
+        brand: "royal alloy",
+        slug: "tg-300-s-lc-abs"
+      }
+    ]
   },
   {
-    title: "MODERN CLASSICS",
+    title: "Grand Prix",
     models: [
       {
-        id: "speed-twin",
-        name: "Speed Twin 1200",
-        description: "Modern klasik performans",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
-  },
+        id: 2,
+        name: "GP 300 S LC ABS",
+        description: "Klasik Tasarım, Modern Performans",
+        image: "https://picsum.photos/seed/gp-300-s-lc-abs/800/600",
+        modelYear: null,
+        brand: "royal alloy",
+        slug: "gp-300-s-lc-abs"
+      }
+    ]
+  }
 ];
 
 const RoyalAlloyPage = () => {
