@@ -18,6 +18,7 @@ import KamaxPage from './pages/brands/Kamax';
 import ElectricMotionPage from './pages/brands/ElectricMotion';
 import MotorcycleDetailPage from './pages/motorcycle/MotorcycleDetailPage';
 import FanticPage from './pages/brands/Fantic';
+import TeamPage from './pages/team';
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/markalar/electric-motion" element={<ElectricMotionPage />} />
             <Route path="/markalar/:brand/:model" element={<MotorcycleDetailPage />} />
             <Route path="/markalar/*" element={<UnderConstruction />} />
+            <Route path="/kurumsal/ekibimiz" element={<TeamPage />} />
             <Route path="/kurumsal/*" element={<UnderConstruction />} />
             <Route path="/bayilerimiz/*" element={<UnderConstruction />} />
             <Route path="/fiyat-listeleri" element={<UnderConstruction />} />

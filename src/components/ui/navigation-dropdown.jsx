@@ -5,10 +5,11 @@ import { Link, useNavigate } from "react-router-dom"
 import { NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent } from "@/components/ui/navigation-menu"
 
 const DropdownItem = memo(({ item, isLoading }) => (
-  <li className="dropdown-item">
+  <li className="dropdown-item flex flex-row items-center" >
+    {item.img && <img src={`/logos/${item.img}`} className="max-h-[30px] max-w-[30px] flex-1 object-contain overflow-hidden" />}
     <Link
       to={item.path}
-      className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 text-white 
+      className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-all duration-200 text-white flex-1 
         hover:text-primary hover:translate-x-1
         data-[active]:bg-white/10 data-[state=open]:bg-white/10
         ${isLoading ? 'animate-pulse' : ''}`}
@@ -48,6 +49,7 @@ const NavigationDropdown = ({ title, items, columns = 1, type }) => {
         showChevron={false}
         onClick={handleTitleClick}
       >
+
         {title}
       </NavigationMenuTrigger>
       <NavigationMenuContent
@@ -55,7 +57,7 @@ const NavigationDropdown = ({ title, items, columns = 1, type }) => {
         role="menu"
         aria-label={`${title} alt menüsü`}
       >
-        <div className="relative w-[250px] md:w-[300px] lg:w-[350px] bg-transparent" role="none">
+        <div className="relative w-[300px] md:w-[350px] lg:w-[420px] bg-transparent" role="none">
           <ul className={`${gridClass} bg-transparent`} role="group">
             {items.map((item) => (
               <DropdownItem
