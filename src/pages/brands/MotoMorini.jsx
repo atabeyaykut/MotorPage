@@ -2,68 +2,40 @@ import BrandPage from "@/components/brands/BrandPage";
 
 const MOTO_MORINI_CATEGORIES = [
   {
-    title: "ADVENTURE",
+    title: "X-Cape",
     models: [
       {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
+        id: 1,
+        name: "X-Cape",
+        description: "Sınırları aşın, maceraya yeni bir soluk getirin!",
+        image: "https://picsum.photos/seed/x-cape/800/600",
+        modelYear: null,
+        brand: "moto morini",
+        slug: "x-cape"
+      }
+    ]
   },
   {
-    title: "MODERN CLASSICS",
+    title: "Seiemmezzo",
     models: [
       {
-        id: "speed-twin",
-        name: "Speed Twin 1200",
-        description: "Modern klasik performans",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
-  },
+        id: 2,
+        name: "Seiemmezzo SCR",
+        description: "Stil ve inovasyonun ortak noktası",
+        image: "https://picsum.photos/seed/seiemmezzo-scr/800/600",
+        modelYear: null,
+        brand: "moto morini",
+        slug: "seiemmezzo-scr"
+      }
+    ]
+  }
 ];
 
 const MotoMoriniPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="MOTO MORINI"
+      description="Motosikletlerde yaşamanın yeni bir yolu"
       categories={MOTO_MORINI_CATEGORIES}
     />
   );

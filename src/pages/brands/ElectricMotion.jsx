@@ -2,68 +2,40 @@ import BrandPage from "@/components/brands/BrandPage";
 
 const ELECTRIC_MOTION_CATEGORIES = [
   {
-    title: "ADVENTURE",
+    title: "Escape",
     models: [
       {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
+        id: 1,
+        name: "Escape XR",
+        description: "Basit, Havalı, Eğlenceli, Şık.",
+        image: "https://picsum.photos/seed/escape-xr/800/600",
+        modelYear: null,
+        brand: "electric-motion",
+        slug: "escape-xr"
+      }
+    ]
   },
   {
-    title: "MODERN CLASSICS",
+    title: "E Pure",
     models: [
       {
-        id: "speed-twin",
-        name: "Speed Twin 1200",
-        description: "Modern klasik performans",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
-  },
+        id: 2,
+        name: "E Pure Race",
+        description: "Basit, Havalı, Eğlenceli, Şık.",
+        image: "https://picsum.photos/seed/e-pure-race/800/600",
+        modelYear: null,
+        brand: "electric-motion",
+        slug: "e-pure-race"
+      }
+    ]
+  }
 ];
 
 const ElectricMotionPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="ELECTRIC MOTION"
+      description="Keskin gaz tepkisi"
       categories={ELECTRIC_MOTION_CATEGORIES}
     />
   );

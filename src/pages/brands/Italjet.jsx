@@ -2,68 +2,35 @@ import BrandPage from "@/components/brands/BrandPage";
 
 const ITALJET_CATEGORIES = [
   {
-    title: "ADVENTURE",
+    title: "Dragster",
     models: [
       {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      }, {
-        id: "tiger-1200",
-        name: "Tiger 1200",
-        description: "Macera dolu yolculuklar için tasarlandı",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
+        id: 1,
+        name: "Dragster 300",
+        description: "İkonik Tasarım Yüksek Performans",
+        image: "https://picsum.photos/seed/dragster-300/800/600",
+        modelYear: null,
+        brand: "italjet",
+        slug: "dragster-300"
       },
-      // Add more models as needed
-    ],
-  },
-  {
-    title: "MODERN CLASSICS",
-    models: [
       {
-        id: "speed-twin",
-        name: "Speed Twin 1200",
-        description: "Modern klasik performans",
-        image: "https://picsum.photos/1800/1200",
-        modelYear: "2024",
-      },
-      // Add more models as needed
-    ],
-  },
+        id: 2,
+        name: "Dragster 200 ABS",
+        description: "Sportif ve zarif ruh",
+        image: "https://picsum.photos/seed/dragster-200-abs/800/600",
+        modelYear: null,
+        brand: "italjet",
+        slug: "dragster-200-abs"
+      }
+    ]
+  }
 ];
 
 const ItaljetPage = () => {
   return (
     <BrandPage
-      brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
+      brandName="ITALJET"
+      description="Alışılmışın dışına çıkın"
       categories={ITALJET_CATEGORIES}
     />
   );

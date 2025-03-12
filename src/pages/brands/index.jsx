@@ -7,55 +7,55 @@ const BRANDS = [
   {
     name: "DUCATI",
     description: "Sportif ve zarif ruh",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/ducati_markalar_banner.png",
+    image: "/brands/ducati-banner.avif",
     path: "/markalar/ducati"
   },
   {
     name: "TRIUMPH",
     description: "Saf macera, mutlak avantaj",
-    image: "https://korlas.com.tr/wp-content/uploads/2023/10/Tiger-1200-Rally-Pro-Banner-002.png",
+    image: "/brands/Tiger-1200-Rally-Pro-Banner-002.avif",
     path: "/markalar/triumph"
   },
   {
     name: "SCRAMBLER DUCATI",
     description: "Yeni nesil Scrambler Ducati sizin için burada",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/scrambler_ducati_marka_banner-2.png",
+    image: "/brands/scrambler_ducati_marka_banner-2.avif",
     path: "/markalar/scrambler-ducati"
   },
   {
     name: "MOTO MORINI",
     description: "Motosikletlerde yaşamanın yeni bir yolu",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/moto_morini_marka_banner.png",
+    image: "/brands/moto_morini_marka_banner.avif",
     path: "/markalar/moto-morini"
   },
   {
     name: "ITALJET",
     description: "Alışılmışın dışına çıkın",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/italjet_marka_banner.png",
+    image: "/brands/italjet_marka_banner.avif",
     path: "/markalar/italjet"
   },
   {
     name: "ROYAL ALLOY",
     description: "Şehir hayatına stilinizle karışın",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/royal-alloy-marka-banner.png",
+    image: "/brands/royal-alloy-marka-banner.avif",
     path: "/markalar/royal-alloy"
   },
   {
     name: "FANTIC",
     description: "Efsaneyi yaşayın",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/fantic-marka-banner.png",
+    image: "/brands/fantic-marka-banner.avif",
     path: "/markalar/fantic"
   },
   {
     name: "KAMAX",
     description: "Basit, Havalı, Eğlenceli, Şık.",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/09/kamax-marka-banner13.png",
+    image: "/brands/kamax-marka-banner13.avif",
     path: "/markalar/kamax"
   },
   {
     name: "ELECTRIC MOTION",
     description: "Keskin gaz tepkisi",
-    image: "https://korlas.com.tr/wp-content/uploads/2024/08/Escape-XR-300x186-1.webp",
+    image: "/brands/Escape-XR-300x186-1.webp",
     path: "/markalar/electric-motion"
   }
 ];

@@ -9,15 +9,15 @@ import NavigationDropdown from "@/components/ui/navigation-dropdown";
 
 const MENU_ITEMS = {
   markalar: [
-    { name: "Ducati", path: "/markalar/ducati" },
-    { name: "Triumph", path: "/markalar/triumph" },
-    { name: "Scrambler Ducati", path: "/markalar/scrambler-ducati" },
-    { name: "Moto Morini", path: "/markalar/moto-morini" },
-    { name: "Italjet", path: "/markalar/italjet" },
-    { name: "Royal Alloy", path: "/markalar/royal-alloy" },
-    { name: "Fantic", path: "/markalar/fantic" },
-    { name: "Kamax", path: "/markalar/kamax" },
-    { name: "Electric Motion", path: "/markalar/electric-motion" }
+    { name: "Ducati", path: "/markalar/ducati", img: "ducati.png" },
+    { name: "Triumph", path: "/markalar/triumph", img: "triumph.png" },
+    { name: "Scrambler Ducati", path: "/markalar/scrambler-ducati", img: "ducati-scrambler.svg" },
+    { name: "Moto Morini", path: "/markalar/moto-morini", img: "moto-morini.webp" },
+    { name: "Italjet", path: "/markalar/italjet", img: "italjet.png" },
+    { name: "Royal Alloy", path: "/markalar/royal-alloy", img: "royal-alloy.png" },
+    { name: "Fantic", path: "/markalar/fantic", img: "fantic.svg" },
+    { name: "Kamax", path: "/markalar/kamax", img: "kamax.png" },
+    { name: "Electric Motion", path: "/markalar/electric-motion", img: "electric-motion.png" },
   ],
   kurumsal: [
     { name: "Hakkımızda", path: "/kurumsal/hakkimizda" },
