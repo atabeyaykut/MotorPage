@@ -20,6 +20,8 @@ import MotorcycleDetailPage from './pages/motorcycle/MotorcycleDetailPage';
 import FanticPage from './pages/brands/Fantic';
 import TeamPage from './pages/team';
 import About from './pages/About';
+import MissionVision from './pages/MissionVision';
+import Contact from './pages/Contact';
 
 const App = () => {
   return (
@@ -49,12 +51,13 @@ const App = () => {
             <Route path="/markalar/*" element={<UnderConstruction />} />
             <Route path="/kurumsal/ekibimiz" element={<TeamPage />} />
             <Route path="/kurumsal/hakkimizda" element={<About />} />
+            <Route path="/kurumsal/misyon-vizyon" element={<MissionVision />} />
             <Route path="/kurumsal" element={<TeamPage />} />
             <Route path="/kurumsal/*" element={<UnderConstruction />} />
             <Route path="/bayilerimiz/*" element={<UnderConstruction />} />
             <Route path="/fiyat-listeleri" element={<UnderConstruction />} />
             <Route path="/kampanyalar" element={<UnderConstruction />} />
-            <Route path="/iletisim" element={<UnderConstruction />} />
+            <Route path="/iletisim" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

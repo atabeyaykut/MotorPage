@@ -6,42 +6,42 @@ const timelineData = [
     title: "MotorPage Kuruldu",
     description:
       "MotorPage 1994 yılında motosiklet lastikleri dağıtıcılığı ile başladığı ticari hayatına motosiklet sarf malzemelerini de ekleyerek devam etmiştir.",
-    icon: "/icons/foundation.svg",
+    icon: "/icons/compass.svg",
   },
   {
     year: "2000",
     title: "Piaggio Grubu'nun Ürünlerini Satmaya Başladı",
     description:
       "2000 yılında Piaggio Grubu'nun ürünlerini satarak başladığı motosiklet satışına, 2001 yılında Suzuki markasının motosiklet konusundaki yapılanmasıyla, MotorPage Suzuki markalı motosikletlerin İstanbul Anadolu yakasındaki tek 4S noktası olmuştur.",
-    icon: "/icons/piaggio.svg",
+    icon: "/icons/compass2.svg",
   },
   {
     year: "2007",
     title: "MV Agusta Türkiye Temsilcisi Oldu",
     description:
       "2007 yılında ünlü İtalyan egzotik motosiklet üreticisi MV Agusta Türkiye Temsilciliğini aldı.",
-    icon: "/icons/mvagusta.svg",
+    icon: "/icons/compass.svg",
   },
   {
     year: "2010",
     title: "Ducati Türkiye Temsilcisi Oldu",
     description:
       "2010 yılında bir diğer İtalyan motosiklet sektörü öncüsü Ducati markasının temsilciliğini de ekleyerek farklı bir boyutta yoluna devam etmiştir.",
-    icon: "/icons/ducati.svg",
+    icon: "/icons/compass2.svg",
   },
   {
     year: "2014",
     title: "Triumph Türkiye Distribütörlüğünü Aldı",
     description:
       "2014 yılında motosiklet sektörünün dünyadaki kurucu markalarından İngiliz Kraliyetinin alametifarikası Triumph motosikletlerinin Türkiye distribütörlüğüne layık görülmüştür.",
-    icon: "/icons/triumph.svg",
+    icon: "/icons/compass.svg",
   },
   {
     year: "2015",
     title: "Depolama ve Servis Alanlarını Hayata Geçirdi",
     description:
       "2015 yılı itibarıyla MotorPage, İstanbul Ataşehir'de toplamda 1400m2'den fazla kullanım alanında hizmet veren iki ayrı teşhir, depolama ve servis alanlarını hayata geçirmiştir.",
-    icon: "/icons/service.svg",
+    icon: "/icons/compass2.svg",
   },
 ];
 
