@@ -22,6 +22,9 @@ import TeamPage from './pages/team';
 import About from './pages/About';
 import MissionVision from './pages/MissionVision';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import KVKK from './pages/KVKK';
+import CommercialConsent from './pages/CommercialConsent';
 
 const App = () => {
   return (
@@ -58,6 +61,9 @@ const App = () => {
             <Route path="/fiyat-listeleri" element={<UnderConstruction />} />
             <Route path="/kampanyalar" element={<UnderConstruction />} />
             <Route path="/iletisim" element={<Contact />} />
+            <Route path="/iletisim-formu-aydinlatma-metni" element={<PrivacyPolicy />} />
+            <Route path="/kvkk" element={<KVKK />} />
+            <Route path="/ticari-elektronik-ileti-izni" element={<CommercialConsent />} />
           </Routes>
         </main>
         <Footer />
