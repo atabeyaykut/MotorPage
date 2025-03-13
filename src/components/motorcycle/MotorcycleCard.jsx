@@ -108,10 +108,10 @@ const MotorcycleCard = React.memo(({ model }) => {
         <ModelImage name={model.name} src={model.image} />
       </div>
 
-      <h3 className="text-base font-semibold text-center mb-1">
+      <h3 className="text-base font-semibold text-xl text-center mb-1">
         {model.name}
       </h3>
-      <p className="text-sm text-muted-foreground text-center mb-4 line-clamp-2">
+      <p className="text-md text-muted-foreground text-center mb-4 line-clamp-2">
         {model.description}
       </p>
 
