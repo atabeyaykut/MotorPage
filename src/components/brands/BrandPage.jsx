@@ -41,16 +41,27 @@ const BrandPage = ({ brandName, description, categories, img }) => {
     }
   }, [brandName, description]);
 
+  const formatDescription = (text) => {
+    return text.split(" ").map((word, index) =>
+      word.toLowerCase() === "sportif" ? (
+        <span key={index} className="font-[zendots] text-4xl font-thin">{word} </span>
+      ) : word.toLowerCase() === "zarif" ? (
+        <span key={index} className="font-[Italianno] text-6xl font-medium ">{word} </span>
+      ) : (
+        word + " "
+      )
+    );
+  };
+
   return (
     <div className="container mx-auto px-4 py-4 pt-16">
       <div className="text-center justify-items-center mb-6 space-y-4">
         {img && <img src={`/logos/${img}`} alt="" className="max-w-[200px] h-auto max-h-[115px]" />}
         <p className="
-          text-7xl
+          text-2xl
           font-thin
-          font-['Italianno',serif]
-          bg-clip-text
-          text-[#800020]">{description}</p>
+          font-[Tinos]
+          bg-clip-text">{formatDescription(description)}</p>
       </div>
 
       <div className="space-y-16">
@@ -67,3 +78,4 @@ const BrandPage = ({ brandName, description, categories, img }) => {
 };
 
 export default BrandPage;
+
