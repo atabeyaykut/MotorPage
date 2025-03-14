@@ -1,22 +1,22 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Mail, Phone, MessageSquare } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "@/lib/emailjs";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    phone: "",
-    message: "",
-    privacyConsent: false,
-    kvkkConsent: false,
-    commercialConsent: false
-  }); 
+  const form = useRef();
 
-  const [errors, setErrors] = useState({});
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   useEffect(() => {
     document.title = "İletişim | MotorPage";
@@ -25,20 +25,6 @@ const Contact = () => {
       behavior: 'smooth'
     });
   }, []);
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
-  };
 
   const handleBlur = (e) => {
     const { name, value } = e.target;
@@ -54,24 +40,45 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newErrors = {};
+  const mutation = useMutation({
+    mutationFn: async (data) => {
+      return emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: `${data.firstName} ${data.lastName}`,
+          from_email: data.email,
+          phone: data.phone || 'Belirtilmedi',
+          subject: data.subject,
+          message: data.message
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+    },
+    onSuccess: () => {
+      toast.success("Mesajınız başarıyla gönderildi!");
+      reset();
+    },
+    onError: (error) => {
+      console.error('EmailJS Error:', error);
+      toast.error("Bir hata oluştu. Lütfen tekrar deneyin.");
+    }
+  });
 
-    if (!formData.firstName) newErrors.firstName = "İsim alanı zorunludur";
-    if (!formData.lastName) newErrors.lastName = "Soyisim alanı zorunludur";
-    if (!formData.email) newErrors.email = "E-posta alanı zorunludur";
-    if (!formData.subject) newErrors.subject = "Konu alanı zorunludur";
-    if (!formData.message) newErrors.message = "Mesaj alanı zorunludur";
-    if (!formData.privacyConsent) newErrors.privacyConsent = "Aydınlatma metnini onaylamanız gerekmektedir";
-    if (!formData.kvkkConsent) newErrors.kvkkConsent = "KVKK metnini onaylamanız gerekmektedir";
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+  const onSubmit = (data) => {
+    if (!data.privacyConsent) {
+      toast.error("Aydınlatma metnini onaylamanız gerekmektedir");
       return;
     }
-
-    console.log("Form submitted:", formData);
+    if (!data.kvkkConsent) {
+      toast.error("KVKK metnini onaylamanız gerekmektedir");
+      return;
+    }
+    if (!data.commercialConsent) {
+      toast.error("KVKK metnini onaylamanız gerekmektedir");
+      return;
+    }
+    mutation.mutate(data);
   };
 
   return (
@@ -82,7 +89,7 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
       className="w-full h-full"
     >
-      <div className="bg-gradient-to-r from-blue-900 to-teal-600 min-w-full container h-screen px-4 py-8 mb-20"> {/* Add padding-bottom */}
+      <div className="bg-gradient-to-r from-blue-900 to-teal-600 min-w-full container h-screen px-4 py-8 mb-20">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-center items-center justify-between gap-12">
             {/* Left Side - Contact Info */}
@@ -121,7 +128,7 @@ const Contact = () => {
 
             {/* Right Side - Contact Form */}
             <div className="bg-white flex-1 rounded-lg shadow-xl p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={form} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -130,13 +137,10 @@ const Contact = () => {
                     <input
                       type="text"
                       id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
+                      {...register("firstName", { required: "İsim alanı zorunludur" })}
                       className={`w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.firstName ? 'border-red-500' : ''}`}
                     />
-                    {errors.firstName && <span className="text-red-500 text-sm mt-1 block">{errors.firstName}</span>}
+                    {errors.firstName && <span className="text-red-500 text-sm mt-1 block">{errors.firstName.message}</span>}
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -145,13 +149,10 @@ const Contact = () => {
                     <input
                       type="text"
                       id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
+                      {...register("lastName", { required: "Soyisim alanı zorunludur" })}
                       className={`w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.lastName ? 'border-red-500' : ''}`}
                     />
-                    {errors.lastName && <span className="text-red-500 text-sm mt-1 block">{errors.lastName}</span>}
+                    {errors.lastName && <span className="text-red-500 text-sm mt-1 block">{errors.lastName.message}</span>}
                   </div>
                 </div>
 
@@ -162,13 +163,16 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    {...register("email", {
+                      required: "E-posta alanı zorunludur",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Geçerli bir e-posta adresi giriniz"
+                      }
+                    })}
                     className={`w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.email ? 'border-red-500' : ''}`}
                   />
-                  {errors.email && <span className="text-red-500 text-sm mt-1 block">{errors.email}</span>}
+                  {errors.email && <span className="text-red-500 text-sm mt-1 block">{errors.email.message}</span>}
                 </div>
 
                 <div>
@@ -178,10 +182,7 @@ const Contact = () => {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    {...register("phone")}
                     className="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -193,29 +194,23 @@ const Contact = () => {
                   <input
                     type="text"
                     id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    {...register("subject", { required: "Konu alanı zorunludur" })}
                     className={`w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.subject ? 'border-red-500' : ''}`}
                   />
-                  {errors.subject && <span className="text-red-500 text-sm mt-1 block">{errors.subject}</span>}
+                  {errors.subject && <span className="text-red-500 text-sm mt-1 block">{errors.subject.message}</span>}
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mesajınız <span className="text-red-500">*</span>
+                    Mesaj <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    {...register("message", { required: "Mesaj alanı zorunludur" })}
                     rows="4"
                     className={`w-full px-4 py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.message ? 'border-red-500' : ''}`}
                   ></textarea>
-                  {errors.message && <span className="text-red-500 text-sm mt-1 block">{errors.message}</span>}
+                  {errors.message && <span className="text-red-500 text-sm mt-1 block">{errors.message.message}</span>}
                 </div>
 
                 <div className="space-y-4">
@@ -223,64 +218,52 @@ const Contact = () => {
                     <input
                       type="checkbox"
                       id="privacyConsent"
-                      name="privacyConsent"
-                      checked={formData.privacyConsent}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      className="mt-1 mr-2 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      {...register("privacyConsent")}
+                      className="mt-1"
                     />
-                    <label htmlFor="privacyConsent" className="text-sm text-gray-700">
-                      <Link to="/iletisim-formu-aydinlatma-metni" className="text-blue-600 hover:text-blue-700 underline" target="_blank">
-                        Aydınlatma metnini
-                      </Link>
-                      {' '}okudum ve onaylıyorum <span className="text-red-500">*</span>
+                    <label htmlFor="privacyConsent" className="ml-2 text-sm text-gray-600">
+                      <Link to="/iletisim-formu-aydinlatma-metni" className="text-blue-600 hover:underline" target="_blank">
+                        İletişim Formu Aydınlatma Metni
+                      </Link>'ni okudum ve onaylıyorum. <span className="text-red-500">*</span>
                     </label>
                   </div>
-                  {errors.privacyConsent && <span className="text-red-500 text-sm block">{errors.privacyConsent}</span>}
 
                   <div className="flex items-start">
                     <input
                       type="checkbox"
                       id="kvkkConsent"
-                      name="kvkkConsent"
-                      checked={formData.kvkkConsent}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      className="mt-1 mr-2 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      {...register("kvkkConsent")}
+                      className="mt-1"
                     />
-                    <label htmlFor="kvkkConsent" className="text-sm text-gray-700">
-                      <Link to="/kvkk" className="text-blue-600 hover:text-blue-700 underline" target="_blank">
-                        KVKK metnini
-                      </Link>
-                      {' '}okudum ve onaylıyorum <span className="text-red-500">*</span>
+                    <label htmlFor="kvkkConsent" className="ml-2 text-sm text-gray-600">
+                      <Link to="/kvkk" className="text-blue-600 hover:underline" target="_blank">
+                        KVKK Aydınlatma Metni
+                      </Link>'ni okudum ve onaylıyorum. <span className="text-red-500">*</span>
                     </label>
                   </div>
-                  {errors.kvkkConsent && <span className="text-red-500 text-sm block">{errors.kvkkConsent}</span>}
 
                   <div className="flex items-start">
                     <input
                       type="checkbox"
                       id="commercialConsent"
-                      name="commercialConsent"
-                      checked={formData.commercialConsent}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      className="mt-1 mr-2 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                      {...register("commercialConsent")}
+                      className="mt-1"
                     />
-                    <label htmlFor="commercialConsent" className="text-sm text-gray-700">
-                      <Link to="/ticari-elektronik-ileti-izni" className="text-blue-600 hover:text-blue-700 underline" target="_blank">
+                    <label htmlFor="commercialConsent" className="ml-2 text-sm text-gray-600">
+                      <Link to="/ticari-elektronik-ileti-izni" className="text-blue-600 hover:underline" target="_blank">
                         Ticari Elektronik İleti İzni
-                      </Link>
-                      'ni okudum ve onaylıyorum <span className="text-red-500">*</span>
+                      </Link>'ni okudum ve onaylıyorum. <span className="text-red-500">*</span>
                     </label>
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors duration-200 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  disabled={mutation.isPending}
+                  className={`w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300 ${mutation.isPending ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
                 >
-                  Gönder
+                  {mutation.isPending ? 'Gönderiliyor...' : 'Gönder'}
                 </button>
               </form>
             </div>
