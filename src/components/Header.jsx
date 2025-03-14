@@ -27,6 +27,7 @@ const MENU_ITEMS = {
 };
 
 const NAV_LINKS = [
+  { to: "/sergi", text: "Sergi" },
   { to: "/fiyat-listeleri", text: "Fiyat Listeleri" },
   { to: "/kampanyalar", text: "Kampanyalar" },
   { to: "/iletisim", text: "İletişim" }
