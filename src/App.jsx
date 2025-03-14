@@ -25,6 +25,7 @@ import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import KVKK from './pages/KVKK';
 import CommercialConsent from './pages/CommercialConsent';
+import PriceList from './pages/PriceList';
 
 const App = () => {
   return (
@@ -58,7 +59,7 @@ const App = () => {
             <Route path="/kurumsal" element={<TeamPage />} />
             <Route path="/kurumsal/*" element={<UnderConstruction />} />
             <Route path="/bayilerimiz/*" element={<UnderConstruction />} />
-            <Route path="/fiyat-listeleri" element={<UnderConstruction />} />
+            <Route path="/fiyat-listeleri" element={<PriceList />} />
             <Route path="/kampanyalar" element={<UnderConstruction />} />
             <Route path="/iletisim" element={<Contact />} />
             <Route path="/iletisim-formu-aydinlatma-metni" element={<PrivacyPolicy />} />
