@@ -75,7 +75,7 @@ const Contact = () => {
       return;
     }
     if (!data.commercialConsent) {
-      toast.error("KVKK metnini onaylamanız gerekmektedir");
+      toast.error("Ticari Elektronik İleti İzni onaylamanız gerekmektedir");
       return;
     }
     mutation.mutate(data);
