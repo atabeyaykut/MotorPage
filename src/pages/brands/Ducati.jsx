@@ -284,7 +284,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Panigale-V4-Dis-Banner-1024x618.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "panigale-v4-2025"
+        slug: "panigale-v4-my2025"
       },
       {
         id: 17,
@@ -302,7 +302,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Panigale-V4-S-Dis-Banner-1024x618.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "panigale-v4-s-2025"
+        slug: "panigale-v4-s-my2025"
       },
       {
         id: 18,
@@ -343,7 +343,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/ducati-street-fighter-v2-1024x634.webp",
         modelYear: null,
         brand: "ducati",
-        slug: "streetfighter-v2"
+        slug: "street-fighter-v2"
       },
       {
         id: 2021,
@@ -352,7 +352,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Streetfighter-V2-MY25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "streetfighter-v2-2025"
+        slug: "street-fighter-v2-my2025"
       },
       {
         id: 22,
@@ -361,7 +361,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Streetfighter-V2-S-MY25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "streetfighter-v2-s"
+        slug: "street-fighter-v2-s-my2025"
       },
       {
         id: 23,
@@ -370,7 +370,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Streetfighter-V4-Banner-1024x634.avif",
         modelYear: null,
         brand: "ducati",
-        slug: "streetfighter-v4"
+        slug: "street-fighter-v4"
       },
       {
         id: 2023,
@@ -379,7 +379,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Streetfighter-V4-MY25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "streetfighter-v4-2025"
+        slug: "street-fighter-v4-my2025"
       },
       {
         id: 24,
@@ -388,7 +388,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Panigale-V4-S-Banner-1024x634.avif",
         modelYear: null,
         brand: "ducati",
-        slug: "streetfighter-v4-s"
+        slug: "street-fighter-v4-s"
       },
       {
         id: 2024,
@@ -397,7 +397,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Streetfighter-V4-S-MY25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "streetfighter-v4-s-2025"
+        slug: "street-fighter-v4-s-my2025"
       },
       {
         id: 25,
@@ -406,7 +406,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-street-fighter-v4-sp3.avif",
         modelYear: null,
         brand: "ducati",
-        slug: "streetfighter-v4-sp2"
+        slug: "street-fighter-v4-sp2"
       }
     ]
   }
