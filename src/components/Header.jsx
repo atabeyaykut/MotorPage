@@ -82,11 +82,11 @@ const Header = () => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          
+
           <Link to="/randevu-al">
-            <Button 
-              variant="outline" 
-              className="border-primary text-white hover:bg-white hover:text-primary transition-colors"
+            <Button
+              variant="outline"
+              className="border-primary border-2 text-white bg-transparent ml-4 hover:bg-white hover:text-primary transition-colors"
             >
               Randevu Al
             </Button>
