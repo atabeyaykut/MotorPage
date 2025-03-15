@@ -29,6 +29,7 @@ import KVKK from './pages/KVKK';
 import CommercialConsent from './pages/CommercialConsent';
 import PriceList from './pages/PriceList';
 import Exhibition from './pages/Exhibition';
+import Appointment from './pages/Appointment';
 
 const queryClient = new QueryClient();
 
@@ -69,6 +70,7 @@ const App = () => {
               <Route path="/kampanyalar" element={<UnderConstruction />} />
               <Route path="/sergi" element={<Exhibition />} />
               <Route path="/iletisim" element={<Contact />} />
+              <Route path="/randevu-al" element={<Appointment />} />
               <Route path="/iletisim-formu-aydinlatma-metni" element={<PrivacyPolicy />} />
               <Route path="/kvkk" element={<KVKK />} />
               <Route path="/ticari-elektronik-ileti-izni" element={<CommercialConsent />} />

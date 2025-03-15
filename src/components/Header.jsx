@@ -5,6 +5,7 @@ import {
   NavigationMenuList,
   NavigationMenuItem,
 } from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
 import NavigationDropdown from "@/components/ui/navigation-dropdown";
 
 const MENU_ITEMS = {
@@ -59,27 +60,38 @@ const Header = () => {
           Daric
         </Link>
 
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationDropdown
-              title="Markalar"
-              items={MENU_ITEMS.markalar}
-              columns={2}
-              type="markalar"
-            />
-            <NavigationDropdown
-              title="Kurumsal"
-              items={MENU_ITEMS.kurumsal}
-              type="kurumsal"
-            />
+        <div className="flex items-center gap-4">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationDropdown
+                title="Markalar"
+                items={MENU_ITEMS.markalar}
+                columns={2}
+                type="markalar"
+              />
+              <NavigationDropdown
+                title="Kurumsal"
+                items={MENU_ITEMS.kurumsal}
+                type="kurumsal"
+              />
 
-            {navLinks.map(link => (
-              <NavLink key={link.to} to={link.to}>
-                {link.text}
-              </NavLink>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
+              {navLinks.map(link => (
+                <NavLink key={link.to} to={link.to}>
+                  {link.text}
+                </NavLink>
+              ))}
+            </NavigationMenuList>
+          </NavigationMenu>
+          
+          <Link to="/randevu-al">
+            <Button 
+              variant="outline" 
+              className="border-primary text-white hover:bg-white hover:text-primary transition-colors"
+            >
+              Randevu Al
+            </Button>
+          </Link>
+        </div>
       </div>
     </header>
   );
