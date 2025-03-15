@@ -849,6 +849,57 @@ export const motorcycles = {
       ]
     },
 
+
+    // Ducati Panigale V2 S – Standart versiyon
+    'panigale-v2-s': {
+      name: "Ducati Panigale V2 My 2025",
+      brand: "ducati",
+      description:
+        "Ducati V2, yüksek performans ve agresif tasarımıyla öne çıkan bir motosiklettir.",
+      modelYear: "2025",
+      heroImage: "https://picsum.photos/seed/ducati-v2-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/ducati-v2-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Gelişmiş Motor",
+          description: "Sıvı soğutmalı, yüksek verimli 2 silindirli Ducati V2 motor."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Sıvı soğutmalı 2 silindirli 4 zamanlı Ducati V2 bloğu, silindir başına 4 supap",
+        "Çap": "96 mm x 61.5 mm",
+        "Motor Hacmi": "890 cc",
+        "Motor Gücü": "120 HP @ 10,750 rpm",
+        "Maks. Tork": "93.3 Nm @ 8,250 rpm",
+        "Kompresyon Oranı": "13:1.1"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "43 mm tamamen ayarlanabilir Öhlins NIX30 ön süspansiyon",
+        "Arka Çatal / Süspansiyon": "Tamamen ayarlanabilir Öhlins arka süspansiyon",
+        "Tekerlek Arası Mesafe": "1465 mm",
+        "Ön Jant Ebatı": '3.50″ x 17″',
+        "Arka Jant Ebatı": '5.50″ x 17″',
+        "Ön Lastik": "120/70R 17 Pirelli Diablo Rosso IV",
+        "Arka Lastik": "190/55R 17 Pirelli Diablo Rosso IV",
+        "Ön Fren": "320 mm çapında çift disk, 4 pistonlu Brembo M50 kaliper",
+        "Arka Fren": "245 mm çapında disk, 2 pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "837 mm",
+        "Depo Kapasitesi": "15 L",
+        "Kuru Ağırlık": "176 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/ducati-v2-1/800/600",
+        "https://picsum.photos/seed/ducati-v2-2/800/600",
+        "https://picsum.photos/seed/ducati-v2-3/800/600",
+        "https://picsum.photos/seed/ducati-v2-4/800/600"
+      ]
+    },
+
     // Ducati Panigale V2 2025 – Güncellenmiş versiyon (aynı teknikler)
     'panigale-v2-2025': {
       name: "Panigale V2 2025",
@@ -3436,6 +3487,537 @@ export const motorcycles = {
       }
     },
 
+    // TRIUMPH BONNEVILLE SPEED TWIN 1200 2025
+    'speed-twin-1200-2025': {
+      name: "Bonneville Speed Twin 1200",
+      brand: "triumph",
+      description:
+        "Triumph Bonneville Speed Twin 1200; klasik tasarımın modern dokunuşlarla harmanlandığı performanslı bir model.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/triumph-bonneville-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/triumph-bonneville-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Klasik Tasarım",
+          description: "Zamansız estetik ve modern teknoloji."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı çift silindirli, 8 valf, SOHC",
+        "Çap": "97.6 mm x 80 mm",
+        "Motor Hacmi": "1200 cc",
+        "Motor Gücü": "105 HP @ 7750 rpm",
+        "Maks. Tork": "112 Nm @ 4250 rpm",
+        "Kompresyon Oranı": "12.1:1",
+        "CO2 Emisyonu": "116 g/km",
+        "Yakıt Tüketimi": "5.1 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "43 mm Marzocchi ön süspansiyon",
+        "Arka Çatal / Süspansiyon": "Ön yükleme ayarlı çift Marzocchi arka süspansiyon",
+        "Tekerlek Arası Mesafe": "1413 mm",
+        "Ön Jant Ebatı": '3.5″ x 17″',
+        "Arka Jant Ebatı": '5.0″ x 17″',
+        "Ön Lastik": "120/70R 17",
+        "Arka Lastik": "160/60R 17",
+        "Ön Fren": "320 mm çapında çift diskli fren, Triumph 4 pistonlu kaliper",
+        "Arka Fren": "220 mm çapında tek diskli fren, Nissin 2 pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "805 mm",
+        "Depo Kapasitesi": "14.5 L",
+        "Islak Ağırlık": "216 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/triumph-bonneville-1/800/600",
+        "https://picsum.photos/seed/triumph-bonneville-2/800/600",
+        "https://picsum.photos/seed/triumph-bonneville-3/800/600",
+        "https://picsum.photos/seed/triumph-bonneville-4/800/600"
+      ]
+    },
+
+    // Rocket 3 STORM GT
+    'rocket-3-storm-gt': {
+      name: "Rocket 3 STORM GT",
+      brand: "piaggio", // veya ilgili marka
+      description:
+        "Rocket 3 STORM GT; agresif tasarım ve yüksek güç çıkışıyla dikkat çeken bir üç silindirli model.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/rocket3-storm-gt-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/rocket3-storm-gt-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Üç Silindir Gücü",
+          description: "180 HP güç ve 225 Nm tork ile dinamik performans."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su soğutmalı, 3 silindirli sıralı motor, 12 valf, DOHC",
+        "Çap": "110.2 mm x 85.9 mm",
+        "Motor Hacmi": "2458 cc",
+        "Motor Gücü": "180 HP @ 7000 rpm (134 kW)",
+        "Maks. Tork": "225 Nm @ 4000 rpm",
+        "Kompresyon Oranı": "10.8:1",
+        "CO2 Emisyonu": "152 g/km",
+        "Yakıt Tüketimi": "6.6 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters konumlandırılmış Showa 47 mm 1+1 kartuşlu süspansiyon",
+        "Arka Çatal / Süspansiyon": "Tamamen ayarlanabilir Showa amortisör",
+        "Tekerlek Arası Mesafe": "1677 mm",
+        "Ön Jant Ebatı": '3.5″ x 17″',
+        "Arka Jant Ebatı": '7.5″ x 16″',
+        "Ön Lastik": "150/80R 17",
+        "Arka Lastik": "240/50R 16",
+        "Ön Fren": "320 mm çapında çift disk, Brembo M4.30 Stylema® dört pistonlu kaliper",
+        "Arka Fren": "300 mm çapında tek disk, Brembo M4.30 Stylema® dört pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "750 mm",
+        "Depo Kapasitesi": "18 L",
+        "Islak Ağırlık": "320 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/rocket3-storm-gt-1/800/600",
+        "https://picsum.photos/seed/rocket3-storm-gt-2/800/600",
+        "https://picsum.photos/seed/rocket3-storm-gt-3/800/600",
+        "https://picsum.photos/seed/rocket3-storm-gt-4/800/600"
+      ]
+    },
+
+    // Rocket 3 STORM R
+    'rocket-3-storm-r': {
+      name: "Rocket 3 STORM R",
+      brand: "piaggio", // marka bilgisi gerektiğinde güncellenebilir
+      description:
+        "Rocket 3 STORM R; STORM GT ile benzer motor özelliklerine sahip, farklı sele yüksekliği ve ağırlık detaylarıyla.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/rocket3-storm-r-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/rocket3-storm-r-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Dinamik Farklılık",
+          description: "STORM GT ile benzer ancak sele yüksekliği ve ağırlıkta değişiklik var."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su soğutmalı, 3 silindirli sıralı motor, 12 valf, DOHC",
+        "Çap": "110.2 mm x 85.9 mm",
+        "Motor Hacmi": "2458 cc",
+        "Motor Gücü": "180 HP @ 7000 rpm (134 kW)",
+        "Maks. Tork": "225 Nm @ 4000 rpm",
+        "Kompresyon Oranı": "10.8:1",
+        "CO2 Emisyonu": "152 g/km",
+        "Yakıt Tüketimi": "6.6 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters konumlandırılmış Showa 47 mm 1+1 kartuşlu süspansiyon",
+        "Arka Çatal / Süspansiyon": "Tamamen ayarlanabilir Showa amortisör",
+        "Tekerlek Arası Mesafe": "1677 mm",
+        "Ön Jant Ebatı": '3.5″ x 17″',
+        "Arka Jant Ebatı": '7.5″ x 16″',
+        "Ön Lastik": "150/80R 17",
+        "Arka Lastik": "240/50R 16",
+        "Ön Fren": "320 mm çapında çift disk, Brembo M4.30 Stylema® dört pistonlu kaliper",
+        "Arka Fren": "300 mm çapında tek disk, Brembo M4.30 Stylema® dört pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "773 mm",
+        "Depo Kapasitesi": "18 L",
+        "Islak Ağırlık": "317 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/rocket3-storm-r-1/800/600",
+        "https://picsum.photos/seed/rocket3-storm-r-2/800/600",
+        "https://picsum.photos/seed/rocket3-storm-r-3/800/600",
+        "https://picsum.photos/seed/rocket3-storm-r-4/800/600"
+      ]
+    },
+
+    // SCRAMBLER 400 X
+    'scrambler-400-x': {
+      name: "Scrambler 400 X",
+      brand: "ducati",
+      description:
+        "Scrambler 400 X; kompakt, tek silindirli ve şehir içi kullanımda esneklik sunan modern bir scrambler.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/scrambler-400-x-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/scrambler-400-x-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Kompakt Performans",
+          description: "Şehir içi kullanım için ideal hafif yapı."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı tek silindirli, 4valf, DOHC",
+        "Çap": "89.0 mm x 64.0 mm",
+        "Motor Hacmi": "398.15 cc",
+        "Motor Gücü": "39.4 HP @ 8000 rpm (29.4 kW)",
+        "Maks. Tork": "37.5 Nm @ 6500 rpm",
+        "Kompresyon Oranı": "12:1",
+        "CO2 Emisyonu": "83.8 g/km",
+        "Yakıt Tüketimi": "3.5 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters konumlandırılmış 43 mm ön süspansiyon",
+        "Arka Çatal / Süspansiyon": "Ön yük ayarlı arka süspansiyon",
+        "Tekerlek Arası Mesafe": "1418 mm",
+        "Ön Jant Ebatı": '2.5″ x 19″',
+        "Arka Jant Ebatı": '3.5″ x 17″',
+        "Ön Lastik": "100/90R 19",
+        "Arka Lastik": "140/80R 19",
+        "Ön Fren": "320 mm çapında tek diskli fren, 4 pistonlu kaliper",
+        "Arka Fren": "230 mm çapında tek diskli fren, ByBreTM tek pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "835 mm",
+        "Depo Kapasitesi": "13 L",
+        "Islak Ağırlık": "179 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/scrambler-400-x-1/800/600",
+        "https://picsum.photos/seed/scrambler-400-x-2/800/600",
+        "https://picsum.photos/seed/scrambler-400-x-3/800/600",
+        "https://picsum.photos/seed/scrambler-400-x-4/800/600"
+      ]
+    },
+
+    // SPEED TRIPLE 1200 RS 2025
+    'speed-triple-1200-rs-2025': {
+      name: "Speed Triple 1200 RS",
+      brand: "triumph",
+      description:
+        "Speed Triple 1200 RS; üç silindirli motor bloğu ve yüksek devre kesimiyle yarış teknolojilerini sokaklara taşıyan model.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/speed-triple-1200-rs-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/speed-triple-1200-rs-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Yarış Teknolojisi",
+          description: "Öhlins SmartEC3 ön süspansiyon ve özel fren sistemi."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Sıvı soğutmalı 3 silindirli DOHC motor bloğu",
+        "Çap": "90.0 mm x 60.8 mm",
+        "Motor Hacmi": "1160 cc",
+        "Motor Gücü": "180 HP @ 10750 dev/dak",
+        "Maks. Tork": "128 Nm @ 8750 dev/dak",
+        "Kompresyon Oranı": "13.2 :1"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "43mm tamamen ayarlanabilir Öhlins SmartEC3 ön süspansiyon",
+        "Arka Çatal / Süspansiyon": "Tamamen ayarlanabilir 120mm Öhlins arka süspansiyon",
+        "Tekerlek Arası Mesafe": "1445 mm",
+        "Ön Jant Ebatı": '3″ x 17″',
+        "Arka Jant Ebatı": '6″ x 17″',
+        "Ön Lastik": "120/70R 17 Pirelli Diablo Supercorsa SP V3",
+        "Arka Lastik": "190/55R 17 Pirelli Diablo Supercorsa SP V3",
+        "Ön Fren": "320 mm çapında çift disk, 4 pistonlu Brembo Stylema monobloc kaliper",
+        "Arka Fren": "220 mm çapında disk, 2 pistonlu Brembo kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "830 mm",
+        "Depo Kapasitesi": "15.5 L",
+        "Islak Ağırlık": "199 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/speed-triple-1200-rs-1/800/600",
+        "https://picsum.photos/seed/speed-triple-1200-rs-2/800/600",
+        "https://picsum.photos/seed/speed-triple-1200-rs-3/800/600",
+        "https://picsum.photos/seed/speed-triple-1200-rs-4/800/600"
+      ]
+    },
+
+    // TIGER 1200 GT EXPLORER
+    'tiger-1200-gt-explorer': {
+      name: "Tiger 1200 GT Explorer",
+      brand: "triumph",
+      description:
+        "Tiger 1200 GT Explorer; uzun yolculuklara uygun, yarı aktif amortisör ve geniş depo kapasitesiyle konforu ön planda tutan model.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/tiger-1200-gt-explorer-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/tiger-1200-gt-explorer-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Konforlu Yolculuk",
+          description: "Yarı aktif amortisör ve geniş depoyla uzun mesafelerde ideal."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı 3 silindirli sıralı motor, 12 valf, DOHC",
+        "Çap": "90 mm x 60.7 mm",
+        "Motor Hacmi": "1160 cc",
+        "Motor Gücü": "148 HP @ 9000 rpm (110.4 kW)",
+        "Maks. Tork": "130 Nm @ 7000 rpm",
+        "Kompresyon Oranı": "13.2 :1",
+        "CO2 Emisyonu": "119 g/km",
+        "Yakıt Tüketimi": "5.1 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters Showa 49 mm çap, yarı aktif sönümleme ayarlı amortisör",
+        "Arka Çatal / Süspansiyon": "Ön Yük Azaltma özellikli Showa yarı aktif mono amortisörü",
+        "Tekerlek Arası Mesafe": "1560 mm",
+        "Ön Jant Ebatı": '3.0″ x 19″',
+        "Arka Jant Ebatı": '4.25″ x 18″',
+        "Ön Lastik": "120/70R 19 Metzeler Tourance",
+        "Arka Lastik": "150/70R 18 Metzeler Tourance",
+        "Ön Fren": "Radyal Brembo M4.30 sabit kaliperler ve 320 mm çapında çift disk",
+        "Arka Fren": "Brembo tek pistonlu kaliper 282 mm çapında tek disk",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "850 mm",
+        "Sele Yükseltme Kiti": "870 mm",
+        "Depo Kapasitesi": "30 L",
+        "Islak Ağırlık": "255 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/tiger-1200-gt-explorer-1/800/600",
+        "https://picsum.photos/seed/tiger-1200-gt-explorer-2/800/600",
+        "https://picsum.photos/seed/tiger-1200-gt-explorer-3/800/600",
+        "https://picsum.photos/seed/tiger-1200-gt-explorer-4/800/600"
+      ]
+    },
+
+    // TIGER 1200 GT PRO
+    'tiger-1200-gt-pro': {
+      name: "Tiger 1200 GT Pro",
+      brand: "triumph",
+      description:
+        "Tiger 1200 GT Pro; Explorer versiyonunun premium donanımlı, daha kompakt depo kapasitesine sahip varyantı.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/tiger-1200-gt-pro-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/tiger-1200-gt-pro-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Premium Donanım",
+          description: "Konfor ve performansı artıran özel süspansiyon ayarları."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı 3 silindirli sıralı motor, 12 valf, DOHC",
+        "Çap": "90 mm x 60.7 mm",
+        "Motor Hacmi": "1160 cc",
+        "Motor Gücü": "148 HP @ 9000 rpm (110.4 kW)",
+        "Maks. Tork": "130 Nm @ 7000 rpm",
+        "Kompresyon Oranı": "13.2 :1",
+        "CO2 Emisyonu": "119 g/km",
+        "Yakıt Tüketimi": "5.1 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters Showa 49 mm çap, yarı aktif sönümleme ayarlı amortisör",
+        "Arka Çatal / Süspansiyon": "Ön Yük Azaltma özellikli Showa yarı aktif mono amortisörü",
+        "Tekerlek Arası Mesafe": "1560 mm",
+        "Ön Jant Ebatı": '3.0″ x 19″',
+        "Arka Jant Ebatı": '4.25″ x 18″',
+        "Ön Lastik": "120/70R 19 Metzeler Tourance",
+        "Arka Lastik": "150/70R 18 Metzeler Tourance",
+        "Ön Fren": "Radyal Brembo M4.30 sabit kaliperler ve 320 mm çapında çift disk",
+        "Arka Fren": "Brembo tek pistonlu kaliper 282 mm çapında tek disk",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "850 mm",
+        "Sele Yükseltme Kiti": "870 mm",
+        "Depo Kapasitesi": "20 L",
+        "Islak Ağırlık": "245 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/tiger-1200-gt-pro-1/800/600",
+        "https://picsum.photos/seed/tiger-1200-gt-pro-2/800/600",
+        "https://picsum.photos/seed/tiger-1200-gt-pro-3/800/600",
+        "https://picsum.photos/seed/tiger-1200-gt-pro-4/800/600"
+      ]
+    },
+
+    // TIGER 1200 RALLY EXPLORER
+    'tiger-1200-rally-explorer': {
+      name: "Tiger 1200 Rally Explorer",
+      brand: "triumph",
+      description:
+        "Tiger 1200 Rally Explorer; off-road performansı ve özel jant-lastik kombinasyonuyla dikkat çeken model.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/tiger-1200-rally-explorer-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/tiger-1200-rally-explorer-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Off-Road Adaptasyonu",
+          description: "Özel jant-lastik ölçüleri ve sele yükseltme kitine sahip."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı 3 silindirli sıralı motor, 12 valf, DOHC",
+        "Çap": "90 mm x 60.7 mm",
+        "Motor Hacmi": "1160 cc",
+        "Motor Gücü": "148 HP @ 9000 rpm (110.4 kW)",
+        "Maks. Tork": "130 Nm @ 7000 rpm",
+        "Kompresyon Oranı": "13.2 :1",
+        "CO2 Emisyonu": "119 g/km",
+        "Yakıt Tüketimi": "5.1 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters Showa 49 mm çap, yarı aktif sönümleme ayarlı amortisör",
+        "Arka Çatal / Süspansiyon": "Ön Yük Azaltma özellikli Showa yarı aktif mono amortisörü",
+        "Tekerlek Arası Mesafe": "1560 mm",
+        "Ön Jant Ebatı": '2.15″ x 21″',
+        "Arka Jant Ebatı": '4.25″ x 18″',
+        "Ön Lastik": "90/90R 21 Metzeler Karoo Street",
+        "Arka Lastik": "150/70R 18 Metzeler Karoo Street",
+        "Ön Fren": "Radyal Brembo M4.30 sabit kaliperler ve 320 mm çapında çift disk",
+        "Arka Fren": "Brembo tek pistonlu kaliper 282 mm çapında tek disk",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "875 mm",
+        "Sele Yükseltme Kiti": "895 mm",
+        "Depo Kapasitesi": "30 L",
+        "Islak Ağırlık": "261 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/tiger-1200-rally-explorer-1/800/600",
+        "https://picsum.photos/seed/tiger-1200-rally-explorer-2/800/600",
+        "https://picsum.photos/seed/tiger-1200-rally-explorer-3/800/600",
+        "https://picsum.photos/seed/tiger-1200-rally-explorer-4/800/600"
+      ]
+    },
+
+    // TIGER 1200 RALLY PRO
+    'tiger-1200-rally-pro': {
+      name: "Tiger 1200 Rally Pro",
+      brand: "triumph",
+      description:
+        "Tiger 1200 Rally Pro; Rally Explorer'ın performans ve donanım olarak daha kompakt versiyonu.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/tiger-1200-rally-pro-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/tiger-1200-rally-pro-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Yüksek Performans",
+          description: "Özel süspansiyon ayarları ve kompakt ağırlık yönetimi."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı 3 silindirli sıralı motor, 12 valf, DOHC",
+        "Çap": "90 mm x 60.7 mm",
+        "Motor Hacmi": "1160 cc",
+        "Motor Gücü": "148 HP @ 9000 rpm (110.4 kW)",
+        "Maks. Tork": "130 Nm @ 7000 rpm",
+        "Kompresyon Oranı": "12.5 :1",
+        "CO2 Emisyonu": "119 g/km",
+        "Yakıt Tüketimi": "5.1 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "Ters Showa 49 mm çap, yarı aktif sönümleme ayarlı amortisör",
+        "Arka Çatal / Süspansiyon": "Ön Yük Azaltma özellikli Showa yarı aktif mono amortisörü",
+        "Tekerlek Arası Mesafe": "1560 mm",
+        "Ön Jant Ebatı": '2.15″ x 21″',
+        "Arka Jant Ebatı": '4.25″ x 18″',
+        "Ön Lastik": "90/90R 21 Metzeler Karoo Street",
+        "Arka Lastik": "150/70R 18 Metzeler Karoo Street",
+        "Ön Fren": "Radyal Brembo M4.30 sabit kaliperler ve 320 mm çapında çift disk",
+        "Arka Fren": "Brembo tek pistonlu kaliper 282 mm çapında tek disk",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "875 mm",
+        "Sele Yükseltme Kiti": "895 mm",
+        "Depo Kapasitesi": "20 L",
+        "Islak Ağırlık": "249 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/tiger-1200-rally-pro-1/800/600",
+        "https://picsum.photos/seed/tiger-1200-rally-pro-2/800/600",
+        "https://picsum.photos/seed/tiger-1200-rally-pro-3/800/600",
+        "https://picsum.photos/seed/tiger-1200-rally-pro-4/800/600"
+      ]
+    },
+
+    // SPEED TWIN 1200 RS 2025
+    'speed-twin-1200-rs-2025': {
+      name: "Speed Twin 1200 RS",
+      brand: "triumph",
+      description:
+        "Speed Twin 1200 RS; sportif donanım ve premium süspansiyon sistemleriyle öne çıkan versiyon.",
+      modelYear: "–",
+      heroImage: "https://picsum.photos/seed/speed-twin-rs-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/speed-twin-rs-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Özel Süspansiyon",
+          description: "Yüksek performans için çift Öhlins arka süspansiyon."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Su/yağ soğutmalı çift silindirli, 8 valf, SOHC",
+        "Çap": "97.6 mm x 80 mm",
+        "Motor Hacmi": "1200 cc",
+        "Motor Gücü": "105 HP @ 7750 rpm",
+        "Maks. Tork": "112 Nm @ 4250 rpm",
+        "Kompresyon Oranı": "12.1:1",
+        "CO2 Emisyonu": "116 g/km",
+        "Yakıt Tüketimi": "5.1 l/100km",
+        "Emisyon": "Euro 5"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "43 mm Marzocchi ön süspansiyon",
+        "Arka Çatal / Süspansiyon": "Ayarlanabilir çift Öhlins arka süspansiyon",
+        "Tekerlek Arası Mesafe": "1414 mm",
+        "Ön Jant Ebatı": '3.5″ x 17″',
+        "Arka Jant Ebatı": '5″ x 17″',
+        "Ön Lastik": "120/70R 17 Metzeler Racetec RR K3",
+        "Arka Lastik": "160/60R 17 Metzeler Racetec RR K3",
+        "Ön Fren": "320 mm çapında çift diskli fren, Brembo Stylema M4.30 kaliper",
+        "Arka Fren": "220 mm çapında tek diskli fren, Nissin 2 pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "810 mm",
+        "Depo Kapasitesi": "14.5 L",
+        "Islak Ağırlık": "216 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/speed-twin-rs-1/800/600",
+        "https://picsum.photos/seed/speed-twin-rs-2/800/600",
+        "https://picsum.photos/seed/speed-twin-rs-3/800/600",
+        "https://picsum.photos/seed/speed-twin-rs-4/800/600"
+      ]
+    },
+
     // 33. TRIUMPH BONNEVILLE SPEED TWIN 1200 (Son model varyantı)
     'bonnevile-speed-twin-1200-3': {
       name: "Bonnevile Speed Twin 1200",
@@ -3481,7 +4063,7 @@ export const motorcycles = {
 
   "scrambler-ducati": {
     // 1. SCRAMBLER DUCATI ICON
-    'scrambler-ducati-icon': {
+    'scrambler-icon': {
       name: "Scrambler Ducati ICON",
       brand: "ducati",
       description:
@@ -3524,7 +4106,7 @@ export const motorcycles = {
     },
 
     // 2. SCRAMBLER DUCATI NIGHTSHIFT
-    'scrambler-ducati-nightshift': {
+    'scrambler-nightshift': {
       name: "Scrambler Ducati NIGHTSHIFT",
       brand: "ducati",
       description:
@@ -3567,7 +4149,7 @@ export const motorcycles = {
     },
 
     // 3. SCRAMBLER DUCATI FULL THROTTLE
-    'scrambler-ducati-full-throttle': {
+    'scrambler-full-throttle': {
       name: "Scrambler Ducati FULL THROTTLE",
       brand: "ducati",
       description:
@@ -3610,7 +4192,7 @@ export const motorcycles = {
     },
 
     // 4. SCRAMBLER DUCATI 10° ANNIVERSARIO RIZOMA EDITION
-    'scrambler-ducati-anniversario-rizoma': {
+    'scrambler-anniversario-rizoma': {
       name: "Scrambler Ducati 10° Anniversario Rizoma Edition",
       brand: "ducati",
       description:
@@ -3655,7 +4237,7 @@ export const motorcycles = {
 
   "moto-morini": {
     // 5. MOTO MORINI X-CAPE
-    'moto-morini-x-cape': {
+    'x-cape': {
       name: "Moto Morini X-Cape",
       brand: "moto morini",
       description:
@@ -3697,7 +4279,7 @@ export const motorcycles = {
     },
 
     // 6. MOTO MORINI SEIEMMEZZO SCR
-    'moto-morini-seiemmezzo-scr': {
+    'seiemmezzo-scr': {
       name: "Moto Morini Seiemmezzo SCR",
       brand: "moto morini",
       description:
@@ -3741,7 +4323,7 @@ export const motorcycles = {
 
   "italjet": {
     // 7. ITALJET DRAGSTER 300
-    'italjet-dragster-300': {
+    'dragster-300': {
       name: "Italjet Dragster 300",
       brand: "italjet",
       description:
@@ -3778,7 +4360,7 @@ export const motorcycles = {
     },
 
     // 8. ITALJET DRAGSTER 200 ABS
-    'italjet-dragster-200-abs': {
+    'dragster-200-abs': {
       name: "Italjet Dragster 200 ABS",
       brand: "italjet",
       description:
@@ -3821,7 +4403,7 @@ export const motorcycles = {
 
   "royal-alloy": {
     // 9. ROYAL ALLOY TG 300 S LC ABS
-    'royal-alloy-tg-300-s-lc-abs': {
+    'tg-300-s-lc-abs': {
       name: "Royal Alloy TG 300 S LC ABS",
       brand: "royal alloy",
       description:
@@ -3864,7 +4446,7 @@ export const motorcycles = {
     },
 
     // 10. ROYAL ALLOY GP 300 S ABS
-    'royal-alloy-gp-300-s-abs': {
+    'gp-300-s-lc-abs': {
       name: "Royal Alloy GP 300 S ABS",
       brand: "royal alloy",
       description:
@@ -3910,7 +4492,7 @@ export const motorcycles = {
 
   "fantic": {
     // 11. FANTIC CABALLERO 500 ANNIVERSARY
-    'fantic-caballero-500-anniversary': {
+    'caballero-500-anniversary': {
       name: "Fantic Caballero 500 Anniversary",
       brand: "fantic",
       description:
@@ -3951,7 +4533,7 @@ export const motorcycles = {
     },
 
     // 12. FANTIC CABALLERO 500 DELUXE
-    'fantic-caballero-500-deluxe': {
+    'caballero-500-deluxe': {
       name: "Fantic Caballero 500 Deluxe",
       brand: "fantic",
       description:
@@ -3993,7 +4575,7 @@ export const motorcycles = {
     },
 
     // 13. FANTIC CABALLERO 500 EXPLORER
-    'fantic-caballero-500-explorer': {
+    'caballero-500-explorer': {
       name: "Fantic Caballero 500 Explorer",
       brand: "fantic",
       description:
@@ -4035,7 +4617,7 @@ export const motorcycles = {
     },
 
     // 14. FANTIC CABALLERO 500 FLAT TRACK
-    'fantic-caballero-500-flat-track': {
+    'caballero-500-flat-track': {
       name: "Fantic Caballero 500 Flat Track",
       brand: "fantic",
       description:
@@ -4076,7 +4658,7 @@ export const motorcycles = {
     },
 
     // 15. FANTIC CABALLERO 500 RALLY
-    'fantic-caballero-500-rally': {
+    'caballero-500-rally': {
       name: "Fantic Caballero 500 Rally",
       brand: "fantic",
       description:
@@ -4117,7 +4699,7 @@ export const motorcycles = {
     },
 
     // 16. FANTIC CABALLERO 500 SCRAMBLER
-    'fantic-caballero-500-scrambler': {
+    'caballero-500-scrambler': {
       name: "Fantic Caballero 500 Scrambler",
       brand: "fantic",
       description:
@@ -4158,7 +4740,7 @@ export const motorcycles = {
     },
 
     // 17. FANTIC XEF 450 4T MY23
-    'fantic-xef-450-4t-my23': {
+    'xef-450-4t-my23': {
       name: "Fantic XEF 450 4T MY23",
       brand: "fantic",
       description:
@@ -4196,7 +4778,7 @@ export const motorcycles = {
     },
 
     // 18. FANTIC XEF 250 4T MY23
-    'fantic-xef-250-4t-my23': {
+    'xef-250-4t-my23': {
       name: "Fantic XEF 250 4T MY23",
       brand: "fantic",
       description:
@@ -4232,7 +4814,7 @@ export const motorcycles = {
     },
 
     // 19. FANTIC XEF 250 ENDURO TRAIL 4T
-    'fantic-xef-250-enduro-trail-4t': {
+    'xef-250-enduro-trail-4t': {
       name: "Fantic XEF 250 Enduro Trail 4T",
       brand: "fantic",
       description:
@@ -4270,7 +4852,7 @@ export const motorcycles = {
     },
 
     // 20. FANTIC XE 125 ENDURO 2T
-    'fantic-xe-125-enduro-2t': {
+    'xe-125-enduro-2t': {
       name: "Fantic XE 125 Enduro 2T",
       brand: "fantic",
       description:
@@ -4312,7 +4894,7 @@ export const motorcycles = {
 
   "kamax": {
     // 21. KAMAX CUB PRO 125
-    'kamax-cub-pro-125': {
+    'cub-pro-125': {
       name: "Kamax Cub Pro 125",
       brand: "kamax",
       description:
@@ -4354,7 +4936,7 @@ export const motorcycles = {
 
   "electric-motion": {
     // 22. ELECTRIC MOTION ESCAPE XR
-    'electric-motion-escape-xr': {
+    'escape-xr': {
       name: "Electric Motion Escape XR",
       brand: "electric motion",
       description:
@@ -4394,7 +4976,7 @@ export const motorcycles = {
     },
 
     // 23. ELECTRIC MOTION E PURE RACE
-    'electric-motion-e-pure-race': {
+    'e-pure-race': {
       name: "Electric Motion E Pure Race",
       brand: "electric motion",
       description:

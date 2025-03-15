@@ -15,7 +15,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         description: "İkonik Görünüm, Modern Performans",
         image: "/brands/scrambler/scrambler-icon.webp",
         modelYear: null,
-        brand: "ducati",
+        brand: "scrambler-ducati",
         slug: "scrambler-icon"
       },
       {
@@ -24,7 +24,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         description: "Şehrin Keskin Ruhu",
         image: "/brands/scrambler/scrambler-nightshift.webp",
         modelYear: null,
-        brand: "ducati",
+        brand: "scrambler-ducati",
         slug: "scrambler-nightshift"
       },
       {
@@ -33,7 +33,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         description: "Kusursuz Tasarım, Sınırsız Performans Yarışın Ruhunu Şehre Taşı!",
         image: "/brands/scrambler/Scrambler-Full-Throttle-Model-Banner.webp",
         modelYear: null,
-        brand: "ducati",
+        brand: "scrambler-ducati",
         slug: "scrambler-full-throttle"
       },
       {
@@ -42,7 +42,7 @@ const SCRAMBLER_DUCATI_CATEGORIES = [
         description: "Güç, Güvenlik ve Tarzın Kusursuz Buluşması",
         image: "/brands/scrambler/scrambler-10°-Anniversario-Rizoma-Edition.png",
         modelYear: null,
-        brand: "ducati",
+        brand: "scrambler-ducati",
         slug: "scrambler-anniversario-rizoma"
       }
     ]
@@ -54,7 +54,6 @@ const ScramblerDucatiPage = () => {
   return (
     <BrandPage
       brandName="SCRAMBLER DUCATI"
-      description="Yeni nesil Scrambler Ducati sizin için burada"
       categories={SCRAMBLER_DUCATI_CATEGORIES}
       img="ducati-scrambler.svg"
     />

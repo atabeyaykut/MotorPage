@@ -10,7 +10,7 @@ const MOTO_MORINI_CATEGORIES = [
         description: "Sınırları aşın, maceraya yeni bir soluk getirin!",
         image: "/brands/moto-morini/X-cape-banner-1024x634.webp",
         modelYear: null,
-        brand: "moto morini",
+        brand: "moto-morini",
         slug: "x-cape"
       }
     ]
@@ -24,7 +24,7 @@ const MOTO_MORINI_CATEGORIES = [
         description: "Stil ve inovasyonun ortak noktası",
         image: "/brands/moto-morini/Moto-Morini-SCR-Banner-1024x634.webp",
         modelYear: null,
-        brand: "moto morini",
+        brand: "moto-morini",
         slug: "seiemmezzo-scr"
       }
     ]
@@ -35,9 +35,8 @@ const MotoMoriniPage = () => {
   return (
     <BrandPage
       brandName="MOTO MORINI"
-      description="Motosikletlerde yaşamanın yeni bir yolu"
       categories={MOTO_MORINI_CATEGORIES}
-      img= "moto-morini.webp"
+      img="moto-morini.webp"
     />
   );
 };

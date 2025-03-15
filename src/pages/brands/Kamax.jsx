@@ -22,7 +22,6 @@ const KamaxPage = () => {
   return (
     <BrandPage
       brandName="KAMAX"
-      description="Basit, Havalı, Eğlenceli, Şık."
       categories={KAMAX_CATEGORIES}
       img="kamax.png"
     />

@@ -112,7 +112,6 @@ const FanticPage = () => {
   return (
     <BrandPage
       brandName="FANTIC"
-      description="Efsaneyi yaşayın"
       categories={FANTIC_CATEGORIES}
       img="fantic.svg"
     />
