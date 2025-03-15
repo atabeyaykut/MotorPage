@@ -43,9 +43,10 @@ const Exhibition = () => {
    */
   const motorcycleList = useMemo(() => {
     return Object.entries(motorcycles).flatMap(([brand, models]) =>
-      Object.values(models).map(model => ({
+      Object.entries(models).map(([slug, model]) => ({
         ...model,
         brand,
+        slug,
         price: Math.floor(Math.random() * (1000000 - 50000) + 50000), // Dummy price for demo
         mileage: Math.floor(Math.random() * 50000), // Dummy mileage for demo
       }))
@@ -217,7 +218,7 @@ const Exhibition = () => {
                       <CardHeader className="space-y-2 p-4 sm:p-6">
                         <div className="aspect-[4/3] overflow-hidden rounded-md">
                           <img
-                            src={motorcycle.images[0]}
+                            src={motorcycle.heroImage}
                             alt={motorcycle.name}
                             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                           />
