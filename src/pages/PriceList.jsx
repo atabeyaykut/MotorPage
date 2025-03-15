@@ -1,6 +1,4 @@
-import AboutHero from "@/components/about/AboutHero";
 import { cn } from "@/lib/utils";
-import { ChevronRight } from "lucide-react";
 import React, { useState } from "react";
 import { pdfjs } from "react-pdf";
 import { Link } from "react-router-dom";
