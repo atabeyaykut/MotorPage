@@ -1,4 +1,3 @@
-
 import BrandPage from '@/components/brands/BrandPage';
 
 /**
