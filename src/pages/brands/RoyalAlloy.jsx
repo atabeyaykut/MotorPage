@@ -10,7 +10,7 @@ const ROYAL_ALLOY_CATEGORIES = [
         description: "Vintage Tasarım, Güçlü Performans",
         image: "/brands/royal-alloy/Royal-Alloy-GP-300-S-ABS-1024x634.webp",
         modelYear: null,
-        brand: "royal alloy",
+        brand: "royal-alloy",
         slug: "tg-300-s-lc-abs"
       }
     ]
@@ -24,7 +24,7 @@ const ROYAL_ALLOY_CATEGORIES = [
         description: "Klasik Tasarım, Modern Performans",
         image: "/brands/royal-alloy/Royal-Alloy-TG-300-ABS-1024x634.webp",
         modelYear: null,
-        brand: "royal alloy",
+        brand: "royal-alloy",
         slug: "gp-300-s-lc-abs"
       }
     ]

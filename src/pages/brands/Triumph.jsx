@@ -12,7 +12,7 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/bonneville-bobber-Banner-1024x634-1.avif",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-bobber"
+        slug: "bonnevile-bobber"
       },
       {
         id: 26,
@@ -21,7 +21,7 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/scrambler-900_my24_cosmic-yellow_rhs_-1.avif",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-scrambler-900"
+        slug: "bonnevile-scrambler-900"
       },
       {
         id: 22,
@@ -30,7 +30,7 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/Speed-Master-Banner-1024x634.webp",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-speedmaster"
+        slug: "bonnevile-speedmaster"
       },
       {
         id: 27,
@@ -39,7 +39,7 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/speed-twin-1200_my23_matt-baja-orange_rhs.avif",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-speed-twin-1200"
+        slug: "bonnevile-speed-twin-1200"
       },
       {
         id: 30,
@@ -48,7 +48,7 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/Bonneville-Speed-Twin-900-Model-1.avif",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-speed-twin-900"
+        slug: "bonnevile-speed-twin-900"
       },
       {
         id: 24,
@@ -57,7 +57,7 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/Triumph-Bonneville-T-100-Banner-0019.avif",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-t100"
+        slug: "bonnevile-t100"
       },
       {
         id: 25,
@@ -66,11 +66,11 @@ const TRIUMPH_CATEGORIES = [
         image: "/brands/triumph/Bonneville_T120_my25_model-png.avif",
         modelYear: null,
         brand: "triumph",
-        slug: "bonneville-t120"
+        slug: "bonnevile-t120"
       },
       {
         id: 28,
-        name: "Speed Twin 1200",
+        name: "Bonneville Speed Twin 1200",
         description: "Çağdaş stil ve klasik tasarım",
         image: "/brands/triumph/Speed-Twin-1200_MY25_model_banner.avif",
         modelYear: "2025",
@@ -79,7 +79,7 @@ const TRIUMPH_CATEGORIES = [
       },
       {
         id: 29,
-        name: "Speed Twin 1200 RS",
+        name: "Bonneville Speed Twin 1200 RS",
         description: "Çarpıcı ve tavizsiz",
         image: "/brands/triumph/Speed-Twin-1200-RS_MY25_model_banner.avif",
         modelYear: "2025",
