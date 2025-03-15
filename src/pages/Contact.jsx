@@ -89,11 +89,11 @@ const Contact = () => {
       transition={{ duration: 0.5 }}
       className="w-full h-full"
     >
-      <div className="bg-gradient-to-r from-blue-900 to-teal-600 min-w-full container h-screen px-4 py-8 mb-20">
+      <div className="bg-gradient-to-r from-blue-900 to-teal-600 min-w-full container h-auto min-h-screen px-4 py-8 mb-20">
         <div className="max-w-6xl mx-auto">
-          <div className="flex justify-center items-center justify-between gap-12">
+          <div className="flex flex-col lg:flex-row justify-center items-stretch gap-8 lg:gap-12">
             {/* Left Side - Contact Info */}
-            <div className="text-white flex-1 space-y-8">
+            <div className="text-white w-full lg:flex-1 space-y-6 lg:space-y-8">
               <h1 className="text-4xl font-bold">İletişim</h1>
               <p className="text-lg">
                 Bizimle iletişime geçmek için aşağıdaki iletişim bilgilerini kullanabilir veya formu doldurabilirsiniz.
@@ -115,7 +115,7 @@ const Contact = () => {
               </div>
 
               {/* Map on mobile */}
-              <div className="md:hidden w-full h-[300px] mt-8">
+              <div className="lg:hidden w-full h-[300px] mt-8">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6504900330166!2d29.006695776332547!3d40.98813012349365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sAcıbadem%2C%20Tekin%20Sk.%20No%3A4%2C%2034718%20Kadık%C4%B1k%C3%B6y%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1701101486499!5m2!1str!2str"
                   className="w-full h-full rounded-lg border-0"
@@ -127,7 +127,7 @@ const Contact = () => {
             </div>
 
             {/* Right Side - Contact Form */}
-            <div className="bg-white flex-1 rounded-lg shadow-xl p-8">
+            <div className="bg-white w-full lg:flex-1 rounded-lg shadow-xl p-4 sm:p-6 lg:p-8">
               <form ref={form} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -272,7 +272,7 @@ const Contact = () => {
       </div>
 
       {/* Map on desktop */}
-      <div className="hidden md:block w-full h-[600px] ">
+      <div className="hidden lg:block w-full h-[600px] ">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6504900330166!2d29.006695776332547!3d40.98813012349365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sAcıbadem%2C%20Tekin%20Sk.%20No%3A4%2C%2034718%20Kadık%C4%B1k%C3%B6y%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1701101486499!5m2!1str!2str"
           className="w-full h-full border-0"

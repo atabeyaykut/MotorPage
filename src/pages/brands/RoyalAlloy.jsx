@@ -35,7 +35,6 @@ const RoyalAlloyPage = () => {
   return (
     <BrandPage
       brandName="ROYAL ALLOY"
-      description="Şehir hayatına stilinizle karışın"
       categories={ROYAL_ALLOY_CATEGORIES}
       img="royal-alloy.png"
     />

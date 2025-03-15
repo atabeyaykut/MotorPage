@@ -90,19 +90,19 @@ const Exhibition = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col space-y-6">
+    <div className="container mx-auto px-4 py-6 sm:py-8">
+      <div className="flex flex-col space-y-4 sm:space-y-6">
         {/* Page Header */}
         <div className="flex flex-col space-y-2">
-          <h1 className="text-4xl font-bold text-primary">Motosiklet Sergisi</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-3xl sm:text-4xl font-bold text-primary">Motosiklet Sergisi</h1>
+          <p className="text-sm sm:text-base text-muted-foreground">
             {filteredMotorcycles.length} adet motosiklet listeleniyor
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Filters Section */}
-          <div className="space-y-6 bg-card p-6 rounded-lg shadow-md border">
+          <div className="lg:sticky lg:top-4 space-y-4 sm:space-y-6 bg-card p-4 sm:p-6 rounded-lg shadow-md border lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
             <div className="flex justify-between items-center">
               <h2 className="text-2xl font-bold text-card-foreground">Filtreler</h2>
               <Button
@@ -160,7 +160,7 @@ const Exhibition = () => {
                   className="w-full"
                 />
               </div>
-              <div className="flex justify-between text-sm text-muted-foreground">
+              <div className="flex justify-between text-sm sm:text-base">
                 <span>{filters.priceRange[0].toLocaleString()} TL</span>
                 <span>{filters.priceRange[1].toLocaleString()} TL</span>
               </div>
@@ -205,45 +205,49 @@ const Exhibition = () => {
 
           {/* Motorcycles Grid */}
           <div className="lg:col-span-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
               {filteredMotorcycles.length > 0 ? (
                 filteredMotorcycles.map((motorcycle, index) => (
                   <Link
-                    key={index}
-                    to={`/markalar/${motorcycle.brand.toLowerCase()}/${motorcycle.slug || motorcycle.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="group"
+                    key={`${motorcycle.brand}-${motorcycle.name}-${index}`}
+                    to={`/markalar/${motorcycle.brand.toLowerCase()}/${motorcycle.slug}`}
+                    className="group transition-transform duration-300 hover:scale-[1.02] focus:scale-[1.02] focus:outline-none"
                   >
-                    <Card className={cn(
-                      "overflow-hidden transition-all duration-300",
-                      "hover:shadow-lg hover:border-primary",
-                      "bg-card border cursor-pointer"
-                    )}>
-                      <CardHeader className="p-0">
-                        <div className="relative">
+                    <Card className="h-full overflow-hidden border transition-colors hover:border-primary/50 focus:border-primary/50">
+                      <CardHeader className="space-y-2 p-4 sm:p-6">
+                        <div className="aspect-[4/3] overflow-hidden rounded-md">
                           <img
-                            src={motorcycle.heroImage}
+                            src={motorcycle.images[0]}
                             alt={motorcycle.name}
-                            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                           />
-                          <Badge className="absolute top-2 right-2" variant="secondary">
-                            {motorcycle.modelYear || 'Yeni'}
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary" className="text-xs sm:text-sm">
+                            {motorcycle.modelYear}
                           </Badge>
                         </div>
+                        <div className="space-y-1">
+                          <h3 className="font-semibold tracking-tight text-base sm:text-lg">
+                            {motorcycle.name}
+                          </h3>
+                          <p className="text-sm sm:text-base text-muted-foreground">
+                            {motorcycle.brand.toUpperCase()}
+                          </p>
+                        </div>
                       </CardHeader>
-                      <CardContent className="p-4 space-y-2">
-                        <h3 className="text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors">
-                          {motorcycle.name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground uppercase">{motorcycle.brand}</p>
+                      <CardContent className="p-4 sm:p-6 pt-0">
+                        <div className="flex flex-col space-y-2">
+                          <div className="flex justify-between text-sm sm:text-base">
+                            <span className="text-muted-foreground">Fiyat:</span>
+                            <span className="font-medium">{motorcycle.price.toLocaleString()} TL</span>
+                          </div>
+                          <div className="flex justify-between text-sm sm:text-base">
+                            <span className="text-muted-foreground">Kilometre:</span>
+                            <span className="font-medium">{motorcycle.mileage.toLocaleString()} KM</span>
+                          </div>
+                        </div>
                       </CardContent>
-                      <CardFooter className="p-4 pt-0 flex justify-between items-center">
-                        <p className="text-lg font-bold text-primary">
-                          {motorcycle.price.toLocaleString()} TL
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {motorcycle.mileage.toLocaleString()} KM
-                        </p>
-                      </CardFooter>
                     </Card>
                   </Link>
                 ))

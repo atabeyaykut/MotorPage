@@ -849,6 +849,56 @@ export const motorcycles = {
       ]
     },
 
+    // Ducati Panigale V2 S – Standart versiyon
+    'panigale-v2-s': {
+      name: "Ducati Panigale V2 My 2025",
+      brand: "ducati",
+      description:
+        "Ducati V2, yüksek performans ve agresif tasarımıyla öne çıkan bir motosiklettir.",
+      modelYear: "2025",
+      heroImage: "https://picsum.photos/seed/ducati-v2-hero/1920/1080",
+      detailImage: "https://picsum.photos/seed/ducati-v2-detail/1920/1080",
+      hotspots: [
+        {
+          x: 30,
+          y: 40,
+          title: "Gelişmiş Motor",
+          description: "Sıvı soğutmalı, yüksek verimli 2 silindirli Ducati V2 motor."
+        }
+      ],
+      engineSpecs: {
+        "Motor Tipi": "Sıvı soğutmalı 2 silindirli 4 zamanlı Ducati V2 bloğu, silindir başına 4 supap",
+        "Çap": "96 mm x 61.5 mm",
+        "Motor Hacmi": "890 cc",
+        "Motor Gücü": "120 HP @ 10,750 rpm",
+        "Maks. Tork": "93.3 Nm @ 8,250 rpm",
+        "Kompresyon Oranı": "13:1.1"
+      },
+      chassisSpecs: {
+        "Ön Çatal / Süspansiyon": "43 mm tamamen ayarlanabilir Öhlins NIX30 ön süspansiyon",
+        "Arka Çatal / Süspansiyon": "Tamamen ayarlanabilir Öhlins arka süspansiyon",
+        "Tekerlek Arası Mesafe": "1465 mm",
+        "Ön Jant Ebatı": '3.50″ x 17″',
+        "Arka Jant Ebatı": '5.50″ x 17″',
+        "Ön Lastik": "120/70R 17 Pirelli Diablo Rosso IV",
+        "Arka Lastik": "190/55R 17 Pirelli Diablo Rosso IV",
+        "Ön Fren": "320 mm çapında çift disk, 4 pistonlu Brembo M50 kaliper",
+        "Arka Fren": "245 mm çapında disk, 2 pistonlu kaliper",
+        "ABS": "Var"
+      },
+      dimensionSpecs: {
+        "Sele Yüksekliği": "837 mm",
+        "Depo Kapasitesi": "15 L",
+        "Kuru Ağırlık": "176 kg"
+      },
+      gallery: [
+        "https://picsum.photos/seed/ducati-v2-1/800/600",
+        "https://picsum.photos/seed/ducati-v2-2/800/600",
+        "https://picsum.photos/seed/ducati-v2-3/800/600",
+        "https://picsum.photos/seed/ducati-v2-4/800/600"
+      ]
+    },
+
     // Ducati Panigale V2 2025 – Güncellenmiş versiyon (aynı teknikler)
     'panigale-v2-2025': {
       name: "Panigale V2 2025",

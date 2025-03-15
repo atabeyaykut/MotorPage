@@ -30,7 +30,6 @@ const ItaljetPage = () => {
   return (
     <BrandPage
       brandName="ITALJET"
-      description="Alışılmışın dışına çıkın"
       categories={ITALJET_CATEGORIES}
       img="italjet.png"
     />

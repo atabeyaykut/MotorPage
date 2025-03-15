@@ -54,7 +54,6 @@ const ScramblerDucatiPage = () => {
   return (
     <BrandPage
       brandName="SCRAMBLER DUCATI"
-      description="Yeni nesil Scrambler Ducati sizin için burada"
       categories={SCRAMBLER_DUCATI_CATEGORIES}
       img="ducati-scrambler.svg"
     />

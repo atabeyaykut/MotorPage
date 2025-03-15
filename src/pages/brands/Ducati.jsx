@@ -25,7 +25,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/XDiavel-V4-2025-Dis-banner-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "x-diavel-v4"
+        slug: "xdiavel-v4-my2025"
       }
     ]
   },
@@ -126,7 +126,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Multistrada-V2-S-My-25-1024x6349-1-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "multistrada-v2-s-2025"
+        slug: "multistrada-v2-s-my2025"
       },
       {
         id: 3,
@@ -144,7 +144,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Multistrada-V4-My-25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "multistrada-v4-2025"
+        slug: "multistrada-v4-my2025"
       },
       {
         id: 9,
@@ -162,7 +162,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Multistrada-V4-Pikes-Peak-My-25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "multistrada-v4-pikes-peak-my-2025"
+        slug: "multistrada-v4-pikes-peak-my2025"
       },
       {
         id: 11,
@@ -180,7 +180,7 @@ const DUCATI_CATEGORIES = [
         image: "/brands/ducati/Ducati-Multistrada-V4-S-My-25-1024x6349-1.avif",
         modelYear: "2025",
         brand: "ducati",
-        slug: "multistrada-v4-s-2025"
+        slug: "multistrada-v4-s-my2025"
       },
       {
         id: 8,
@@ -427,7 +427,6 @@ const DucatiPage = () => {
   return (
     <BrandPage
       brandName="DUCATI"
-      description="Sportif ve zarif ruh"
       categories={DUCATI_CATEGORIES}
       img="ducati.png"
     />

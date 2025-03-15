@@ -362,7 +362,6 @@ const TriumphPage = () => {
   return (
     <BrandPage
       brandName="TRIUMPH"
-      description="Saf macera, mutlak avantaj"
       categories={TRIUMPH_CATEGORIES}
       img="triumph.png"
     />
