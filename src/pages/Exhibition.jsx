@@ -10,6 +10,23 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
+/**
+ * Exhibition page component that displays a filterable grid of motorcycles.
+ * Implements responsive design and follows shadcn UI component standards.
+ * 
+ * Features:
+ * - Filtering by year, brand, price range, engine type, mileage, and power
+ * - Responsive grid layout (1 column on mobile, 2 on tablet, 3 on desktop)
+ * - Interactive cards with hover effects
+ * - Direct navigation to motorcycle detail pages
+ * - Reset filters functionality
+ * 
+ * @component
+ * @example
+ * ```jsx
+ * <Exhibition />
+ * ```
+ */
 const Exhibition = () => {
   const [filters, setFilters] = useState({
     year: "all",
@@ -20,7 +37,10 @@ const Exhibition = () => {
     enginePower: ''
   });
 
-  // Convert motorcycles object to array for easier filtering
+  /**
+   * Converts the motorcycles object into a flat array with additional computed properties
+   * @returns {Array} Array of motorcycle objects with brand, price, and mileage
+   */
   const motorcycleList = useMemo(() => {
     return Object.entries(motorcycles).flatMap(([brand, models]) =>
       Object.values(models).map(model => ({
@@ -32,7 +52,10 @@ const Exhibition = () => {
     );
   }, []);
 
-  // Filter motorcycles based on current filters
+  /**
+   * Filters motorcycles based on current filter state
+   * @returns {Array} Filtered array of motorcycles
+   */
   const filteredMotorcycles = useMemo(() => {
     return motorcycleList.filter(moto => {
       const yearMatch = filters.year === "all" || moto.modelYear === filters.year;
@@ -48,10 +71,13 @@ const Exhibition = () => {
     });
   }, [motorcycleList, filters]);
 
+  // Get unique years and brands for filter options
   const uniqueYears = [...new Set(motorcycleList.map(m => m.modelYear).filter(Boolean))].sort((a, b) => b - a);
   const uniqueBrands = [...new Set(motorcycleList.map(m => m.brand))].sort();
 
-  // Reset all filters
+  /**
+   * Resets all filters to their default values
+   */
   const handleResetFilters = () => {
     setFilters({
       year: "all",
