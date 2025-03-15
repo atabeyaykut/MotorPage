@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 const AboutHero = () => {
   return (
-    <section className="relative min-h-[40vh] bg-[url('/images/about-hero.jpg')] bg-cover bg-center bg-no-repeat">
+    <section className="relative min-h-[40vh] bg-[url('https://picsum.photos/2200')] bg-cover bg-center bg-no-repeat">
       <div className="absolute inset-0 bg-black/50" />
       <div className="container relative flex h-full min-h-[40vh] items-center justify-start">
         <div className="flex flex-col items-start gap-4">

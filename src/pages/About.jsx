@@ -4,7 +4,6 @@ import AboutHero from "../components/about/AboutHero";
 import AboutWelcome from "../components/about/AboutWelcome";
 import AboutHistory from "../components/about/AboutHistory";
 import AboutTimeline from "../components/about/AboutTimeline";
-import AboutVideo from "../components/about/AboutVideo";
 
 const About = () => {
   useEffect(() => {

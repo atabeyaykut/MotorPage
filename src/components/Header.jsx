@@ -23,11 +23,11 @@ const MENU_ITEMS = {
     { name: "Hakkımızda", path: "/kurumsal/hakkimizda" },
     { name: "Ekibimiz", path: "/kurumsal/ekibimiz" },
     { name: "Misyon & Vizyon", path: "/kurumsal/misyon-vizyon" },
-    { name: "Kullanıcı Kılavuzları", path: "/kurumsal/kullanici-kilavuzlari" },
   ]
 };
 
 const NAV_LINKS = [
+  { to: "/sergi", text: "Sergi" },
   { to: "/fiyat-listeleri", text: "Fiyat Listeleri" },
   { to: "/kampanyalar", text: "Kampanyalar" },
   { to: "/iletisim", text: "İletişim" }
