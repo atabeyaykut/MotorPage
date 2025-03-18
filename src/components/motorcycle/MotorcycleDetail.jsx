@@ -110,8 +110,8 @@ const MotorcycleDetail = React.memo(({ model }) => {
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
-    setPrevBtnEnabled(emblaApi.canScrollPrev());
-    setNextBtnEnabled(emblaApi.canScrollNext());
+    setPrevBtnEnabled(true);
+    setNextBtnEnabled(true);
   }, [emblaApi]);
 
   useEffect(() => {
@@ -239,13 +239,6 @@ const MotorcycleDetail = React.memo(({ model }) => {
                 aria-label={`Go to image ${index + 1}`}
               />
             ))}
-          </div>
-
-          {/* Title Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center z-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
-              {model.name}
-            </h1>
           </div>
         </div>
       </section>
