@@ -149,19 +149,19 @@ const Exhibition = () => {
 
             {/* Price Range Filter */}
             <div className="space-y-4">
-              <Label className="text-card-foreground">Fiyat Aralığı</Label>
+              <Label className="text-card-foreground">Maksimum Fiyat</Label>
               <div className="pt-2">
                 <Slider
-                  defaultValue={[0, 1000000]}
+                  defaultValue={[1000000]}
                   max={1000000}
                   step={10000}
-                  value={filters.priceRange}
-                  onValueChange={(value) => setFilters(prev => ({ ...prev, priceRange: value }))}
+                  value={[filters.priceRange[1]]}
+                  onValueChange={(value) => setFilters(prev => ({ ...prev, priceRange: [0, value[0]] }))}
                   className="w-full"
                 />
               </div>
               <div className="flex justify-between text-sm sm:text-base">
-                <span>{filters.priceRange[0].toLocaleString()} TL</span>
+                <span>0 TL</span>
                 <span>{filters.priceRange[1].toLocaleString()} TL</span>
               </div>
             </div>
